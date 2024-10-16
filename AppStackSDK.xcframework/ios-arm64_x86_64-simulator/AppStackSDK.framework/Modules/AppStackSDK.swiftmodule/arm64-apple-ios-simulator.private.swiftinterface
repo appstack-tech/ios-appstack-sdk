@@ -1,42 +1,84 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AppStackSDK
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AppstackSDK
+import AdAttributionKit
 import AdServices
-@_exported import AppStackSDK
+@_exported import AppstackSDK
 import Foundation
 import StoreKit
 import Swift
+import _AdAttributionKit_StoreKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-@_hasMissingDesignatedInitializers public class AppStack {
-  public static var shared: AppStackSDK.AppStack
-  public var logLevel: AppStackSDK.LogLevel
+@_hasMissingDesignatedInitializers public class Appstack {
+  public static var shared: AppstackSDK.Appstack
   public func configure()
-  public func sendEvent(event: any AppStackSDK.AppStackEventProtocol)
+  public func sendEvent(event: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
+final public class AppstackASAAttribution {
+  public static var shared: AppstackSDK.AppstackASAAttribution
+  final public func enableASAAttributionTracking()
   @objc deinit
 }
 public struct ConversionValues : Swift.Codable {
+  public let values: [AppstackSDK.ConversionValues.ConversionValue]
+  public let lockWindowConfigurations: [AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.LockWindowConfiguration]
   public struct ConversionValue : Swift.Codable {
-    public enum CoarseValue : Swift.String, Swift.Codable {
-      case high
-      case medium
-      case low
-      public init?(rawValue: Swift.String)
-      public typealias RawValue = Swift.String
-      public var rawValue: Swift.String {
-        get
-      }
-    }
+    public let key: Swift.String
+    public let windows: [AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.WindowValue]
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
+  public struct WindowValue : Swift.Codable {
+    public let fineValue: Swift.Int?
+    public let coarseValue: AppstackSDK.ConversionValues.CoarseValue?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct LockWindowConfiguration : Swift.Codable {
+    public let type: AppstackSDK.ConversionValues.LockWindowType
+    public let value: Swift.Int?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public enum LockWindowType : Swift.String, Swift.Codable {
+    case time
+    case high
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Window : Swift.String, Swift.Codable {
+    case window1
+    case window2
+    case window3
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CoarseValue : Swift.String, Swift.Codable {
+    case high
+    case medium
+    case low
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(values: [AppstackSDK.ConversionValues.ConversionValue], lockWindowConfigurations: [AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.LockWindowConfiguration])
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public typealias CoarseConversionValue = AppStackSDK.ConversionValues.ConversionValue.CoarseValue
 public enum LogLevel : Swift.Int {
   case off
   case error
@@ -54,6 +96,14 @@ public enum LogLevel : Swift.Int {
   public static func info(_ message: Swift.String)
   @objc deinit
 }
+public struct LastWindowValue : Swift.Codable {
+  public let key: Swift.String
+  public let fineValue: Swift.Int
+  public let coarseValue: AppstackSDK.ConversionValues.CoarseValue?
+  public let lockWindow: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public enum LogDateFormatter : Swift.String {
   case MM_dd_yyyy_HH_mm_ss_SSS
   case MM_dd_yyyy_HH_mm_ss
@@ -65,18 +115,22 @@ public enum LogDateFormatter : Swift.String {
     get
   }
 }
-public protocol AppStackEventProtocol {
-  var key: Swift.String { get }
-  var fineValue: Swift.Int { get }
-  var coarseValue: AppStackSDK.CoarseConversionValue { get }
-  var lockWindow: Swift.Bool { get }
+public struct ASAToken : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-extension AppStackSDK.ConversionValues.ConversionValue.CoarseValue : Swift.Equatable {}
-extension AppStackSDK.ConversionValues.ConversionValue.CoarseValue : Swift.Hashable {}
-extension AppStackSDK.ConversionValues.ConversionValue.CoarseValue : Swift.RawRepresentable {}
-extension AppStackSDK.LogLevel : Swift.Equatable {}
-extension AppStackSDK.LogLevel : Swift.Hashable {}
-extension AppStackSDK.LogLevel : Swift.RawRepresentable {}
-extension AppStackSDK.LogDateFormatter : Swift.Equatable {}
-extension AppStackSDK.LogDateFormatter : Swift.Hashable {}
-extension AppStackSDK.LogDateFormatter : Swift.RawRepresentable {}
+extension AppstackSDK.ConversionValues.LockWindowType : Swift.Equatable {}
+extension AppstackSDK.ConversionValues.LockWindowType : Swift.Hashable {}
+extension AppstackSDK.ConversionValues.LockWindowType : Swift.RawRepresentable {}
+extension AppstackSDK.ConversionValues.Window : Swift.Equatable {}
+extension AppstackSDK.ConversionValues.Window : Swift.Hashable {}
+extension AppstackSDK.ConversionValues.Window : Swift.RawRepresentable {}
+extension AppstackSDK.ConversionValues.CoarseValue : Swift.Equatable {}
+extension AppstackSDK.ConversionValues.CoarseValue : Swift.Hashable {}
+extension AppstackSDK.ConversionValues.CoarseValue : Swift.RawRepresentable {}
+extension AppstackSDK.LogLevel : Swift.Equatable {}
+extension AppstackSDK.LogLevel : Swift.Hashable {}
+extension AppstackSDK.LogLevel : Swift.RawRepresentable {}
+extension AppstackSDK.LogDateFormatter : Swift.Equatable {}
+extension AppstackSDK.LogDateFormatter : Swift.Hashable {}
+extension AppstackSDK.LogDateFormatter : Swift.RawRepresentable {}

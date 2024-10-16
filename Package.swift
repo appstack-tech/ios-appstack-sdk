@@ -2,19 +2,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppStackSDK",
+    name: "AppstackSDK",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "AppStackSDK",
-            targets: ["AppStackSDK"])
+            name: "AppstackSDK",
+            targets: ["AppstackSDK"])
     ],
     targets: [
         .binaryTarget(
-            name: "AppStackSDK",
-            path: "./AppStackSDK.xcframework")
+            name: "AppstackSDK",
+            path: "./AppstackSDK.xcframework")
     ]
 )
 

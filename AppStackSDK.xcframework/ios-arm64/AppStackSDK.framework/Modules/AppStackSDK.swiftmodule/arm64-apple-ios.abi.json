@@ -1,34 +1,34 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "AppstackSDK",
+    "printedName": "AppstackSDK",
     "children": [
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "StoreKit",
         "printedName": "StoreKit",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "AdServices",
         "printedName": "AdServices",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "TypeDecl",
-        "name": "AppStack",
-        "printedName": "AppStack",
+        "name": "Appstack",
+        "printedName": "Appstack",
         "children": [
           {
             "kind": "Var",
@@ -37,21 +37,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "AppStack",
-                "printedName": "AppStackSDK.AppStack",
-                "usr": "s:11AppStackSDK0aB0C"
+                "name": "Appstack",
+                "printedName": "AppstackSDK.Appstack",
+                "usr": "s:11AppstackSDK0A0C"
               }
             ],
             "declKind": "Var",
-            "usr": "s:11AppStackSDK0aB0C6sharedACvpZ",
-            "mangledName": "$s11AppStackSDK0aB0C6sharedACvpZ",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK0A0C6sharedACvpZ",
+            "mangledName": "$s11AppstackSDK0A0C6sharedACvpZ",
+            "moduleName": "AppstackSDK",
             "static": true,
             "declAttributes": [
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -62,15 +63,15 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "AppStack",
-                    "printedName": "AppStackSDK.AppStack",
-                    "usr": "s:11AppStackSDK0aB0C"
+                    "name": "Appstack",
+                    "printedName": "AppstackSDK.Appstack",
+                    "usr": "s:11AppstackSDK0A0C"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB0C6sharedACvgZ",
-                "mangledName": "$s11AppStackSDK0aB0C6sharedACvgZ",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK0A0C6sharedACvgZ",
+                "mangledName": "$s11AppstackSDK0A0C6sharedACvgZ",
+                "moduleName": "AppstackSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
@@ -90,15 +91,15 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "AppStack",
-                    "printedName": "AppStackSDK.AppStack",
-                    "usr": "s:11AppStackSDK0aB0C"
+                    "name": "Appstack",
+                    "printedName": "AppstackSDK.Appstack",
+                    "usr": "s:11AppstackSDK0A0C"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB0C6sharedACvsZ",
-                "mangledName": "$s11AppStackSDK0aB0C6sharedACvsZ",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK0A0C6sharedACvsZ",
+                "mangledName": "$s11AppstackSDK0A0C6sharedACvsZ",
+                "moduleName": "AppstackSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
@@ -118,100 +119,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB0C6sharedACvMZ",
-                "mangledName": "$s11AppStackSDK0aB0C6sharedACvMZ",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK0A0C6sharedACvMZ",
+                "mangledName": "$s11AppstackSDK0A0C6sharedACvMZ",
+                "moduleName": "AppstackSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "logLevel",
-            "printedName": "logLevel",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LogLevel",
-                "printedName": "AppStackSDK.LogLevel",
-                "usr": "s:11AppStackSDK8LogLevelO"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppStackSDK0aB0C8logLevelAA03LogE0Ovp",
-            "mangledName": "$s11AppStackSDK0aB0C8logLevelAA03LogE0Ovp",
-            "moduleName": "AppStackSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB0C8logLevelAA03LogE0Ovg",
-                "mangledName": "$s11AppStackSDK0aB0C8logLevelAA03LogE0Ovg",
-                "moduleName": "AppStackSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB0C8logLevelAA03LogE0Ovs",
-                "mangledName": "$s11AppStackSDK0aB0C8logLevelAA03LogE0Ovs",
-                "moduleName": "AppStackSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB0C8logLevelAA03LogE0OvM",
-                "mangledName": "$s11AppStackSDK0aB0C8logLevelAA03LogE0OvM",
-                "moduleName": "AppStackSDK",
-                "implicit": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -228,11 +143,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppStackSDK0aB0C9configureyyF",
-            "mangledName": "$s11AppStackSDK0aB0C9configureyyF",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK0A0C9configureyyF",
+            "mangledName": "$s11AppstackSDK0A0C9configureyyF",
+            "moduleName": "AppstackSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -248,92 +164,336 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "AppStackEventProtocol",
-                "printedName": "any AppStackSDK.AppStackEventProtocol",
-                "usr": "s:11AppStackSDK0aB13EventProtocolP"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppStackSDK0aB0C9sendEvent5eventyAA0abE8Protocol_p_tF",
-            "mangledName": "$s11AppStackSDK0aB0C9sendEvent5eventyAA0abE8Protocol_p_tF",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK0A0C9sendEvent5eventySS_tF",
+            "mangledName": "$s11AppstackSDK0A0C9sendEvent5eventySS_tF",
+            "moduleName": "AppstackSDK",
             "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11AppstackSDK0A0C",
+        "mangledName": "$s11AppstackSDK0A0C",
+        "moduleName": "AppstackSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AdServices",
+        "printedName": "AdServices",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppstackASAAttribution",
+        "printedName": "AppstackASAAttribution",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppstackASAAttribution",
+                "printedName": "AppstackSDK.AppstackASAAttribution",
+                "usr": "s:11AppstackSDK0A14ASAAttributionC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK0A14ASAAttributionC6sharedACvpZ",
+            "mangledName": "$s11AppstackSDK0A14ASAAttributionC6sharedACvpZ",
+            "moduleName": "AppstackSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppstackASAAttribution",
+                    "printedName": "AppstackSDK.AppstackASAAttribution",
+                    "usr": "s:11AppstackSDK0A14ASAAttributionC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK0A14ASAAttributionC6sharedACvgZ",
+                "mangledName": "$s11AppstackSDK0A14ASAAttributionC6sharedACvgZ",
+                "moduleName": "AppstackSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppstackASAAttribution",
+                    "printedName": "AppstackSDK.AppstackASAAttribution",
+                    "usr": "s:11AppstackSDK0A14ASAAttributionC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK0A14ASAAttributionC6sharedACvsZ",
+                "mangledName": "$s11AppstackSDK0A14ASAAttributionC6sharedACvsZ",
+                "moduleName": "AppstackSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK0A14ASAAttributionC6sharedACvMZ",
+                "mangledName": "$s11AppstackSDK0A14ASAAttributionC6sharedACvMZ",
+                "moduleName": "AppstackSDK",
+                "static": true,
+                "implicit": true,
+                "intro_Macosx": "12.0",
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "enableASAAttributionTracking",
+            "printedName": "enableASAAttributionTracking()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK0A14ASAAttributionC06enableC8TrackingyyF",
+            "mangledName": "$s11AppstackSDK0A14ASAAttributionC06enableC8TrackingyyF",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:11AppStackSDK0aB0C",
-        "mangledName": "$s11AppStackSDK0aB0C",
-        "moduleName": "AppStackSDK",
+        "usr": "s:11AppstackSDK0A14ASAAttributionC",
+        "mangledName": "$s11AppstackSDK0A14ASAAttributionC",
+        "moduleName": "AppstackSDK",
+        "intro_Macosx": "12.0",
+        "intro_iOS": "15.0",
         "declAttributes": [
-          "AccessControl"
+          "Final",
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "TypeDecl",
@@ -341,257 +501,255 @@
         "printedName": "ConversionValues",
         "children": [
           {
+            "kind": "Var",
+            "name": "values",
+            "printedName": "values",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AppstackSDK.ConversionValues.ConversionValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConversionValue",
+                    "printedName": "AppstackSDK.ConversionValues.ConversionValue",
+                    "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK16ConversionValuesV6valuesSayAC0C5ValueVGvp",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV6valuesSayAC0C5ValueVGvp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AppstackSDK.ConversionValues.ConversionValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConversionValue",
+                        "printedName": "AppstackSDK.ConversionValues.ConversionValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK16ConversionValuesV6valuesSayAC0C5ValueVGvg",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV6valuesSayAC0C5ValueVGvg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lockWindowConfigurations",
+            "printedName": "lockWindowConfigurations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.LockWindowConfiguration]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Window",
+                    "printedName": "AppstackSDK.ConversionValues.Window",
+                    "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockWindowConfiguration",
+                    "printedName": "AppstackSDK.ConversionValues.LockWindowConfiguration",
+                    "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK16ConversionValuesV24lockWindowConfigurationsSDyAC0F0OAC04LockF13ConfigurationVGvp",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV24lockWindowConfigurationsSDyAC0F0OAC04LockF13ConfigurationVGvp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.LockWindowConfiguration]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Window",
+                        "printedName": "AppstackSDK.ConversionValues.Window",
+                        "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockWindowConfiguration",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowConfiguration",
+                        "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK16ConversionValuesV24lockWindowConfigurationsSDyAC0F0OAC04LockF13ConfigurationVGvg",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV24lockWindowConfigurationsSDyAC0F0OAC04LockF13ConfigurationVGvg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "TypeDecl",
             "name": "ConversionValue",
             "printedName": "ConversionValue",
             "children": [
               {
-                "kind": "TypeDecl",
-                "name": "CoarseValue",
-                "printedName": "CoarseValue",
+                "kind": "Var",
+                "name": "key",
+                "printedName": "key",
                 "children": [
                   {
-                    "kind": "Var",
-                    "name": "high",
-                    "printedName": "high",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(AppStackSDK.ConversionValues.ConversionValue.CoarseValue.Type) -> AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CoarseValue",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                            "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "CoarseValue",
-                                "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O4highyA2GmF",
-                    "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O4highyA2GmF",
-                    "moduleName": "AppStackSDK"
-                  },
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV3keySSvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV3keySSvp",
+                "moduleName": "AppstackSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
                   {
-                    "kind": "Var",
-                    "name": "medium",
-                    "printedName": "medium",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(AppStackSDK.ConversionValues.ConversionValue.CoarseValue.Type) -> AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CoarseValue",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                            "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "CoarseValue",
-                                "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O6mediumyA2GmF",
-                    "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O6mediumyA2GmF",
-                    "moduleName": "AppStackSDK"
-                  },
-                  {
-                    "kind": "Var",
-                    "name": "low",
-                    "printedName": "low",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(AppStackSDK.ConversionValues.ConversionValue.CoarseValue.Type) -> AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CoarseValue",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                            "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "CoarseValue",
-                                "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O3lowyA2GmF",
-                    "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O3lowyA2GmF",
-                    "moduleName": "AppStackSDK"
-                  },
-                  {
-                    "kind": "Constructor",
-                    "name": "init",
-                    "printedName": "init(rawValue:)",
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CoarseValue",
-                            "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                            "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                          }
-                        ],
-                        "usr": "s:Sq"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV3keySSvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV3keySSvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "windows",
+                "printedName": "windows",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.WindowValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Window",
+                        "printedName": "AppstackSDK.ConversionValues.Window",
+                        "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "WindowValue",
+                        "printedName": "AppstackSDK.ConversionValues.WindowValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV"
                       }
                     ],
-                    "declKind": "Constructor",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O03rawF0AGSgSS_tcfc",
-                    "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O03rawF0AGSgSS_tcfc",
-                    "moduleName": "AppStackSDK",
-                    "implicit": true,
-                    "init_kind": "Designated"
-                  },
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV7windowsSDyAC6WindowOAC0gE0VGvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV7windowsSDyAC6WindowOAC0gE0VGvp",
+                "moduleName": "AppstackSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
                   {
-                    "kind": "Var",
-                    "name": "rawValue",
-                    "printedName": "rawValue",
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Var",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O03rawF0SSvp",
-                    "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O03rawF0SSvp",
-                    "moduleName": "AppStackSDK",
-                    "implicit": true,
-                    "accessors": [
-                      {
-                        "kind": "Accessor",
-                        "name": "Get",
-                        "printedName": "Get()",
+                        "name": "Dictionary",
+                        "printedName": "[AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.WindowValue]",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
+                            "name": "Window",
+                            "printedName": "AppstackSDK.ConversionValues.Window",
+                            "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "WindowValue",
+                            "printedName": "AppstackSDK.ConversionValues.WindowValue",
+                            "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV"
                           }
                         ],
-                        "declKind": "Accessor",
-                        "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O03rawF0SSvg",
-                        "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O03rawF0SSvg",
-                        "moduleName": "AppStackSDK",
-                        "implicit": true,
-                        "accessorKind": "get"
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "Enum",
-                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O",
-                "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O",
-                "moduleName": "AppStackSDK",
-                "declAttributes": [
-                  "AccessControl"
-                ],
-                "enumRawTypeName": "String",
-                "conformances": [
-                  {
-                    "kind": "Conformance",
-                    "name": "Equatable",
-                    "printedName": "Equatable",
-                    "usr": "s:SQ",
-                    "mangledName": "$sSQ"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Hashable",
-                    "printedName": "Hashable",
-                    "usr": "s:SH",
-                    "mangledName": "$sSH"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "RawRepresentable",
-                    "printedName": "RawRepresentable",
-                    "children": [
-                      {
-                        "kind": "TypeWitness",
-                        "name": "RawValue",
-                        "printedName": "RawValue",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
+                        "usr": "s:SD"
                       }
                     ],
-                    "usr": "s:SY",
-                    "mangledName": "$sSY"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Decodable",
-                    "printedName": "Decodable",
-                    "usr": "s:Se",
-                    "mangledName": "$sSe"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Encodable",
-                    "printedName": "Encodable",
-                    "usr": "s:SE",
-                    "mangledName": "$sSE"
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV7windowsSDyAC6WindowOAC0gE0VGvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV7windowsSDyAC6WindowOAC0gE0VGvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
                   }
                 ]
               },
@@ -603,8 +761,8 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ConversionValue",
-                    "printedName": "AppStackSDK.ConversionValues.ConversionValue",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV"
+                    "printedName": "AppstackSDK.ConversionValues.ConversionValue",
+                    "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV"
                   },
                   {
                     "kind": "TypeNominal",
@@ -614,9 +772,9 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV4fromAEs7Decoder_p_tKcfc",
-                "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV4fromAEs7Decoder_p_tKcfc",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AppstackSDK",
                 "implicit": true,
                 "throwing": true,
                 "init_kind": "Designated"
@@ -639,22 +797,1205 @@
                   }
                 ],
                 "declKind": "Func",
-                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV6encode2toys7Encoder_p_tKF",
-                "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV6encode2toys7Encoder_p_tKF",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV6encode2toys7Encoder_p_tKF",
+                "moduleName": "AppstackSDK",
                 "implicit": true,
                 "throwing": true,
                 "funcSelfKind": "NonMutating"
               }
             ],
             "declKind": "Struct",
-            "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV",
-            "mangledName": "$s11AppStackSDK16ConversionValuesV0D5ValueV",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV0C5ValueV",
+            "moduleName": "AppstackSDK",
             "declAttributes": [
               "AccessControl"
             ],
             "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "WindowValue",
+            "printedName": "WindowValue",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "fineValue",
+                "printedName": "fineValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV04fineF0SiSgvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV04fineF0SiSgvp",
+                "moduleName": "AppstackSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Int?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV04fineF0SiSgvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV04fineF0SiSgvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "coarseValue",
+                "printedName": "coarseValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppstackSDK.ConversionValues.CoarseValue?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CoarseValue",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV06coarseF0AC06CoarseF0OSgvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV06coarseF0AC06CoarseF0OSgvp",
+                "moduleName": "AppstackSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CoarseValue",
+                            "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                            "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV06coarseF0AC06CoarseF0OSgvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV06coarseF0AC06CoarseF0OSgvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WindowValue",
+                    "printedName": "AppstackSDK.ConversionValues.WindowValue",
+                    "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV6encode2toys7Encoder_p_tKF",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:11AppstackSDK16ConversionValuesV11WindowValueV",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV11WindowValueV",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "LockWindowConfiguration",
+            "printedName": "LockWindowConfiguration",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "type",
+                "printedName": "type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockWindowType",
+                    "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                    "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV4typeAC0eF4TypeOvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV4typeAC0eF4TypeOvp",
+                "moduleName": "AppstackSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockWindowType",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                        "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV4typeAC0eF4TypeOvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV4typeAC0eF4TypeOvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "value",
+                "printedName": "value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV5valueSiSgvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV5valueSiSgvp",
+                "moduleName": "AppstackSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Int?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV5valueSiSgvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV5valueSiSgvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockWindowConfiguration",
+                    "printedName": "AppstackSDK.ConversionValues.LockWindowConfiguration",
+                    "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV6encode2toys7Encoder_p_tKF",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV23LockWindowConfigurationV",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "LockWindowType",
+            "printedName": "LockWindowType",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "time",
+                "printedName": "time",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.LockWindowType.Type) -> AppstackSDK.ConversionValues.LockWindowType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockWindowType",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                        "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LockWindowType",
+                            "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                            "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO4timeyA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV14LockWindowTypeO4timeyA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "high",
+                "printedName": "high",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.LockWindowType.Type) -> AppstackSDK.ConversionValues.LockWindowType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockWindowType",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                        "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LockWindowType",
+                            "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                            "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO4highyA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV14LockWindowTypeO4highyA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppstackSDK.ConversionValues.LockWindowType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LockWindowType",
+                        "printedName": "AppstackSDK.ConversionValues.LockWindowType",
+                        "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO8rawValueAESgSS_tcfc",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV14LockWindowTypeO8rawValueAESgSS_tcfc",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO8rawValueSSvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV14LockWindowTypeO8rawValueSSvp",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO8rawValueSSvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV14LockWindowTypeO8rawValueSSvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:11AppstackSDK16ConversionValuesV14LockWindowTypeO",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV14LockWindowTypeO",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Window",
+            "printedName": "Window",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "window1",
+                "printedName": "window1",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.Window.Type) -> AppstackSDK.ConversionValues.Window",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Window",
+                        "printedName": "AppstackSDK.ConversionValues.Window",
+                        "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.Window.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Window",
+                            "printedName": "AppstackSDK.ConversionValues.Window",
+                            "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV6WindowO7window1yA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO7window1yA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "window2",
+                "printedName": "window2",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.Window.Type) -> AppstackSDK.ConversionValues.Window",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Window",
+                        "printedName": "AppstackSDK.ConversionValues.Window",
+                        "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.Window.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Window",
+                            "printedName": "AppstackSDK.ConversionValues.Window",
+                            "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV6WindowO7window2yA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO7window2yA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "window3",
+                "printedName": "window3",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.Window.Type) -> AppstackSDK.ConversionValues.Window",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Window",
+                        "printedName": "AppstackSDK.ConversionValues.Window",
+                        "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.Window.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Window",
+                            "printedName": "AppstackSDK.ConversionValues.Window",
+                            "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV6WindowO7window3yA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO7window3yA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppstackSDK.ConversionValues.Window?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Window",
+                        "printedName": "AppstackSDK.ConversionValues.Window",
+                        "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11AppstackSDK16ConversionValuesV6WindowO8rawValueAESgSS_tcfc",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO8rawValueAESgSS_tcfc",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV6WindowO8rawValueSSvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO8rawValueSSvp",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV6WindowO8rawValueSSvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO8rawValueSSvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:11AppstackSDK16ConversionValuesV6WindowO",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV6WindowO",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CoarseValue",
+            "printedName": "CoarseValue",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "high",
+                "printedName": "high",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.CoarseValue.Type) -> AppstackSDK.ConversionValues.CoarseValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CoarseValue",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CoarseValue",
+                            "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                            "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO4highyA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO4highyA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "medium",
+                "printedName": "medium",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.CoarseValue.Type) -> AppstackSDK.ConversionValues.CoarseValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CoarseValue",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CoarseValue",
+                            "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                            "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO6mediumyA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO6mediumyA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "low",
+                "printedName": "low",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.ConversionValues.CoarseValue.Type) -> AppstackSDK.ConversionValues.CoarseValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CoarseValue",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CoarseValue",
+                            "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                            "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO3lowyA2EmF",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO3lowyA2EmF",
+                "moduleName": "AppstackSDK"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppstackSDK.ConversionValues.CoarseValue?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CoarseValue",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO03rawF0AESgSS_tcfc",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO03rawF0AESgSS_tcfc",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO03rawF0SSvp",
+                "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO03rawF0SSvp",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO03rawF0SSvg",
+                    "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO03rawF0SSvg",
+                    "moduleName": "AppstackSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV11CoarseValueO",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
               {
                 "kind": "Conformance",
                 "name": "Decodable",
@@ -674,13 +2015,68 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(values:lockWindowConfigurations:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConversionValues",
+                "printedName": "AppstackSDK.ConversionValues",
+                "usr": "s:11AppstackSDK16ConversionValuesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AppstackSDK.ConversionValues.ConversionValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConversionValue",
+                    "printedName": "AppstackSDK.ConversionValues.ConversionValue",
+                    "usr": "s:11AppstackSDK16ConversionValuesV0C5ValueV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[AppstackSDK.ConversionValues.Window : AppstackSDK.ConversionValues.LockWindowConfiguration]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Window",
+                    "printedName": "AppstackSDK.ConversionValues.Window",
+                    "usr": "s:11AppstackSDK16ConversionValuesV6WindowO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockWindowConfiguration",
+                    "printedName": "AppstackSDK.ConversionValues.LockWindowConfiguration",
+                    "usr": "s:11AppstackSDK16ConversionValuesV23LockWindowConfigurationV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11AppstackSDK16ConversionValuesV6values24lockWindowConfigurationsACSayAC0C5ValueVG_SDyAC0G0OAC04LockG13ConfigurationVGtcfc",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV6values24lockWindowConfigurationsACSayAC0C5ValueVG_SDyAC0G0OAC04LockG13ConfigurationVGtcfc",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "ConversionValues",
-                "printedName": "AppStackSDK.ConversionValues",
-                "usr": "s:11AppStackSDK16ConversionValuesV"
+                "printedName": "AppstackSDK.ConversionValues",
+                "usr": "s:11AppstackSDK16ConversionValuesV"
               },
               {
                 "kind": "TypeNominal",
@@ -690,9 +2086,9 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppStackSDK16ConversionValuesV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s11AppStackSDK16ConversionValuesV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK16ConversionValuesV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AppstackSDK",
             "implicit": true,
             "throwing": true,
             "init_kind": "Designated"
@@ -715,22 +2111,36 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppStackSDK16ConversionValuesV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s11AppStackSDK16ConversionValuesV6encode2toys7Encoder_p_tKF",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK16ConversionValuesV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11AppstackSDK16ConversionValuesV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AppstackSDK",
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
-        "usr": "s:11AppStackSDK16ConversionValuesV",
-        "mangledName": "$s11AppStackSDK16ConversionValuesV",
-        "moduleName": "AppStackSDK",
+        "usr": "s:11AppstackSDK16ConversionValuesV",
+        "mangledName": "$s11AppstackSDK16ConversionValuesV",
+        "moduleName": "AppstackSDK",
         "declAttributes": [
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -752,28 +2162,77 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "os.log",
         "printedName": "os.log",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "TypeDecl",
@@ -788,24 +2247,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogLevel.Type) -> AppStackSDK.LogLevel",
+                "printedName": "(AppstackSDK.LogLevel.Type) -> AppstackSDK.LogLevel",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
+                    "printedName": "AppstackSDK.LogLevel",
+                    "usr": "s:11AppstackSDK8LogLevelO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogLevel.Type",
+                    "printedName": "AppstackSDK.LogLevel.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogLevel",
-                        "printedName": "AppStackSDK.LogLevel",
-                        "usr": "s:11AppStackSDK8LogLevelO"
+                        "printedName": "AppstackSDK.LogLevel",
+                        "usr": "s:11AppstackSDK8LogLevelO"
                       }
                     ]
                   }
@@ -813,9 +2272,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK8LogLevelO3offyA2CmF",
-            "mangledName": "$s11AppStackSDK8LogLevelO3offyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK8LogLevelO3offyA2CmF",
+            "mangledName": "$s11AppstackSDK8LogLevelO3offyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -825,24 +2284,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogLevel.Type) -> AppStackSDK.LogLevel",
+                "printedName": "(AppstackSDK.LogLevel.Type) -> AppstackSDK.LogLevel",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
+                    "printedName": "AppstackSDK.LogLevel",
+                    "usr": "s:11AppstackSDK8LogLevelO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogLevel.Type",
+                    "printedName": "AppstackSDK.LogLevel.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogLevel",
-                        "printedName": "AppStackSDK.LogLevel",
-                        "usr": "s:11AppStackSDK8LogLevelO"
+                        "printedName": "AppstackSDK.LogLevel",
+                        "usr": "s:11AppstackSDK8LogLevelO"
                       }
                     ]
                   }
@@ -850,9 +2309,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK8LogLevelO5erroryA2CmF",
-            "mangledName": "$s11AppStackSDK8LogLevelO5erroryA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK8LogLevelO5erroryA2CmF",
+            "mangledName": "$s11AppstackSDK8LogLevelO5erroryA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -862,24 +2321,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogLevel.Type) -> AppStackSDK.LogLevel",
+                "printedName": "(AppstackSDK.LogLevel.Type) -> AppstackSDK.LogLevel",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
+                    "printedName": "AppstackSDK.LogLevel",
+                    "usr": "s:11AppstackSDK8LogLevelO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogLevel.Type",
+                    "printedName": "AppstackSDK.LogLevel.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogLevel",
-                        "printedName": "AppStackSDK.LogLevel",
-                        "usr": "s:11AppStackSDK8LogLevelO"
+                        "printedName": "AppstackSDK.LogLevel",
+                        "usr": "s:11AppstackSDK8LogLevelO"
                       }
                     ]
                   }
@@ -887,9 +2346,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK8LogLevelO5debugyA2CmF",
-            "mangledName": "$s11AppStackSDK8LogLevelO5debugyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK8LogLevelO5debugyA2CmF",
+            "mangledName": "$s11AppstackSDK8LogLevelO5debugyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -899,24 +2358,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogLevel.Type) -> AppStackSDK.LogLevel",
+                "printedName": "(AppstackSDK.LogLevel.Type) -> AppstackSDK.LogLevel",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
+                    "printedName": "AppstackSDK.LogLevel",
+                    "usr": "s:11AppstackSDK8LogLevelO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogLevel.Type",
+                    "printedName": "AppstackSDK.LogLevel.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogLevel",
-                        "printedName": "AppStackSDK.LogLevel",
-                        "usr": "s:11AppStackSDK8LogLevelO"
+                        "printedName": "AppstackSDK.LogLevel",
+                        "usr": "s:11AppstackSDK8LogLevelO"
                       }
                     ]
                   }
@@ -924,9 +2383,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK8LogLevelO4infoyA2CmF",
-            "mangledName": "$s11AppStackSDK8LogLevelO4infoyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK8LogLevelO4infoyA2CmF",
+            "mangledName": "$s11AppstackSDK8LogLevelO4infoyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Constructor",
@@ -936,13 +2395,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "AppStackSDK.LogLevel?",
+                "printedName": "AppstackSDK.LogLevel?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogLevel",
-                    "printedName": "AppStackSDK.LogLevel",
-                    "usr": "s:11AppStackSDK8LogLevelO"
+                    "printedName": "AppstackSDK.LogLevel",
+                    "usr": "s:11AppstackSDK8LogLevelO"
                   }
                 ],
                 "usr": "s:Sq"
@@ -955,9 +2414,9 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppStackSDK8LogLevelO8rawValueACSgSi_tcfc",
-            "mangledName": "$s11AppStackSDK8LogLevelO8rawValueACSgSi_tcfc",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK8LogLevelO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11AppstackSDK8LogLevelO8rawValueACSgSi_tcfc",
+            "moduleName": "AppstackSDK",
             "implicit": true,
             "init_kind": "Designated"
           },
@@ -974,9 +2433,9 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:11AppStackSDK8LogLevelO8rawValueSivp",
-            "mangledName": "$s11AppStackSDK8LogLevelO8rawValueSivp",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK8LogLevelO8rawValueSivp",
+            "mangledName": "$s11AppstackSDK8LogLevelO8rawValueSivp",
+            "moduleName": "AppstackSDK",
             "implicit": true,
             "accessors": [
               {
@@ -992,9 +2451,9 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11AppStackSDK8LogLevelO8rawValueSivg",
-                "mangledName": "$s11AppStackSDK8LogLevelO8rawValueSivg",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK8LogLevelO8rawValueSivg",
+                "mangledName": "$s11AppstackSDK8LogLevelO8rawValueSivg",
+                "moduleName": "AppstackSDK",
                 "implicit": true,
                 "accessorKind": "get"
               }
@@ -1002,14 +2461,28 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "s:11AppStackSDK8LogLevelO",
-        "mangledName": "$s11AppStackSDK8LogLevelO",
-        "moduleName": "AppStackSDK",
+        "usr": "s:11AppstackSDK8LogLevelO",
+        "mangledName": "$s11AppstackSDK8LogLevelO",
+        "moduleName": "AppstackSDK",
         "declAttributes": [
           "AccessControl"
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1071,9 +2544,9 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppStackSDK6LoggerC5erroryySSFZ",
-            "mangledName": "$s11AppStackSDK6LoggerC5erroryySSFZ",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK6LoggerC5erroryySSFZ",
+            "mangledName": "$s11AppstackSDK6LoggerC5erroryySSFZ",
+            "moduleName": "AppstackSDK",
             "static": true,
             "declAttributes": [
               "Final",
@@ -1099,9 +2572,9 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppStackSDK6LoggerC5debugyySSFZ",
-            "mangledName": "$s11AppStackSDK6LoggerC5debugyySSFZ",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK6LoggerC5debugyySSFZ",
+            "mangledName": "$s11AppstackSDK6LoggerC5debugyySSFZ",
+            "moduleName": "AppstackSDK",
             "static": true,
             "declAttributes": [
               "Final",
@@ -1127,9 +2600,9 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppStackSDK6LoggerC4infoyySSFZ",
-            "mangledName": "$s11AppStackSDK6LoggerC4infoyySSFZ",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK6LoggerC4infoyySSFZ",
+            "mangledName": "$s11AppstackSDK6LoggerC4infoyySSFZ",
+            "moduleName": "AppstackSDK",
             "static": true,
             "declAttributes": [
               "Final",
@@ -1139,41 +2612,395 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:11AppStackSDK6LoggerC",
-        "mangledName": "$s11AppStackSDK6LoggerC",
-        "moduleName": "AppStackSDK",
+        "usr": "s:11AppstackSDK6LoggerC",
+        "mangledName": "$s11AppstackSDK6LoggerC",
+        "moduleName": "AppstackSDK",
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LastWindowValue",
+        "printedName": "LastWindowValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK15LastWindowValueV3keySSvp",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV3keySSvp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK15LastWindowValueV3keySSvg",
+                "mangledName": "$s11AppstackSDK15LastWindowValueV3keySSvg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fineValue",
+            "printedName": "fineValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK15LastWindowValueV04fineE0Sivp",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV04fineE0Sivp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK15LastWindowValueV04fineE0Sivg",
+                "mangledName": "$s11AppstackSDK15LastWindowValueV04fineE0Sivg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "coarseValue",
+            "printedName": "coarseValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppstackSDK.ConversionValues.CoarseValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CoarseValue",
+                    "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                    "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK15LastWindowValueV06coarseE0AA16ConversionValuesV06CoarseE0OSgvp",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV06coarseE0AA16ConversionValuesV06CoarseE0OSgvp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppstackSDK.ConversionValues.CoarseValue?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CoarseValue",
+                        "printedName": "AppstackSDK.ConversionValues.CoarseValue",
+                        "usr": "s:11AppstackSDK16ConversionValuesV11CoarseValueO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK15LastWindowValueV06coarseE0AA16ConversionValuesV06CoarseE0OSgvg",
+                "mangledName": "$s11AppstackSDK15LastWindowValueV06coarseE0AA16ConversionValuesV06CoarseE0OSgvg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lockWindow",
+            "printedName": "lockWindow",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK15LastWindowValueV04lockD0SbSgvp",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV04lockD0SbSgvp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK15LastWindowValueV04lockD0SbSgvg",
+                "mangledName": "$s11AppstackSDK15LastWindowValueV04lockD0SbSgvg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LastWindowValue",
+                "printedName": "AppstackSDK.LastWindowValue",
+                "usr": "s:11AppstackSDK15LastWindowValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11AppstackSDK15LastWindowValueV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AppstackSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK15LastWindowValueV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AppstackSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11AppstackSDK15LastWindowValueV",
+        "mangledName": "$s11AppstackSDK15LastWindowValueV",
+        "moduleName": "AppstackSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "StoreKit",
         "printedName": "StoreKit",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AdServices",
+        "printedName": "AdServices",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AdAttributionKit",
+        "printedName": "AdAttributionKit",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "TypeDecl",
@@ -1188,24 +3015,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogDateFormatter.Type) -> AppStackSDK.LogDateFormatter",
+                "printedName": "(AppstackSDK.LogDateFormatter.Type) -> AppstackSDK.LogDateFormatter",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogDateFormatter",
-                    "printedName": "AppStackSDK.LogDateFormatter",
-                    "usr": "s:11AppStackSDK16LogDateFormatterO"
+                    "printedName": "AppstackSDK.LogDateFormatter",
+                    "usr": "s:11AppstackSDK16LogDateFormatterO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogDateFormatter.Type",
+                    "printedName": "AppstackSDK.LogDateFormatter.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogDateFormatter",
-                        "printedName": "AppStackSDK.LogDateFormatter",
-                        "usr": "s:11AppStackSDK16LogDateFormatterO"
+                        "printedName": "AppstackSDK.LogDateFormatter",
+                        "usr": "s:11AppstackSDK16LogDateFormatterO"
                       }
                     ]
                   }
@@ -1213,9 +3040,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK16LogDateFormatterO23MM_dd_yyyy_HH_mm_ss_SSSyA2CmF",
-            "mangledName": "$s11AppStackSDK16LogDateFormatterO23MM_dd_yyyy_HH_mm_ss_SSSyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK16LogDateFormatterO23MM_dd_yyyy_HH_mm_ss_SSSyA2CmF",
+            "mangledName": "$s11AppstackSDK16LogDateFormatterO23MM_dd_yyyy_HH_mm_ss_SSSyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -1225,24 +3052,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogDateFormatter.Type) -> AppStackSDK.LogDateFormatter",
+                "printedName": "(AppstackSDK.LogDateFormatter.Type) -> AppstackSDK.LogDateFormatter",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogDateFormatter",
-                    "printedName": "AppStackSDK.LogDateFormatter",
-                    "usr": "s:11AppStackSDK16LogDateFormatterO"
+                    "printedName": "AppstackSDK.LogDateFormatter",
+                    "usr": "s:11AppstackSDK16LogDateFormatterO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogDateFormatter.Type",
+                    "printedName": "AppstackSDK.LogDateFormatter.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogDateFormatter",
-                        "printedName": "AppStackSDK.LogDateFormatter",
-                        "usr": "s:11AppStackSDK16LogDateFormatterO"
+                        "printedName": "AppstackSDK.LogDateFormatter",
+                        "usr": "s:11AppstackSDK16LogDateFormatterO"
                       }
                     ]
                   }
@@ -1250,9 +3077,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK16LogDateFormatterO19MM_dd_yyyy_HH_mm_ssyA2CmF",
-            "mangledName": "$s11AppStackSDK16LogDateFormatterO19MM_dd_yyyy_HH_mm_ssyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK16LogDateFormatterO19MM_dd_yyyy_HH_mm_ssyA2CmF",
+            "mangledName": "$s11AppstackSDK16LogDateFormatterO19MM_dd_yyyy_HH_mm_ssyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -1262,24 +3089,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogDateFormatter.Type) -> AppStackSDK.LogDateFormatter",
+                "printedName": "(AppstackSDK.LogDateFormatter.Type) -> AppstackSDK.LogDateFormatter",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogDateFormatter",
-                    "printedName": "AppStackSDK.LogDateFormatter",
-                    "usr": "s:11AppStackSDK16LogDateFormatterO"
+                    "printedName": "AppstackSDK.LogDateFormatter",
+                    "usr": "s:11AppstackSDK16LogDateFormatterO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogDateFormatter.Type",
+                    "printedName": "AppstackSDK.LogDateFormatter.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogDateFormatter",
-                        "printedName": "AppStackSDK.LogDateFormatter",
-                        "usr": "s:11AppStackSDK16LogDateFormatterO"
+                        "printedName": "AppstackSDK.LogDateFormatter",
+                        "usr": "s:11AppstackSDK16LogDateFormatterO"
                       }
                     ]
                   }
@@ -1287,9 +3114,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK16LogDateFormatterO23E_d_MMM_yyyy_HH_mm_ss_ZyA2CmF",
-            "mangledName": "$s11AppStackSDK16LogDateFormatterO23E_d_MMM_yyyy_HH_mm_ss_ZyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK16LogDateFormatterO23E_d_MMM_yyyy_HH_mm_ss_ZyA2CmF",
+            "mangledName": "$s11AppstackSDK16LogDateFormatterO23E_d_MMM_yyyy_HH_mm_ss_ZyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -1299,24 +3126,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(AppStackSDK.LogDateFormatter.Type) -> AppStackSDK.LogDateFormatter",
+                "printedName": "(AppstackSDK.LogDateFormatter.Type) -> AppstackSDK.LogDateFormatter",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogDateFormatter",
-                    "printedName": "AppStackSDK.LogDateFormatter",
-                    "usr": "s:11AppStackSDK16LogDateFormatterO"
+                    "printedName": "AppstackSDK.LogDateFormatter",
+                    "usr": "s:11AppstackSDK16LogDateFormatterO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "AppStackSDK.LogDateFormatter.Type",
+                    "printedName": "AppstackSDK.LogDateFormatter.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "LogDateFormatter",
-                        "printedName": "AppStackSDK.LogDateFormatter",
-                        "usr": "s:11AppStackSDK16LogDateFormatterO"
+                        "printedName": "AppstackSDK.LogDateFormatter",
+                        "usr": "s:11AppstackSDK16LogDateFormatterO"
                       }
                     ]
                   }
@@ -1324,9 +3151,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11AppStackSDK16LogDateFormatterO19MMM_d_HH_mm_ss_SSSZyA2CmF",
-            "mangledName": "$s11AppStackSDK16LogDateFormatterO19MMM_d_HH_mm_ss_SSSZyA2CmF",
-            "moduleName": "AppStackSDK"
+            "usr": "s:11AppstackSDK16LogDateFormatterO19MMM_d_HH_mm_ss_SSSZyA2CmF",
+            "mangledName": "$s11AppstackSDK16LogDateFormatterO19MMM_d_HH_mm_ss_SSSZyA2CmF",
+            "moduleName": "AppstackSDK"
           },
           {
             "kind": "Var",
@@ -1341,9 +3168,9 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:11AppStackSDK16LogDateFormatterO8rawValueSSvp",
-            "mangledName": "$s11AppStackSDK16LogDateFormatterO8rawValueSSvp",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK16LogDateFormatterO8rawValueSSvp",
+            "mangledName": "$s11AppstackSDK16LogDateFormatterO8rawValueSSvp",
+            "moduleName": "AppstackSDK",
             "implicit": true,
             "accessors": [
               {
@@ -1359,9 +3186,9 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11AppStackSDK16LogDateFormatterO8rawValueSSvg",
-                "mangledName": "$s11AppStackSDK16LogDateFormatterO8rawValueSSvg",
-                "moduleName": "AppStackSDK",
+                "usr": "s:11AppstackSDK16LogDateFormatterO8rawValueSSvg",
+                "mangledName": "$s11AppstackSDK16LogDateFormatterO8rawValueSSvg",
+                "moduleName": "AppstackSDK",
                 "implicit": true,
                 "accessorKind": "get"
               }
@@ -1375,13 +3202,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "AppStackSDK.LogDateFormatter?",
+                "printedName": "AppstackSDK.LogDateFormatter?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "LogDateFormatter",
-                    "printedName": "AppStackSDK.LogDateFormatter",
-                    "usr": "s:11AppStackSDK16LogDateFormatterO"
+                    "printedName": "AppstackSDK.LogDateFormatter",
+                    "usr": "s:11AppstackSDK16LogDateFormatterO"
                   }
                 ],
                 "usr": "s:Sq"
@@ -1394,22 +3221,36 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppStackSDK16LogDateFormatterO8rawValueACSgSS_tcfc",
-            "mangledName": "$s11AppStackSDK16LogDateFormatterO8rawValueACSgSS_tcfc",
-            "moduleName": "AppStackSDK",
+            "usr": "s:11AppstackSDK16LogDateFormatterO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11AppstackSDK16LogDateFormatterO8rawValueACSgSS_tcfc",
+            "moduleName": "AppstackSDK",
             "implicit": true,
             "init_kind": "Designated"
           }
         ],
         "declKind": "Enum",
-        "usr": "s:11AppStackSDK16LogDateFormatterO",
-        "mangledName": "$s11AppStackSDK16LogDateFormatterO",
-        "moduleName": "AppStackSDK",
+        "usr": "s:11AppstackSDK16LogDateFormatterO",
+        "mangledName": "$s11AppstackSDK16LogDateFormatterO",
+        "moduleName": "AppstackSDK",
         "declAttributes": [
           "AccessControl"
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1453,188 +3294,115 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AppStackSDK"
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "TypeDecl",
-        "name": "AppStackEventProtocol",
-        "printedName": "AppStackEventProtocol",
+        "name": "ASAToken",
+        "printedName": "ASAToken",
         "children": [
           {
-            "kind": "Var",
-            "name": "key",
-            "printedName": "key",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "ASAToken",
+                "printedName": "AppstackSDK.ASAToken",
+                "usr": "s:11AppstackSDK8ASATokenV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:11AppStackSDK0aB13EventProtocolP3keySSvp",
-            "mangledName": "$s11AppStackSDK0aB13EventProtocolP3keySSvp",
-            "moduleName": "AppStackSDK",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB13EventProtocolP3keySSvg",
-                "mangledName": "$s11AppStackSDK0aB13EventProtocolP3keySSvg",
-                "moduleName": "AppStackSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : AppStackSDK.AppStackEventProtocol>",
-                "sugared_genericSig": "<Self where Self : AppStackSDK.AppStackEventProtocol>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
+            "declKind": "Constructor",
+            "usr": "s:11AppstackSDK8ASATokenV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11AppstackSDK8ASATokenV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AppstackSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
           },
           {
-            "kind": "Var",
-            "name": "fineValue",
-            "printedName": "fineValue",
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppStackSDK0aB13EventProtocolP9fineValueSivp",
-            "mangledName": "$s11AppStackSDK0aB13EventProtocolP9fineValueSivp",
-            "moduleName": "AppStackSDK",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB13EventProtocolP9fineValueSivg",
-                "mangledName": "$s11AppStackSDK0aB13EventProtocolP9fineValueSivg",
-                "moduleName": "AppStackSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : AppStackSDK.AppStackEventProtocol>",
-                "sugared_genericSig": "<Self where Self : AppStackSDK.AppStackEventProtocol>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "coarseValue",
-            "printedName": "coarseValue",
-            "children": [
+                "name": "Void",
+                "printedName": "()"
+              },
               {
                 "kind": "TypeNominal",
-                "name": "CoarseValue",
-                "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:11AppStackSDK0aB13EventProtocolP11coarseValueAA16ConversionValuesV0hG0V06CoarseG0Ovp",
-            "mangledName": "$s11AppStackSDK0aB13EventProtocolP11coarseValueAA16ConversionValuesV0hG0V06CoarseG0Ovp",
-            "moduleName": "AppStackSDK",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CoarseValue",
-                    "printedName": "AppStackSDK.ConversionValues.ConversionValue.CoarseValue",
-                    "usr": "s:11AppStackSDK16ConversionValuesV0D5ValueV06CoarseF0O"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB13EventProtocolP11coarseValueAA16ConversionValuesV0hG0V06CoarseG0Ovg",
-                "mangledName": "$s11AppStackSDK0aB13EventProtocolP11coarseValueAA16ConversionValuesV0hG0V06CoarseG0Ovg",
-                "moduleName": "AppStackSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : AppStackSDK.AppStackEventProtocol>",
-                "sugared_genericSig": "<Self where Self : AppStackSDK.AppStackEventProtocol>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "lockWindow",
-            "printedName": "lockWindow",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppStackSDK0aB13EventProtocolP10lockWindowSbvp",
-            "mangledName": "$s11AppStackSDK0aB13EventProtocolP10lockWindowSbvp",
-            "moduleName": "AppStackSDK",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppStackSDK0aB13EventProtocolP10lockWindowSbvg",
-                "mangledName": "$s11AppStackSDK0aB13EventProtocolP10lockWindowSbvg",
-                "moduleName": "AppStackSDK",
-                "genericSig": "<τ_0_0 where τ_0_0 : AppStackSDK.AppStackEventProtocol>",
-                "sugared_genericSig": "<Self where Self : AppStackSDK.AppStackEventProtocol>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK8ASATokenV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11AppstackSDK8ASATokenV6encode2toys7Encoder_p_tKF",
+            "moduleName": "AppstackSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Protocol",
-        "usr": "s:11AppStackSDK0aB13EventProtocolP",
-        "mangledName": "$s11AppStackSDK0aB13EventProtocolP",
-        "moduleName": "AppStackSDK",
+        "declKind": "Struct",
+        "usr": "s:11AppstackSDK8ASATokenV",
+        "mangledName": "$s11AppstackSDK8ASATokenV",
+        "moduleName": "AppstackSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       }
     ],
@@ -1642,273 +3410,203 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/AppStack.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "StringLiteral",
-      "offset": 220,
+      "offset": 508,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/AppStack.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 260,
+      "offset": 605,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/AppStack.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 303,
+      "offset": 735,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/AppStack.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1417,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Persistence\/UserDefaults+Appstack.swift",
       "kind": "StringLiteral",
-      "offset": 481,
-      "length": 22,
-      "value": "\"AppStackFirstRunDate\""
+      "offset": 144,
+      "length": 37,
+      "value": "\"tech.app-stack.appstackuserdefaults\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/AppStack.swift",
-      "kind": "BooleanLiteral",
-      "offset": 614,
-      "length": 5,
-      "value": "false"
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackASAAttribution.swift",
+      "kind": "StringLiteral",
+      "offset": 596,
+      "length": 2,
+      "value": "\"\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Config.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
       "offset": 62,
       "length": 40,
       "value": "\"https:\/\/console.app-stack.tech\/api\/sdk\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Config.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
       "kind": "IntegerLiteral",
-      "offset": 130,
+      "offset": 191,
       "length": 2,
       "value": "37"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 463,
+      "offset": 257,
+      "length": 22,
+      "value": "\"AppstackFirstRunDate\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
+      "length": 12,
+      "value": "\"AppstackId\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 17,
+      "value": "\"LastWindowValue\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 10,
+      "value": "\"ASAToken\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 437,
+      "length": 12,
+      "value": "\"AppVersion\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 478,
+      "length": 12,
+      "value": "\"SdkVersion\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 575,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
       "kind": "FloatLiteral",
-      "offset": 559,
+      "offset": 732,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Persistence\/ConversionValuesPersistence.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Persistence\/ConversionValuesPersistence.swift",
       "kind": "StringLiteral",
       "offset": 464,
       "length": 26,
       "value": "\"app-stack-conv-val.plist\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 181,
-      "length": 6,
-      "value": "\"high\""
+      "offset": 277,
+      "length": 2,
+      "value": "\"\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
-      "kind": "StringLiteral",
-      "offset": 214,
-      "length": 8,
-      "value": "\"medium\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
-      "kind": "StringLiteral",
-      "offset": 246,
-      "length": 5,
-      "value": "\"low\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
-      "kind": "StringLiteral",
-      "offset": 181,
-      "length": 6,
-      "value": "\"high\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
-      "kind": "StringLiteral",
-      "offset": 214,
-      "length": 8,
-      "value": "\"medium\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
-      "kind": "StringLiteral",
-      "offset": 246,
-      "length": 5,
-      "value": "\"low\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 76,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 87,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 102,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 117,
       "length": 4,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 76,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 87,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 102,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 117,
-      "length": 4,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 76,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 87,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 102,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
-      "kind": "IntegerLiteral",
-      "offset": 117,
-      "length": 4,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 224,
       "length": 25,
       "value": "\"tech.app-stack.appstack\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/Logger.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 284,
       "length": 13,
-      "value": "\"AppStackSDK\""
+      "value": "\"AppstackSDK\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/ConversionTrackingManager.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/ConversionTrackingManager.swift",
       "kind": "StringLiteral",
-      "offset": 153,
+      "offset": 195,
       "length": 29,
-      "value": "\"AppStackAdNetworkRegistered\""
+      "value": "\"AppstackAdNetworkRegistered\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/LogDateFormatter.swift",
       "kind": "StringLiteral",
       "offset": 91,
       "length": 25,
       "value": "\"MM\/dd\/yyyy HH:mm:ss:SSS\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/LogDateFormatter.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 21,
       "value": "\"MM-dd-yyyy HH:mm:ss\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/LogDateFormatter.swift",
       "kind": "StringLiteral",
       "offset": 201,
       "length": 26,
       "value": "\"E, d MMM yyyy HH:mm:ss Z\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
-      "kind": "StringLiteral",
-      "offset": 257,
-      "length": 22,
-      "value": "\"MMM d, HH:mm:ss:SSSZ\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
-      "kind": "StringLiteral",
-      "offset": 91,
-      "length": 25,
-      "value": "\"MM\/dd\/yyyy HH:mm:ss:SSS\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
-      "kind": "StringLiteral",
-      "offset": 146,
-      "length": 21,
-      "value": "\"MM-dd-yyyy HH:mm:ss\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
-      "kind": "StringLiteral",
-      "offset": 201,
-      "length": 26,
-      "value": "\"E, d MMM yyyy HH:mm:ss Z\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppStackSDK\/Sources\/Utils\/LogDateFormatter.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/LogDateFormatter.swift",
       "kind": "StringLiteral",
       "offset": 257,
       "length": 22,
