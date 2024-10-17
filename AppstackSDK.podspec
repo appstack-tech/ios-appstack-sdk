@@ -7,8 +7,9 @@ Pod::Spec.new do |s|
                       DESC
   s.homepage         = 'https://www.app-stack.tech/'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'AppStack' => 'lucas@app-stack.tech' }
+  s.author           = { 'Appstack' => 'lucas@app-stack.tech' }
   s.source           = { :git => 'https://github.com/appstack-tech/ios-appstack-sdk.git', :tag => s.version.to_s }
   s.ios.deployment_target = '13.0'
+  s.swift_version = '5.0'
   s.vendored_frameworks = 'AppstackSDK.xcframework'
 end
