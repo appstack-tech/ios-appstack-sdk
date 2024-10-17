@@ -15,7 +15,7 @@ import os.log
 import os
 @_hasMissingDesignatedInitializers public class Appstack {
   public static var shared: AppstackSDK.Appstack
-  public func configure()
+  public func configure(_ appstackVerificationKey: Swift.String)
   public func sendEvent(event: Swift.String)
   @objc deinit
 }

@@ -134,17 +134,23 @@
           {
             "kind": "Function",
             "name": "configure",
-            "printedName": "configure()",
+            "printedName": "configure(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppstackSDK0A0C9configureyyF",
-            "mangledName": "$s11AppstackSDK0A0C9configureyyF",
+            "usr": "s:11AppstackSDK0A0C9configureyySSF",
+            "mangledName": "$s11AppstackSDK0A0C9configureyySSF",
             "moduleName": "AppstackSDK",
             "declAttributes": [
               "AccessControl",
@@ -3506,6 +3512,13 @@
       "offset": 478,
       "length": 12,
       "value": "\"SdkVersion\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 532,
+      "length": 25,
+      "value": "\"AppstackVerificationKey\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
