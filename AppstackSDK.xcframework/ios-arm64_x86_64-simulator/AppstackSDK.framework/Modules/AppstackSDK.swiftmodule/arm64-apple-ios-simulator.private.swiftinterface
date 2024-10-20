@@ -1,0 +1,27 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AppstackSDK
+import AdAttributionKit
+import AdServices
+@_exported import AppstackSDK
+import Foundation
+import StoreKit
+import Swift
+import _AdAttributionKit_StoreKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+@_hasMissingDesignatedInitializers public class Appstack {
+  public static var shared: AppstackSDK.Appstack
+  public func configure(_ appstackVerificationKey: Swift.String)
+  public func sendEvent(event: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
+final public class AppstackASAAttribution {
+  public static var shared: AppstackSDK.AppstackASAAttribution
+  final public func enableASAAttributionTracking()
+  @objc deinit
+}
