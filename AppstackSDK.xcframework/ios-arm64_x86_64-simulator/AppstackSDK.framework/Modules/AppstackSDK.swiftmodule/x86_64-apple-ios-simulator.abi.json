@@ -11441,6 +11441,85 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toDictionary",
+            "printedName": "toDictionary()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK15LastWindowValueV12toDictionarySDySSypGyF",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV12toDictionarySDySSypGyF",
+            "moduleName": "AppstackSDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fromDictionary",
+            "printedName": "fromDictionary(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppstackSDK.LastWindowValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LastWindowValue",
+                    "printedName": "AppstackSDK.LastWindowValue",
+                    "usr": "s:11AppstackSDK15LastWindowValueV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK15LastWindowValueV14fromDictionaryyACSgSDySSypGFZ",
+            "mangledName": "$s11AppstackSDK15LastWindowValueV14fromDictionaryyACSgSDySSypGFZ",
+            "moduleName": "AppstackSDK",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -17801,8 +17880,8 @@
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
       "offset": 597,
-      "length": 7,
-      "value": "\"1.0.9\""
+      "length": 8,
+      "value": "\"1.0.10\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/workspaceSwift\/AppStack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Persistence\/ConversionValuesPersistence.swift",
