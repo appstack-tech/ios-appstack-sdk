@@ -25,7 +25,7 @@ Or directly from Xcode:
 
 ## Initialization
 
-### UIKit with AppDelegate
+### AppDelegate
 
 ```swift
 import AppstackSDK
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-### UIKit with SceneDelegate
+### SceneDelegate
 
 ```swift
 import AppstackSDK
