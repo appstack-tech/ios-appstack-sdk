@@ -15,12 +15,12 @@ The SDK can be installed through Swift Package Manager. Add the following depend
 
 swift
 dependencies: [
-.package(url: "https://github.com/appstack/appstack-ios-sdk.git", from: "1.0.0")
+.package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "1.0.0")
 ]
 
 Or directly from Xcode:
 1. File > Add Packages
-2. Enter the repository URL: `https://github.com/appstack/appstack-ios-sdk.git`
+2. Enter the repository URL: `https://github.com/appstack/ios-appstack-sdk.git`
 3. Select the desired version
 
 ## Initialization
