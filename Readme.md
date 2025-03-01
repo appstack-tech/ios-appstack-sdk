@@ -3,6 +3,7 @@
 SDK for integrating Appstack into iOS applications.
 
 ## Requirements
+
 - iOS 13.0+
 - Xcode 14.0+
 - Swift 5.0+
@@ -19,9 +20,29 @@ dependencies: [
 ]
 
 Or directly from Xcode:
+
 1. File > Add Packages
 2. Enter the repository URL: `https://github.com/appstack/ios-appstack-sdk.git`
 3. Select the desired version
+
+### Initial Setup
+
+Before starting with the SDK integration, you need to configure the attribution endpoint. There are two ways to do this:
+
+#### Option 1: Through Info.plist
+
+Add the following entry to your Info.plist file:
+
+```xml
+<key>NSAdvertisingAttributionReportEndpoint</key>
+<string>https://ios-appstack.com/</string>
+```
+
+#### Option 2: Through Xcode
+
+1. Open your Info.plist file
+2. Add a new entry with the key `Advertising attribution report endpoint URL`
+3. Set the value to `https://ios-appstack.com/`
 
 ## Initialization
 
@@ -70,6 +91,28 @@ struct MyApp: App {
     }
 }
 ```
+
+## Sending Events
+
+To send events defined in the Appstack platform (Mapping section):
+
+```swift
+Appstack.shared.sendEvent(event: "event_name")
+```
+
+For example:
+
+```swift
+// Send a purchase event
+Appstack.shared.sendEvent(event: "purchase_completed")
+
+// Send a registration event
+Appstack.shared.sendEvent(event: "user_registered")
+```
+
+## Important Notes
+- Make sure to initialize the SDK before sending any events
+- Events must exactly match the names defined in the Appstack platform
 
 ## Apple Search Ads Attribution
 
@@ -172,32 +215,11 @@ func requestTrackingPermission() {
 }
 ```
 
-⚠️ **Important**: 
+⚠️ **Important**:
+
 - Detailed attribution will only be available if the user grants tracking permission
 - If the user denies tracking, standard attribution data can still be collected
 - Allow up to 24 hours for attribution data to be available in your Appstack dashboard
-
-## Sending Events
-
-To send events defined in the Appstack platform (Mapping section):
-
-```swift
-Appstack.shared.sendEvent(event: "event_name")
-```
-
-For example:
-
-```swift
-// Send a purchase event
-Appstack.shared.sendEvent(event: "purchase_completed")
-
-// Send a registration event
-Appstack.shared.sendEvent(event: "user_registered")
-```
-
-## Important Notes
-- Make sure to initialize the SDK before sending any events
-- Events must exactly match the names defined in the Appstack platform
 - For iOS 14.3+, it's recommended to implement ATT permission request before enabling ASA tracking
 
 ## Support
