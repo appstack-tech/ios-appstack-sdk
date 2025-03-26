@@ -1,4 +1,4 @@
-# iOS SDK Integration Guide for SKAN Measurement
+# Appstack iOS SDK Integration Guide for SKAN Measurement
 
 ## Introduction
 
