@@ -12,7 +12,7 @@ When multiple SDKs attempt to set conversion values, it can lead to:
 - Campaign measurement discrepancies
 - Potential violation of Apple's guidelines
 
-This guide shows you how to properly configure each SDK while maintaining Appstack as your primary SKAN handler.
+This guide shows you how to configure each SDK properly while maintaining Appstack as your primary SKAN handler.
 
 ## Integration Walkthrough
 
@@ -66,7 +66,7 @@ ApplicationDelegate.shared.application(
 
 #### ⚠️ Meta SKAN Deactivation (Critical)
 
-To prevent Meta from sending conversion values to SKAdNetwork:
+To prevent Meta from sending conversion values to SKAdNetwork (do it in both code and platform):
 
 **In code:**
 
@@ -210,7 +210,7 @@ func requestTrackingPermission() {
 
 To effectively debug and monitor SKAN events:
 
-1. Open Xcode and run your app on a **real device** (not simulator, as SKAdNetwork only works on real hardware)
+1. Open Xcode and run your app on a **real device** (not the simulator, as SKAdNetwork only works on real hardware)
 2. Open the Console app on your Mac (`Applications` > `Utilities` > `Console`)
 3. Filter logs by `process: your-app-bundle-id`
 4. Look for messages related to `SKAdNetwork`
@@ -275,8 +275,8 @@ For more detailed SKAN logs:
 
 #### No SKAN Logs Visible
 
-- Ensure you're testing on a physical device, not simulator
-- Verify SKAdNetworkDebugMode is properly enabled
+- Ensure you're testing on a physical device, not the simulator
+- Verify SKAdNetworkDebugMode is correctly enabled
 - Check that your app's bundle ID is correctly entered in the Console app filter
 
 ## Additional Resources
