@@ -248,7 +248,6 @@ For more detailed SKAN logs:
 | ✅ Single SKAN Handler | Use Appstack exclusively for SKAN postbacks | Critical |
 | ✅ Consistent Event Naming | Use identical event names across all SDKs | High |
 | ✅ Centralized Tracking | Implement a central tracking manager | High |
-| ✅ ATT Implementation | Properly request tracking permission | High |
 | ✅ Thorough Testing | Verify only Appstack sends conversion values | High |
 
 ## Troubleshooting Guide
