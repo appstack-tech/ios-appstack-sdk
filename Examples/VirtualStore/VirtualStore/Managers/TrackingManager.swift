@@ -1,4 +1,5 @@
 import Foundation
+import StoreKit
 import AppstackSDK
 import FacebookCore
 import TikTokBusinessSDK
@@ -22,6 +23,7 @@ class TrackingManager: ObservableObject {
         configureFirebaseSDK()
         
         setupTracking()
+        registerSKAdNetwork()
         print("🔄 All SDKs have been configured")
     }
     
@@ -88,7 +90,7 @@ class TrackingManager: ObservableObject {
     
     private func configureFirebaseSDK() {
         // Initialize Firebase
-        //FirebaseApp.configure()
+        FirebaseApp.configure()
         
         // Disable SKAdNetwork reporting in Firebase
         // Firebase doesn't provide a programmatic way to disable SKAdNetwork reporting
@@ -117,6 +119,21 @@ class TrackingManager: ObservableObject {
                 @unknown default:
                     fatalError("Invalid authorization status")
                 }
+            }
+        }
+    }
+    
+    private func registerSKAdNetwork() {
+        if !UserDefaults.standard.bool(forKey: "IsSkAdNetworkInstallReported") {
+            if #available(iOS 15.4, *) {
+                SKAdNetwork.updatePostbackConversionValue(0) { error in
+                    if error == nil {
+                        UserDefaults.standard.set(true, forKey: "IsSkAdNetworkInstallReported")
+                    }
+                }
+            } else {
+                SKAdNetwork.registerAppForAdNetworkAttribution()
+                UserDefaults.standard.set(true, forKey: "IsSkAdNetworkInstallReported")
             }
         }
     }
