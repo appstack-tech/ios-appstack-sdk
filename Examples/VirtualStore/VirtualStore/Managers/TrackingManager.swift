@@ -14,14 +14,14 @@ class TrackingManager: ObservableObject {
     
     func configureSDKs() {
         // Configure Appstack SDK
-//        Appstack.shared.configure(Constants.appstackVerificationKey)
-//        
-//        // Configure SDKs
-//        configureFacebookSDK()
-//        configureTiktokSDK()
-//        configureFirebaseSDK()
-//        
-//        setupTracking()
+        Appstack.shared.configure(Constants.appstackVerificationKey)
+        
+        // Configure SDKs
+        configureFacebookSDK()
+        configureTiktokSDK()
+        configureFirebaseSDK()
+        
+        setupTracking()
         print("🔄 All SDKs have been configured")
     }
     
@@ -69,11 +69,6 @@ class TrackingManager: ObservableObject {
         // 2. Navigate to "Data Sources" -> "Settings"
         // 3. Under "Apple's SKAdNetwork" -> "View Additional Settings"
         // 4. Toggle off "SKAdNetwork for the Facebook SDK"
-        Settings.shared.isSKAdNetworkReportEnabled = false
-        
-        // Disable data processing for conversion values
-        // This prevents Meta from processing conversion values
-        Settings.shared.setDataProcessingOptions([], country: 0, state: 0)
     }
     
     private func configureTiktokSDK() {

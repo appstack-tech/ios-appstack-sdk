@@ -73,12 +73,6 @@ To prevent Meta from sending conversion values to SKAdNetwork (do it in both cod
 ```swift
 // Disable automatic event logging
 Settings.shared.isAutoLogAppEventsEnabled = false
-   
-// Disable SKAdNetwork reporting
-Settings.shared.isSKAdNetworkReportEnabled = false
-   
-// Disable data processing for conversion values
-Settings.shared.setDataProcessingOptions([], country: 0, state: 0)
 ```
 
 **In Meta Business Manager:**
