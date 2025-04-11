@@ -18872,7 +18872,7 @@
       "kind": "StringLiteral",
       "offset": 597,
       "length": 7,
-      "value": "\"1.2.0\""
+      "value": "\"1.2.4\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Persistence\/ConversionValuesPersistence.swift",
