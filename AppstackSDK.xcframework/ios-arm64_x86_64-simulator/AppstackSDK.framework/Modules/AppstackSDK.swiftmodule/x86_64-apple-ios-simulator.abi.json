@@ -22340,105 +22340,105 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "StringLiteral",
-      "offset": 530,
+      "offset": 529,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 627,
+      "offset": 626,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 723,
+      "offset": 722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 815,
+      "offset": 814,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 934,
+      "offset": 933,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "Array",
-      "offset": 1082,
+      "offset": 1081,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "StringLiteral",
-      "offset": 1143,
+      "offset": 1142,
       "length": 28,
       "value": "\"com.appstack.pendingEvents\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 1322,
+      "offset": 1321,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 2147,
+      "offset": 2146,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "StringLiteral",
-      "offset": 2337,
+      "offset": 2336,
       "length": 30,
       "value": "\"com.appstack.eventProcessing\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "StringLiteral",
-      "offset": 2507,
+      "offset": 2506,
       "length": 26,
       "value": "\"com.appstack.sharedState\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "Dictionary",
-      "offset": 24787,
+      "offset": 24786,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "IntegerLiteral",
-      "offset": 24916,
+      "offset": 24915,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "IntegerLiteral",
-      "offset": 25066,
+      "offset": 25065,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 25192,
+      "offset": 25191,
       "length": 5,
       "value": "false"
     },
@@ -22781,14 +22781,14 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 211,
+      "offset": 210,
       "length": 25,
       "value": "\"tech.app-stack.appstack\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 271,
+      "offset": 270,
       "length": 13,
       "value": "\"AppstackSDK\""
     }
