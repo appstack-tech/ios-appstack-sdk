@@ -64,7 +64,7 @@ import AppstackSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Appstack.shared.configure("your_verification_key")
+        Appstack.shared.configure("your_api_key")
         return true
     }
 }
@@ -77,7 +77,7 @@ import AppstackSDK
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        Appstack.shared.configure("your_verification_key")
+        Appstack.shared.configure("your_api_key")
     }
 }
 ```
@@ -91,7 +91,7 @@ import AppstackSDK
 @main
 struct MyApp: App {
     init() {
-        Appstack.shared.configure("your_verification_key")
+        Appstack.shared.configure("your_api_key")
     }
     
     var body: some Scene {
@@ -246,7 +246,7 @@ import AppstackSDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Configure Appstack
-        Appstack.shared.configure("your_verification_key")
+        Appstack.shared.configure("your_api_key")
         
         // Enable ASA Attribution if tracking is already decided
         if #available(iOS 14.3, *) {
