@@ -21,7 +21,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
  dependencies: [
-    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "1.0.0")
+    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "2.0.0")
  ]
 ```
 
@@ -106,26 +106,72 @@ struct MyApp: App {
 
 ## 📡 Sending Events
 
+### **Basic Event Tracking**
+
 To send events defined in the **Appstack platform (Mapping section)**:
 
 ```swift
 Appstack.shared.sendEvent(event: "event_name")
 ```
 
+### **Event Tracking with Parameters**
+
+The SDK supports sending additional parameters with events. Currently, the **revenue** parameter is supported for tracking monetary values:
+
+```swift
+// Send event with revenue parameter
+Appstack.shared.sendEvent(
+    event: "purchase_completed", 
+    params: [.revenue: 29.99]
+)
+```
+
+### **Available Parameters**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `revenue` | `Double`, `Int`, `Float`, or `String` | Monetary value associated with the event |
+
 ### **Examples:**
 
 ```swift
-// Send a purchase event
-Appstack.shared.sendEvent(event: "purchase_completed")
-
-// Send a registration event
+// Send a basic event
 Appstack.shared.sendEvent(event: "user_registered")
+
+// Send a purchase event with revenue
+Appstack.shared.sendEvent(
+    event: "purchase_completed", 
+    params: [.revenue: 49.99]
+)
+
+// Send event with integer revenue
+Appstack.shared.sendEvent(
+    event: "subscription_purchased", 
+    params: [.revenue: 10]
+)
+
+// Send event with string revenue (will be converted to Double)
+Appstack.shared.sendEvent(
+    event: "in_app_purchase", 
+    params: [.revenue: "5.99"]
+)
 ```
+
+### **Revenue Range Matching**
+
+The SDK automatically matches events with revenue parameters to configured **revenue ranges** in the Appstack platform:
+
+- Events are tracked with their revenue values
+- The SDK evaluates if the revenue falls within the configured ranges
+- Conversion values are triggered when revenue requirements are met
+- Multiple events can contribute to the same conversion value
 
 ### ⚠️ **Important Notes:**
 
-- Always **initialize the SDK** before sending events.
-- Event names **must match** those defined in the **Appstack platform**.
+- Always **initialize the SDK** before sending events
+- Event names **must match** those defined in the **Appstack platform**
+- Revenue parameters support automatic type conversion (`Double`, `Int`, `Float`, `String`)
+- Revenue ranges are configured in the Appstack platform and automatically synchronized
 
 ---
 
@@ -134,7 +180,7 @@ Appstack.shared.sendEvent(event: "user_registered")
 ### ✅ **Compatibility**
 
 - Requires **iOS 14.3+**
-- Works with **AppstackSDK version 1.0.0 or later**
+- Works with **AppstackSDK version 2.0.0 or later**
 
 ### 📊 **Attribution Data Collection**
 
@@ -233,6 +279,26 @@ func requestTrackingPermission() {
 - **Standard attribution** works even if the user denies tracking.
 - **Attribution data may take up to 24 hours** to appear in the Appstack dashboard.
 - **iOS 14.3+**: Implement **ATT permission request** before enabling ASA tracking.
+
+---
+
+## 🔧 Advanced Configuration
+
+### **SDK Behavior**
+
+The SDK automatically:
+- Fetches configuration from Appstack servers
+- Manages conversion value updates based on event tracking
+- Handles revenue range matching for conversion optimization
+- Processes events in time-based windows (0-2 days, 3-7 days, 8-35 days)
+- Queues events when configuration is not ready
+
+### **Event Processing**
+
+- Events are processed asynchronously to avoid blocking the main thread
+- The SDK queues events if configuration is not yet loaded
+- Revenue parameters are automatically validated and converted to numeric values
+- Events are matched against configured revenue ranges in real-time
 
 ---
 
