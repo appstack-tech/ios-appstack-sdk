@@ -2,14 +2,21 @@ import Foundation
 
 struct Constants {
     
-//#error("Modify the appstack verification key in Constants.swift, then comment this line out.")
-    static let appstackVerificationKey = "YOUR_APPSTACK_VERIFICATION_KEY"
-//#error("Modify the appId in Constants.swift, then comment this line out.")
+    // MARK: - SDK Configuration
+    // Replace with your actual Appstack api key from the dashboard
+    // Get your key from: https://dashboard.appstack.com/settings
+    //#error("Modify the appstack api key in Constants.swift, then comment this line out.")
+    static let appstackApiKey = "YOUR_APPSTACK_API_KEY"
+    
+    // Replace with your actual App ID for Meta/Facebook SDK
     static let appId = "YOUR_APP_ID"
-//#error("Modify the tiktokAppId in Constants.swift, then comment this line out.")
+    
+    // Replace with your actual TikTok App ID
     static let tiktokAppId = "YOUR_TIKTOK_APP_ID"
     
-    // Event names
+    // MARK: - Event Names
+    // These event names should match those configured in your Appstack dashboard
+    // for proper conversion tracking and revenue range matching
     struct Events {
         static let signup = "signup"
         static let login = "login"
@@ -25,7 +32,8 @@ struct Constants {
         static let viewHome = "view_home"
     }
     
-    // Sample products with details
+    // MARK: - Sample Products
+    // Sample products with details for demonstration
     static let products: [Product] = [
         Product(
             id: "1",

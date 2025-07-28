@@ -18,20 +18,20 @@ class CartManager: ObservableObject {
                     parameters: [
                         "product_id": product.id,
                         "product_name": product.name,
-                        "price": product.price,
+                        "revenue": product.price, // Use revenue for better conversion tracking
                         "quantity": self.cart[index].quantity
                     ]
                 )
             } else {
                 self.cart.append(CartItem(product: product, quantity: 1))
                 
-                // Send event for adding to cart
+                // Send event for adding to cart with revenue
                 TrackingManager.shared.trackEvent(
                     name: Constants.Events.addToCart,
                     parameters: [
                         "product_id": product.id,
                         "product_name": product.name,
-                        "price": product.price
+                        "revenue": product.price // Use revenue parameter for conversion tracking
                     ]
                 )
             }
@@ -49,7 +49,7 @@ class CartManager: ObservableObject {
                 parameters: [
                     "product_id": product.id,
                     "product_name": product.name,
-                    "price": product.price
+                    "revenue": product.price
                 ]
             )
             cart.remove(at: index)
@@ -67,7 +67,7 @@ class CartManager: ObservableObject {
                 parameters: [
                     "product_id": cart[index].product.id,
                     "product_name": cart[index].product.name,
-                    "price": cart[index].product.price,
+                    "revenue": cart[index].product.price,
                     "quantity": newQuantity
                 ]
             )
@@ -88,16 +88,18 @@ class CartManager: ObservableObject {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            // Send purchase event
+            // Send purchase event with total revenue
+            // This is the most important event for conversion tracking
             TrackingManager.shared.trackEvent(
                 name: Constants.Events.purchase,
                 parameters: [
-                    "value": totalValue,
+                    "revenue": totalValue, // Primary revenue parameter for conversion tracking
                     "currency": "USD",
-                    "items": items
+                    "items": items,
+                    "item_count": self.cart.count
                 ]
             )
-            SKAdNetwork.updatePostbackConversionValue(60, coarseValue: .high)
+            
             self.cart.removeAll()
             self.isLoading = false
         }

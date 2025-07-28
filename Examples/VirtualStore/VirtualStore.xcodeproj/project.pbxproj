@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		281E67212D86AF0F000A7445 /* AppstackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 281E67202D86AF0F000A7445 /* AppstackSDK */; };
+		28C734422E37301D007AF24C /* AppstackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 28C734412E37301D007AF24C /* AppstackSDK */; };
 		28CB3FB92D93C9ED0071F941 /* TikTokBusinessSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 28CB3FB82D93C9ED0071F941 /* TikTokBusinessSDK */; };
 		28D9BF702D87EBAB003A39A7 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 28D9BF6F2D87EBAB003A39A7 /* FacebookCore */; };
 		28D9BF732D87F367003A39A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 28D9BF722D87F367003A39A7 /* FirebaseAnalytics */; };
@@ -44,11 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C734422E37301D007AF24C /* AppstackSDK in Frameworks */,
 				28D9BF752D87F367003A39A7 /* FirebaseCore in Frameworks */,
 				28CB3FB92D93C9ED0071F941 /* TikTokBusinessSDK in Frameworks */,
 				28D9BF702D87EBAB003A39A7 /* FacebookCore in Frameworks */,
 				28D9BF732D87F367003A39A7 /* FirebaseAnalytics in Frameworks */,
-				281E67212D86AF0F000A7445 /* AppstackSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,11 +91,11 @@
 			);
 			name = VirtualStore;
 			packageProductDependencies = (
-				281E67202D86AF0F000A7445 /* AppstackSDK */,
 				28D9BF6F2D87EBAB003A39A7 /* FacebookCore */,
 				28D9BF722D87F367003A39A7 /* FirebaseAnalytics */,
 				28D9BF742D87F367003A39A7 /* FirebaseCore */,
 				28CB3FB82D93C9ED0071F941 /* TikTokBusinessSDK */,
+				28C734412E37301D007AF24C /* AppstackSDK */,
 			);
 			productName = VirtualStore;
 			productReference = 284F8C662D7EC30F00BAAD66 /* VirtualStore.app */;
@@ -109,7 +109,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					284F8C652D7EC30F00BAAD66 = {
 						CreatedOnToolsVersion = 16.2;
@@ -126,10 +126,10 @@
 			mainGroup = 284F8C5D2D7EC30F00BAAD66;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				281E671F2D86AF0F000A7445 /* XCRemoteSwiftPackageReference "appstack-ios-sdk" */,
 				28D9BF6E2D87EBAB003A39A7 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				28D9BF712D87F367003A39A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				28CB3FB72D93C9ED0071F941 /* XCRemoteSwiftPackageReference "tiktok-business-ios-sdk" */,
+				28C734402E37301D007AF24C /* XCRemoteSwiftPackageReference "ios-appstack-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 284F8C672D7EC30F00BAAD66 /* Products */;
@@ -197,6 +197,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8CCG744V3R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -260,6 +261,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8CCG744V3R;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -289,7 +291,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VirtualStore/Preview Content\"";
-				DEVELOPMENT_TEAM = 8CCG744V3R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VirtualStore/Info.plist;
@@ -320,7 +321,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VirtualStore/Preview Content\"";
-				DEVELOPMENT_TEAM = 8CCG744V3R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VirtualStore/Info.plist;
@@ -367,9 +367,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		281E671F2D86AF0F000A7445 /* XCRemoteSwiftPackageReference "appstack-ios-sdk" */ = {
+		28C734402E37301D007AF24C /* XCRemoteSwiftPackageReference "ios-appstack-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/appstack-tech/appstack-ios-sdk";
+			repositoryURL = "https://github.com/appstack-tech/ios-appstack-sdk";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -402,9 +402,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		281E67202D86AF0F000A7445 /* AppstackSDK */ = {
+		28C734412E37301D007AF24C /* AppstackSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 281E671F2D86AF0F000A7445 /* XCRemoteSwiftPackageReference "appstack-ios-sdk" */;
+			package = 28C734402E37301D007AF24C /* XCRemoteSwiftPackageReference "ios-appstack-sdk" */;
 			productName = AppstackSDK;
 		};
 		28CB3FB82D93C9ED0071F941 /* TikTokBusinessSDK */ = {

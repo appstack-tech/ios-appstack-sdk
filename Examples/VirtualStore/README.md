@@ -4,6 +4,12 @@
 
 This comprehensive guide demonstrates how to integrate multiple measurement SDKs (Appstack, Meta, TikTok, and Firebase) in your iOS application while ensuring that only Appstack handles SKAdNetwork (SKAN) postbacks. Following these best practices will help you avoid attribution conflicts and ensure accurate campaign measurement.
 
+**🆕 New in SDK v2.0.0:**
+- Enhanced revenue parameter support for better conversion tracking
+- Improved Apple Search Ads attribution with iOS 14.3+ compatibility
+- Automatic revenue range matching for optimized conversion values
+- Simplified configuration process
+
 ## Why Single-SDK SKAN Handling Matters
 
 When multiple SDKs attempt to set conversion values, it can lead to:
@@ -18,7 +24,7 @@ This guide shows you how to configure each SDK properly while maintaining Appsta
 
 ### 1️⃣ Appstack SDK - Primary SKAN Handler
 
-Appstack will serve as your single source of truth for SKAN measurement.
+Appstack will serve as your single source of truth for SKAN measurement with enhanced revenue tracking.
 
 #### Appstack Installation
 
@@ -27,17 +33,52 @@ Add the Appstack SDK using Swift Package Manager:
 ```swift
 // In Xcode: File > Add Packages...
 // Enter the package URL:
-https://github.com/appstack-io/appstack-ios
+https://github.com/appstack-tech/ios-appstack-sdk
 ```
 
 #### Appstack Configuration
 
+**Step 1: Configure Attribution Endpoint**
+
+Add the following entry to your `Info.plist` file:
+
+```xml
+<key>NSAdvertisingAttributionReportEndpoint</key>
+<string>https://ios-appstack.com/</string>
+```
+
+**Step 2: Initialize the SDK**
+
 ```swift
 // In your AppDelegate or appropriate initialization point
 Appstack.shared.configure("YOUR_APPSTACK_VERIFICATION_KEY")
+```
 
-// For event tracking
-Appstack.shared.sendEvent(event: "purchase")
+**Step 3: Track Events with Revenue Parameters**
+
+```swift
+// Basic event tracking
+Appstack.shared.sendEvent(event: "user_registered")
+
+// Event tracking with revenue (new in v2.0.0)
+Appstack.shared.sendEvent(
+    event: "purchase_completed", 
+    params: [.revenue: 29.99]
+)
+
+// Revenue parameter supports multiple types
+Appstack.shared.sendEvent(event: "subscription", params: [.revenue: 10])     // Int
+Appstack.shared.sendEvent(event: "premium_upgrade", params: [.revenue: 5.99]) // Double
+Appstack.shared.sendEvent(event: "in_app_purchase", params: [.revenue: "9.99"]) // String
+```
+
+**Step 4: Enable Apple Search Ads Attribution**
+
+```swift
+// For iOS 14.3+ compatibility
+if #available(iOS 14.3, *) {
+    AppstackASAAttribution.shared.enableASAAttributionTracking()
+}
 ```
 
 > 📘 **Note**: For complete implementation details, refer to the [Appstack iOS SDK Documentation](https://docs.app-stack.tech/documentation/sdk/quickstart).
@@ -147,56 +188,152 @@ Add the following key to your `Info.plist` file:
 
 > 📘 **Resources**: [Firebase iOS SDK Documentation](https://firebase.google.com/docs/ios/setup) | [Firebase Analytics Documentation](https://firebase.google.com/docs/analytics/get-started?platform=ios)
 
-## Unified Event Tracking Implementation
+## Enhanced Event Tracking Implementation
 
-For consistent event tracking across all SDKs, implement a centralized tracking manager:
+For consistent event tracking across all SDKs with revenue optimization, implement a centralized tracking manager:
 
 ```swift
 class TrackingManager {
     static let shared = TrackingManager()
     
     func trackEvent(name: String, parameters: [String: Any]? = nil) {
-        // Log to Appstack (primary SKAN handler)
-        Appstack.shared.sendEvent(event: name)
+        // Send to Appstack with revenue parameter extraction
+        if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
+            Appstack.shared.sendEvent(event: name, params: [.revenue: revenue])
+        } else {
+            Appstack.shared.sendEvent(event: name)
+        }
         
-        // Log to Meta
+        // Send to other SDKs
         AppEvents.shared.logEvent(AppEvents.Name(name))
-        
-        // Log to TikTok
         TikTokBusiness.trackTTEvent(TikTokBaseEvent(eventName: name))
-        
-        // Log to Firebase
         Analytics.logEvent(name, parameters: parameters)
+    }
+    
+    private func extractRevenue(from parameters: [String: Any]) -> Any? {
+        let revenueKeys = ["revenue", "value", "price", "amount"]
+        for key in revenueKeys {
+            if let value = parameters[key] {
+                return value
+            }
+        }
+        return nil
     }
 }
 ```
 
-## App Tracking Transparency Implementation
+## Revenue Range Matching
 
-For iOS 14.5+, implement the App Tracking Transparency request:
+**🆕 New Feature**: The SDK now automatically matches events with revenue parameters to configured revenue ranges in the Appstack platform:
+
+- Events are tracked with their revenue values
+- The SDK evaluates if the revenue falls within configured ranges
+- Conversion values are triggered when revenue requirements are met
+- Multiple events can contribute to the same conversion value
+
+### Example Revenue Events:
+
+```swift
+// Add to cart with product price
+TrackingManager.shared.trackEvent(
+    name: "add_to_cart",
+    parameters: ["revenue": 29.99, "product_id": "123"]
+)
+
+// Purchase with total order value
+TrackingManager.shared.trackEvent(
+    name: "purchase",
+    parameters: ["revenue": 149.97, "currency": "USD", "item_count": 3]
+)
+```
+
+## Apple Search Ads Attribution (Enhanced)
+
+### ✅ **Compatibility**
+
+- Requires **iOS 14.3+** (improved from previous iOS 15.0+ requirement)
+- Works with **AppstackSDK version 2.0.0 or later**
+
+### 📊 **Attribution Data Collection**
+
+Apple Search Ads attribution is a **two-step process**:
+
+1. **Collect the user's attribution token** and send it to Appstack.
+2. **Appstack requests attribution data** from Apple within **24 hours**.
+
+### 📌 **Standard vs. Detailed Attribution**
+
+| Data Type  | Requires ATT Consent |
+|------------|---------------------|
+| Standard   | No                  |
+| Detailed   | Yes                 |
+
+### 🟢 **Standard Attribution (No User Consent Required)**
+
+```swift
+import AppstackSDK
+
+if #available(iOS 14.3, *) {
+    AppstackASAAttribution.shared.enableASAAttributionTracking()
+}
+```
+
+### 🔵 **Detailed Attribution (Requires User Consent)**
 
 ```swift
 import AppTrackingTransparency
+import AppstackSDK
 
-func requestTrackingPermission() {
-    if #available(iOS 14.0, *) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                switch status {
-                case .authorized:
-                    // User allowed tracking
-                    print("ATTrackingManager: Authorized")
-                case .denied, .restricted, .notDetermined:
-                    // User denied tracking
-                    print("ATTrackingManager: Not authorized")
-                @unknown default:
-                    break
-                }
-            }
+if #available(iOS 14.3, *) {
+    ATTrackingManager.requestTrackingAuthorization { status in
+        // Enable ASA Attribution after getting permission
+        AppstackASAAttribution.shared.enableASAAttributionTracking()
+        
+        switch status {
+        case .authorized:
+            // User allowed tracking - detailed attribution available
+            print("ATTrackingManager: Authorized")
+        case .denied, .restricted, .notDetermined:
+            // User denied tracking - standard attribution still works
+            print("ATTrackingManager: Not authorized")
+        @unknown default:
+            break
         }
     }
 }
 ```
+
+### ✅ **Complete Implementation Example**
+
+```swift
+import UIKit
+import AppTrackingTransparency
+import AppstackSDK
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Configure Appstack
+        Appstack.shared.configure("your_verification_key")
+        
+        // Request tracking permission and enable ASA Attribution
+        if #available(iOS 14.3, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                AppstackASAAttribution.shared.enableASAAttributionTracking()
+            }
+        }
+        
+        return true
+    }
+}
+```
+
+⚠️ **Important Notes:**
+
+- **Detailed attribution** requires **user consent**.
+- **Standard attribution** works even if the user denies tracking.
+- **Attribution data may take up to 24 hours** to appear in the Appstack dashboard.
+- **iOS 14.3+**: Now supports both standard and detailed attribution.
 
 ## Debugging SKAN Events
 
@@ -240,8 +377,10 @@ For more detailed SKAN logs:
 | Practice | Description | Importance |
 |----------|-------------|------------|
 | ✅ Single SKAN Handler | Use Appstack exclusively for SKAN postbacks | Critical |
+| ✅ Revenue Parameters | Use revenue parameters for all purchase events | High |
 | ✅ Consistent Event Naming | Use identical event names across all SDKs | High |
 | ✅ Centralized Tracking | Implement a central tracking manager | High |
+| ✅ ASA Attribution | Enable Apple Search Ads attribution tracking | High |
 | ✅ Thorough Testing | Verify only Appstack sends conversion values | High |
 
 ## Troubleshooting Guide
@@ -259,12 +398,21 @@ For more detailed SKAN logs:
 - Ensure event names are consistent across all SDKs
 - Verify network connectivity during event triggers
 - Check for SDK initialization issues
+- Confirm revenue parameters are being sent correctly
 
 #### Conversion Value Discrepancies
 
 - Confirm Appstack is correctly setting conversion values
-- Review conversion value mapping logic
+- Review conversion value mapping logic in dashboard
 - Verify event triggers for conversion value updates
+- Check revenue range configuration
+
+#### Revenue Parameters Not Working
+
+- Ensure you're using the correct parameter key: `.revenue`
+- Verify revenue values are numeric (Double, Int, Float, or String)
+- Check that events with revenue are configured in the Appstack dashboard
+- Review revenue range settings
 
 #### No SKAN Logs Visible
 
@@ -276,6 +424,9 @@ For more detailed SKAN logs:
 
 - [Apple's SKAdNetwork Documentation](https://developer.apple.com/documentation/storekit/skadnetwork)
 - [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency)
-- [Appstack SKAN Documentation](https://docs.app-stack.tech/documentation/sdk/quickstart)
+- [Appstack SDK Documentation](https://docs.app-stack.tech/documentation/sdk/quickstart)
+- [Apple Search Ads Attribution](https://searchads.apple.com/help/reporting/0028-apple-search-ads-attribution-api)
 
 ---
+
+**📧 Support**: For questions or issues, contact <support@appstack.com>

@@ -15,9 +15,9 @@ class TrackingManager: ObservableObject {
     
     func configureSDKs() {
         // Configure Appstack SDK
-//        Appstack.shared.configure(Constants.appstackVerificationKey)
+        Appstack.shared.configure(Constants.appstackApiKey)
         
-        // Configure SDKs
+        // Configure other SDKs
         configureFacebookSDK()
         configureTiktokSDK()
         configureFirebaseSDK()
@@ -32,16 +32,15 @@ class TrackingManager: ObservableObject {
     /// - Parameters:
     ///   - name: The name of the event to track.
     ///   - parameters: Optional parameters to include with the event.
-    ///     Note: For the purpose of this example, which focuses on SKAN integration,
-    ///     these parameters are not being used for SKAN events
-    ///     (as SKAN doesn't support parameters).
-    ///     However, this parameter is included to demonstrate how this manager could be used
-    ///     for centralizing all analytics tracking beyond SKAN, where sending additional
-    ///     parameters with events would be valuable for more detailed analytics.
+    ///     For Appstack SDK, revenue parameters are automatically extracted
+    ///     and sent using the new .revenue parameter format.
     func trackEvent(name: String, parameters: [String: Any]? = nil) {
-        // Send event to Appstack
-//        Appstack.shared.sendEvent(event: name)
-        
+        // Send event to Appstack with revenue parameter if available
+        if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
+            Appstack.shared.sendEvent(event: name, params: [.revenue: revenue])
+        } else {
+            Appstack.shared.sendEvent(event: name)
+        }
         
         // Send event to Meta
         AppEvents.shared.logEvent(AppEvents.Name(name))
@@ -53,6 +52,22 @@ class TrackingManager: ObservableObject {
         Analytics.logEvent(name, parameters: parameters)
         
         print("📊 Event '\(name)' sent to all SDKs")
+    }
+    
+    /// Extracts revenue value from parameters dictionary
+    /// Supports Double, Int, Float, and String values as per SDK documentation
+    private func extractRevenue(from parameters: [String: Any]) -> Any? {
+        // Check for common revenue parameter names
+        let revenueKeys = ["value", "revenue", "price", "amount"]
+        
+        for key in revenueKeys {
+            if let value = parameters[key] {
+                // Return the value as-is since SDK supports multiple types
+                return value
+            }
+        }
+        
+        return nil
     }
     
     private func configureFacebookSDK() {
@@ -107,9 +122,11 @@ class TrackingManager: ObservableObject {
     private func setupTracking() {
         if #available(iOS 14.0, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
-                if #available(iOS 15.0, *) {
+                // Enable ASA Attribution tracking after getting permission
+                if #available(iOS 14.3, *) {
                     AppstackASAAttribution.shared.enableASAAttributionTracking()
                 }
+                
                 switch status {
                 case .authorized:
                     Settings.shared.isAdvertiserIDCollectionEnabled = true

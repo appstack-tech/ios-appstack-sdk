@@ -20,10 +20,8 @@
 	<key>GOOGLE_ANALYTICS_REGISTRATION_WITH_AD_NETWORK_ENABLED</key>
 	<false/>
 	<key>NSAdvertisingAttributionReportEndpoint</key>
-	<string>https://ios-appstack.com</string>
+	<string>https://ios-appstack.com/</string>
 	<key>EligibleForAdAttributionKitReengagementPostbackCopies</key>
 	<true/>
-	<key>AttributionCopyEndpoint</key>
-	<string>https://c69a-81-0-45-143.ngrok-free.app</string>
 </dict>
 </plist>

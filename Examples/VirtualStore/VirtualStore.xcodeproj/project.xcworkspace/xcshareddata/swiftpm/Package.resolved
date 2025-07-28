@@ -1,5 +1,5 @@
 {
-  "originHash" : "c4ec78f32684366bfb06e8a1fd6d3314d4c7d4ba90ae952b140fc7744745c61d",
+  "originHash" : "edc657a0ef320abf75fc077cee8ac6f8431da469f567af3f1d59c83fd31bc717",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -17,15 +17,6 @@
       "state" : {
         "revision" : "61b85103a1aeed8218f17c794687781505fbbef5",
         "version" : "11.2.0"
-      }
-    },
-    {
-      "identity" : "appstack-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/appstack-tech/appstack-ios-sdk",
-      "state" : {
-        "branch" : "main",
-        "revision" : "2f5260bea3aa7b9fc1ee38097a9d70c3872afd16"
       }
     },
     {
@@ -98,6 +89,15 @@
       "state" : {
         "revision" : "040d087ac2267d2ddd4cca36c757d1c6a05fdbfe",
         "version" : "101.0.0"
+      }
+    },
+    {
+      "identity" : "ios-appstack-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/appstack-tech/ios-appstack-sdk",
+      "state" : {
+        "branch" : "main",
+        "revision" : "89acfb6c1a0cc3b6660d0c7dbb3bab894b44fb71"
       }
     },
     {
