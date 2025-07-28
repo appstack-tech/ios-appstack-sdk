@@ -20,5 +20,111 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A66A1C8-002D-4B58-9616-243F528DA30B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VirtualStore/Managers/CartManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "purchase()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EA8CDB4-FF8A-4CE9-93DA-14FF14BD22FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VirtualStore/Managers/AuthManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6EA8CDB4-FF8A-4CE9-93DA-14FF14BD22FF - d67ba7b5e98ee4a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for VirtualStore.AuthManager.login() async -&gt; ()"
+                  moduleName = "VirtualStore.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antoniojimenezmartinez/Developer/Appstack/ios-sdk/appstack-ios-sdk-dist/Examples/VirtualStore/VirtualStore/Managers/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+               <Location
+                  uuid = "6EA8CDB4-FF8A-4CE9-93DA-14FF14BD22FF - ea3552fa0a34acb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for VirtualStore.AuthManager.login() async -&gt; ()"
+                  moduleName = "VirtualStore.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antoniojimenezmartinez/Developer/Appstack/ios-sdk/appstack-ios-sdk-dist/Examples/VirtualStore/VirtualStore/Managers/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+               <Location
+                  uuid = "6EA8CDB4-FF8A-4CE9-93DA-14FF14BD22FF - da73387ba7a040a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for VirtualStore.AuthManager.login() async -&gt; ()"
+                  moduleName = "VirtualStore.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antoniojimenezmartinez/Developer/Appstack/ios-sdk/appstack-ios-sdk-dist/Examples/VirtualStore/VirtualStore/Managers/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+               <Location
+                  uuid = "6EA8CDB4-FF8A-4CE9-93DA-14FF14BD22FF - a476fb5a40aaeea6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for VirtualStore.AuthManager.login() async -&gt; ()"
+                  moduleName = "VirtualStore.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antoniojimenezmartinez/Developer/Appstack/ios-sdk/appstack-ios-sdk-dist/Examples/VirtualStore/VirtualStore/Managers/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DECC001-3505-48AC-A69F-4337EA404F17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VirtualStore/Managers/AuthManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "login()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

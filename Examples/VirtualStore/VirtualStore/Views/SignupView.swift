@@ -40,7 +40,9 @@ struct SignupView: View {
             .padding(.horizontal)
             
             Button {
-                authManager.login()
+                Task {
+                    await authManager.login()
+                }
             } label: {
                 HStack {
                     Spacer()

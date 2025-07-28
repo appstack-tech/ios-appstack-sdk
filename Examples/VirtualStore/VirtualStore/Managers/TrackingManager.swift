@@ -15,7 +15,7 @@ class TrackingManager: ObservableObject {
     
     func configureSDKs() {
         // Configure Appstack SDK
-        Appstack.shared.configure(Constants.appstackVerificationKey)
+//        Appstack.shared.configure(Constants.appstackVerificationKey)
         
         // Configure SDKs
         configureFacebookSDK()
@@ -40,7 +40,8 @@ class TrackingManager: ObservableObject {
     ///     parameters with events would be valuable for more detailed analytics.
     func trackEvent(name: String, parameters: [String: Any]? = nil) {
         // Send event to Appstack
-        Appstack.shared.sendEvent(event: name)
+//        Appstack.shared.sendEvent(event: name)
+        
         
         // Send event to Meta
         AppEvents.shared.logEvent(AppEvents.Name(name))
@@ -112,10 +113,8 @@ class TrackingManager: ObservableObject {
                 switch status {
                 case .authorized:
                     Settings.shared.isAdvertiserIDCollectionEnabled = true
-                    Settings.shared.isAdvertiserTrackingEnabled = true
                 case .denied, .notDetermined, .restricted:
                     Settings.shared.isAdvertiserIDCollectionEnabled = false
-                    Settings.shared.isAdvertiserTrackingEnabled = true
                 @unknown default:
                     fatalError("Invalid authorization status")
                 }

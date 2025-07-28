@@ -1,21 +1,35 @@
 import Foundation
+import AdAttributionKit
+import StoreKit
 import SwiftUI
 
 class AuthManager: ObservableObject {
     @Published var isLoggedIn = false
     @Published var isLoading = false
     
-    func login() {
+    func login() async {
         isLoading = true
         
         // Simulate server delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        //DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.isLoggedIn = true
             self.isLoading = false
             
             // Send signup event
             TrackingManager.shared.trackEvent(name: Constants.Events.signup)
-        }
+            //SKAdNetwork.updatePostbackConversionValue(1, coarseValue: .low)
+            let postbackUpdate = PostbackUpdate(
+                fineConversionValue: 1,
+                lockPostback: false,
+                coarseConversionValue: .low,
+                conversionTypes: nil
+            )
+            do {
+                try await AdAttributionKit.Postback.updateConversionValue(postbackUpdate)
+            } catch {
+                print("Attribution: AdAttributionKit postback failed")
+            }
+        //}
     }
     
     func logout() {

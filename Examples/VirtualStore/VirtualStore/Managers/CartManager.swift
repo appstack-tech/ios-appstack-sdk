@@ -1,4 +1,5 @@
 import Foundation
+import StoreKit
 import SwiftUI
 
 class CartManager: ObservableObject {
@@ -96,6 +97,7 @@ class CartManager: ObservableObject {
                     "items": items
                 ]
             )
+            SKAdNetwork.updatePostbackConversionValue(60, coarseValue: .high)
             self.cart.removeAll()
             self.isLoading = false
         }
