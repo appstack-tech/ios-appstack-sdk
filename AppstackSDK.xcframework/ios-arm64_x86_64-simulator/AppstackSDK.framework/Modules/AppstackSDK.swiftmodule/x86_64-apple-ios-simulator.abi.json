@@ -7365,6 +7365,89 @@
         "printedName": "EventServerLogApiClient",
         "children": [
           {
+            "kind": "Var",
+            "name": "asaAttributionRepository",
+            "printedName": "asaAttributionRepository",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ASAAttributionTrackingRepositoryProtocol",
+                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
+                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK23EventServerLogApiClientC24asaAttributionRepository33_D010694E5A59F40457C11C01A4731084LLAA022ASAAttributionTrackingJ8Protocol_pSgvp",
+            "mangledName": "$s11AppstackSDK23EventServerLogApiClientC24asaAttributionRepository33_D010694E5A59F40457C11C01A4731084LLAA022ASAAttributionTrackingJ8Protocol_pSgvp",
+            "moduleName": "AppstackSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(networkManager:appstackVerificationKey:asaAttributionRepository:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EventServerLogApiClient",
+                "printedName": "AppstackSDK.EventServerLogApiClient",
+                "usr": "s:11AppstackSDK23EventServerLogApiClientC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkManagerProtocol",
+                "printedName": "any AppstackSDK.NetworkManagerProtocol",
+                "usr": "s:11AppstackSDK22NetworkManagerProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ASAAttributionTrackingRepositoryProtocol",
+                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
+                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11AppstackSDK23EventServerLogApiClientC14networkManager23appstackVerificationKey24asaAttributionRepositoryAcA07NetworkI8Protocol_p_SSAA022ASAAttributionTrackingoQ0_pSgtcfc",
+            "mangledName": "$s11AppstackSDK23EventServerLogApiClientC14networkManager23appstackVerificationKey24asaAttributionRepositoryAcA07NetworkI8Protocol_p_SSAA022ASAAttributionTrackingoQ0_pSgtcfc",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "logEvent",
             "printedName": "logEvent(_:)",
@@ -7437,7 +7520,6 @@
           "RawDocComment"
         ],
         "superclassUsr": "s:11AppstackSDK13BaseApiClientC",
-        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "AppstackSDK.BaseApiClient"
         ],
@@ -9665,6 +9747,95 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "attributionDetails",
+            "printedName": "attributionDetails",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvp",
+            "mangledName": "$s11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvp",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 6,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvg",
+                "mangledName": "$s11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvg",
+                "moduleName": "AppstackSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "TypeDecl",
             "name": "CodingKeys",
             "printedName": "CodingKeys",
@@ -9896,6 +10067,44 @@
                 "mangledName": "$s11AppstackSDK21EventServerLogRequestV10CodingKeysO10sdkVersionyA2EmF",
                 "moduleName": "AppstackSDK",
                 "fixedbinaryorder": 5
+              },
+              {
+                "kind": "Var",
+                "name": "attributionDetails",
+                "printedName": "attributionDetails",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppstackSDK.EventServerLogRequest.CodingKeys.Type) -> AppstackSDK.EventServerLogRequest.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "AppstackSDK.EventServerLogRequest.CodingKeys",
+                        "usr": "s:11AppstackSDK21EventServerLogRequestV10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppstackSDK.EventServerLogRequest.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "AppstackSDK.EventServerLogRequest.CodingKeys",
+                            "usr": "s:11AppstackSDK21EventServerLogRequestV10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11AppstackSDK21EventServerLogRequestV10CodingKeysO18attributionDetailsyA2EmF",
+                "mangledName": "$s11AppstackSDK21EventServerLogRequestV10CodingKeysO18attributionDetailsyA2EmF",
+                "moduleName": "AppstackSDK",
+                "fixedbinaryorder": 6
               },
               {
                 "kind": "Constructor",
@@ -10227,7 +10436,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(event:)",
+            "printedName": "init(event:asaAttributionRepository:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10240,38 +10449,27 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK21EventServerLogRequestV5eventACSS_tcfc",
-            "mangledName": "$s11AppstackSDK21EventServerLogRequestV5eventACSS_tcfc",
-            "moduleName": "AppstackSDK",
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "EventServerLogRequest",
-                "printedName": "AppstackSDK.EventServerLogRequest",
-                "usr": "s:11AppstackSDK21EventServerLogRequestV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
+                "name": "Optional",
+                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ASAAttributionTrackingRepositoryProtocol",
+                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
+                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppstackSDK21EventServerLogRequestV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s11AppstackSDK21EventServerLogRequestV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:11AppstackSDK21EventServerLogRequestV5event24asaAttributionRepositoryACSS_AA022ASAAttributionTrackingJ8Protocol_pSgtcfc",
+            "mangledName": "$s11AppstackSDK21EventServerLogRequestV5event24asaAttributionRepositoryACSS_AA022ASAAttributionTrackingJ8Protocol_pSgtcfc",
             "moduleName": "AppstackSDK",
-            "implicit": true,
-            "throwing": true,
             "init_kind": "Designated"
           },
           {
@@ -10295,9 +10493,36 @@
             "usr": "s:11AppstackSDK21EventServerLogRequestV6encode2toys7Encoder_p_tKF",
             "mangledName": "$s11AppstackSDK21EventServerLogRequestV6encode2toys7Encoder_p_tKF",
             "moduleName": "AppstackSDK",
-            "implicit": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EventServerLogRequest",
+                "printedName": "AppstackSDK.EventServerLogRequest",
+                "usr": "s:11AppstackSDK21EventServerLogRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11AppstackSDK21EventServerLogRequestV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11AppstackSDK21EventServerLogRequestV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "AppstackSDK",
+            "throwing": true,
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Struct",
@@ -22580,7 +22805,7 @@
       "kind": "StringLiteral",
       "offset": 1012,
       "length": 7,
-      "value": "\"2.0.0\""
+      "value": "\"2.0.2\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
@@ -22592,44 +22817,51 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
       "kind": "StringLiteral",
-      "offset": 276,
+      "offset": 319,
       "length": 10,
       "value": "\"event_id\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
       "kind": "StringLiteral",
-      "offset": 312,
+      "offset": 355,
       "length": 12,
       "value": "\"event_name\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
       "kind": "StringLiteral",
-      "offset": 351,
+      "offset": 394,
       "length": 13,
       "value": "\"appstack_id\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
       "kind": "StringLiteral",
-      "offset": 386,
+      "offset": 429,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
       "kind": "StringLiteral",
-      "offset": 420,
+      "offset": 463,
       "length": 12,
       "value": "\"event_type\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
       "kind": "StringLiteral",
-      "offset": 459,
+      "offset": 502,
       "length": 13,
       "value": "\"sdk_version\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 21,
+      "value": "\"attribution_details\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Model\/ConversionValues.swift",
