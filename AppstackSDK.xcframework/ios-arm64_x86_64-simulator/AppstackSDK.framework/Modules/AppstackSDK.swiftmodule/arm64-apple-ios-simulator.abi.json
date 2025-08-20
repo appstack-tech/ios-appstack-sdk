@@ -977,7 +977,7 @@
           {
             "kind": "Function",
             "name": "configure",
-            "printedName": "configure(_:)",
+            "printedName": "configure(_:isDebug:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -989,11 +989,18 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppstackSDK0A0C9configureyySSF",
-            "mangledName": "$s11AppstackSDK0A0C9configureyySSF",
+            "usr": "s:11AppstackSDK0A0C9configure_7isDebugySS_SbtF",
+            "mangledName": "$s11AppstackSDK0A0C9configure_7isDebugySS_SbtF",
             "moduleName": "AppstackSDK",
             "isOpen": true,
             "declAttributes": [
@@ -1005,7 +1012,7 @@
           {
             "kind": "Function",
             "name": "sendEvent",
-            "printedName": "sendEvent(event:params:)",
+            "printedName": "sendEvent(event:revenue:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1021,26 +1028,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[AppstackSDK.ASEventParam : Any]?",
+                "printedName": "Foundation.Decimal?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[AppstackSDK.ASEventParam : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASEventParam",
-                        "printedName": "AppstackSDK.ASEventParam",
-                        "usr": "s:11AppstackSDK12ASEventParamO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "Decimal",
+                    "printedName": "Foundation.Decimal",
+                    "usr": "c:@SA@NSDecimal"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -1048,8 +1042,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppstackSDK0A0C9sendEvent5event6paramsySS_SDyAA12ASEventParamOypGSgtF",
-            "mangledName": "$s11AppstackSDK0A0C9sendEvent5event6paramsySS_SDyAA12ASEventParamOypGSgtF",
+            "usr": "s:11AppstackSDK0A0C9sendEvent5event7revenueySS_So9NSDecimalaSgtF",
+            "mangledName": "$s11AppstackSDK0A0C9sendEvent5event7revenueySS_So9NSDecimalaSgtF",
             "moduleName": "AppstackSDK",
             "isOpen": true,
             "declAttributes": [
@@ -2459,8 +2453,8 @@
           },
           {
             "kind": "Function",
-            "name": "enableASAAttributionTracking",
-            "printedName": "enableASAAttributionTracking()",
+            "name": "enableAppleAdsAttribution",
+            "printedName": "enableAppleAdsAttribution()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2469,8 +2463,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11AppstackSDK0A14ASAAttributionC06enableC8TrackingyyF",
-            "mangledName": "$s11AppstackSDK0A14ASAAttributionC06enableC8TrackingyyF",
+            "usr": "s:11AppstackSDK0A14ASAAttributionC25enableAppleAdsAttributionyyF",
+            "mangledName": "$s11AppstackSDK0A14ASAAttributionC25enableAppleAdsAttributionyyF",
             "moduleName": "AppstackSDK",
             "declAttributes": [
               "Final",
@@ -6247,372 +6241,6 @@
             "printedName": "BitwiseCopyable",
             "usr": "s:s15BitwiseCopyableP",
             "mangledName": "$ss15BitwiseCopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ASEventParam",
-        "printedName": "ASEventParam",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "revenue",
-            "printedName": "revenue",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(AppstackSDK.ASEventParam.Type) -> AppstackSDK.ASEventParam",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASEventParam",
-                    "printedName": "AppstackSDK.ASEventParam",
-                    "usr": "s:11AppstackSDK12ASEventParamO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "AppstackSDK.ASEventParam.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASEventParam",
-                        "printedName": "AppstackSDK.ASEventParam",
-                        "usr": "s:11AppstackSDK12ASEventParamO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11AppstackSDK12ASEventParamO7revenueyA2CmF",
-            "mangledName": "$s11AppstackSDK12ASEventParamO7revenueyA2CmF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "key",
-            "printedName": "key",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK12ASEventParamO3keySSvp",
-            "mangledName": "$s11AppstackSDK12ASEventParamO3keySSvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK12ASEventParamO3keySSvg",
-                "mangledName": "$s11AppstackSDK12ASEventParamO3keySSvg",
-                "moduleName": "AppstackSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "parameters",
-            "printedName": "parameters(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[AppstackSDK.ASEventParam : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASEventParam",
-                    "printedName": "AppstackSDK.ASEventParam",
-                    "usr": "s:11AppstackSDK12ASEventParamO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK12ASEventParamO10parametersySDySSypGSDyACypGFZ",
-            "mangledName": "$s11AppstackSDK12ASEventParamO10parametersySDySSypGSDyACypGFZ",
-            "moduleName": "AppstackSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AppstackSDK.ASEventParam?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASEventParam",
-                    "printedName": "AppstackSDK.ASEventParam",
-                    "usr": "s:11AppstackSDK12ASEventParamO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK12ASEventParamO8rawValueACSgSS_tcfc",
-            "mangledName": "$s11AppstackSDK12ASEventParamO8rawValueACSgSS_tcfc",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK12ASEventParamO8rawValueSSvp",
-            "mangledName": "$s11AppstackSDK12ASEventParamO8rawValueSSvp",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK12ASEventParamO8rawValueSSvg",
-                "mangledName": "$s11AppstackSDK12ASEventParamO8rawValueSSvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "allCases",
-            "printedName": "allCases",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[AppstackSDK.ASEventParam]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASEventParam",
-                    "printedName": "AppstackSDK.ASEventParam",
-                    "usr": "s:11AppstackSDK12ASEventParamO"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK12ASEventParamO8allCasesSayACGvpZ",
-            "mangledName": "$s11AppstackSDK12ASEventParamO8allCasesSayACGvpZ",
-            "moduleName": "AppstackSDK",
-            "static": true,
-            "implicit": true,
-            "declAttributes": [
-              "Nonisolated"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[AppstackSDK.ASEventParam]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASEventParam",
-                        "printedName": "AppstackSDK.ASEventParam",
-                        "usr": "s:11AppstackSDK12ASEventParamO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK12ASEventParamO8allCasesSayACGvgZ",
-                "mangledName": "$s11AppstackSDK12ASEventParamO8allCasesSayACGvgZ",
-                "moduleName": "AppstackSDK",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:11AppstackSDK12ASEventParamO",
-        "mangledName": "$s11AppstackSDK12ASEventParamO",
-        "moduleName": "AppstackSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "enumRawTypeName": "String",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CaseIterable",
-            "printedName": "CaseIterable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AllCases",
-                "printedName": "AllCases",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[AppstackSDK.ASEventParam]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASEventParam",
-                        "printedName": "AppstackSDK.ASEventParam",
-                        "usr": "s:11AppstackSDK12ASEventParamO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s12CaseIterableP",
-            "mangledName": "$ss12CaseIterableP"
           }
         ]
       },
@@ -22641,29 +22269,36 @@
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3417,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "Dictionary",
-      "offset": 24786,
+      "offset": 24840,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "IntegerLiteral",
-      "offset": 24915,
+      "offset": 24969,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "IntegerLiteral",
-      "offset": 25065,
+      "offset": 25119,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/Appstack.swift",
       "kind": "BooleanLiteral",
-      "offset": 25191,
+      "offset": 25245,
       "length": 5,
       "value": "false"
     },
@@ -22805,14 +22440,7 @@
       "kind": "StringLiteral",
       "offset": 1012,
       "length": 7,
-      "value": "\"2.0.2\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
-      "kind": "StringLiteral",
-      "offset": 1244,
-      "length": 9,
-      "value": "\"revenue\""
+      "value": "\"2.0.3\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",

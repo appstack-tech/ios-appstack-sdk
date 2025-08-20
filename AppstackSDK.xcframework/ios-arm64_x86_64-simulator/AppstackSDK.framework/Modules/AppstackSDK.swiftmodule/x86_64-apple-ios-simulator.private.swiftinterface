@@ -15,8 +15,8 @@ import os.log
 import os
 @_hasMissingDesignatedInitializers public class Appstack : @unchecked Swift.Sendable {
   public static var shared: AppstackSDK.Appstack
-  public func configure(_ appstackVerificationKey: Swift.String)
-  public func sendEvent(event: Swift.String, params: [AppstackSDK.ASEventParam : Any]? = nil)
+  public func configure(_ appstackVerificationKey: Swift.String, isDebug: Swift.Bool = false)
+  public func sendEvent(event: Swift.String, revenue: Foundation.Decimal? = nil)
   @objc deinit
 }
 extension AppstackSDK.Appstack {
@@ -25,26 +25,7 @@ extension AppstackSDK.Appstack {
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
   public static var shared: AppstackSDK.AppstackASAAttribution
-  final public func enableASAAttributionTracking()
+  final public func enableAppleAdsAttribution()
   final public func disableASAAttributionTracking()
   @objc deinit
 }
-public enum ASEventParam : Swift.String, Swift.CaseIterable {
-  case revenue
-  public var key: Swift.String {
-    get
-  }
-  public static func parameters(_ params: [AppstackSDK.ASEventParam : Any]) -> [Swift.String : Any]
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [AppstackSDK.ASEventParam]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [AppstackSDK.ASEventParam] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension AppstackSDK.ASEventParam : Swift.Equatable {}
-extension AppstackSDK.ASEventParam : Swift.Hashable {}
-extension AppstackSDK.ASEventParam : Swift.RawRepresentable {}
