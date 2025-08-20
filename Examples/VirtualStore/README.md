@@ -60,16 +60,16 @@ Appstack.shared.configure("YOUR_APPSTACK_VERIFICATION_KEY")
 // Basic event tracking
 Appstack.shared.sendEvent(event: "user_registered")
 
-// Event tracking with revenue (new in v2.0.0)
+// Event tracking with revenue (new in v2.0.3)
 Appstack.shared.sendEvent(
     event: "purchase_completed", 
-    params: [.revenue: 29.99]
+    revenue: 29.99
 )
 
-// Revenue parameter supports multiple types
-Appstack.shared.sendEvent(event: "subscription", params: [.revenue: 10])     // Int
-Appstack.shared.sendEvent(event: "premium_upgrade", params: [.revenue: 5.99]) // Double
-Appstack.shared.sendEvent(event: "in_app_purchase", params: [.revenue: "9.99"]) // String
+// Revenue parameter supports Decimal type
+Appstack.shared.sendEvent(event: "subscription", revenue: 10.99)
+Appstack.shared.sendEvent(event: "subscription", revenue: Decimal(10.99))
+
 ```
 
 **Step 4: Enable Apple Search Ads Attribution**
@@ -199,7 +199,7 @@ class TrackingManager {
     func trackEvent(name: String, parameters: [String: Any]? = nil) {
         // Send to Appstack with revenue parameter extraction
         if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
-            Appstack.shared.sendEvent(event: name, params: [.revenue: revenue])
+            Appstack.shared.sendEvent(event: name, revenue: revenue)
         } else {
             Appstack.shared.sendEvent(event: name)
         }
@@ -210,11 +210,11 @@ class TrackingManager {
         Analytics.logEvent(name, parameters: parameters)
     }
     
-    private func extractRevenue(from parameters: [String: Any]) -> Any? {
+    private func extractRevenue(from parameters: [String: Any]) -> Decimal? {
         let revenueKeys = ["revenue", "value", "price", "amount"]
         for key in revenueKeys {
             if let value = parameters[key] {
-                return value
+                return value as? Decimal
             }
         }
         return nil
@@ -429,4 +429,4 @@ For more detailed SKAN logs:
 
 ---
 
-**📧 Support**: For questions or issues, contact <support@appstack.com>
+📩 **[Contact](https://www.appstack.tech/contact)**
