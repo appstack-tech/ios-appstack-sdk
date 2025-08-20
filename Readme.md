@@ -122,15 +122,9 @@ The SDK supports sending additional parameters with events. Currently, the **rev
 // Send event with revenue parameter
 Appstack.shared.sendEvent(
     event: "purchase_completed", 
-    params: [.revenue: 29.99]
+    revenue: 29.99
 )
 ```
-
-### **Available Parameters**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `revenue` | `Double`, `Int`, `Float`, or `String` | Monetary value associated with the event |
 
 ### **Examples:**
 
@@ -138,23 +132,11 @@ Appstack.shared.sendEvent(
 // Send a basic event
 Appstack.shared.sendEvent(event: "user_registered")
 
-// Send a purchase event with revenue
-Appstack.shared.sendEvent(
-    event: "purchase_completed", 
-    params: [.revenue: 49.99]
-)
+// Send event with revenue (recommended for purchase events)
+Appstack.shared.sendEvent(event: "purchase_completed", revenue: 49.99)
 
-// Send event with integer revenue
-Appstack.shared.sendEvent(
-    event: "subscription_purchased", 
-    params: [.revenue: 10]
-)
-
-// Send event with string revenue (will be converted to Double)
-Appstack.shared.sendEvent(
-    event: "in_app_purchase", 
-    params: [.revenue: "5.99"]
-)
+// Revenue parameter accepts Decimal for precise monetary values
+Appstack.shared.sendEvent(event: "subscription_renewed", revenue: Decimal(9.99))
 ```
 
 ### **Revenue Range Matching**
@@ -287,6 +269,7 @@ func requestTrackingPermission() {
 ### **SDK Behavior**
 
 The SDK automatically:
+
 - Fetches configuration from Appstack servers
 - Manages conversion value updates based on event tracking
 - Handles revenue range matching for conversion optimization
@@ -309,4 +292,4 @@ For any questions or issues, please:
 - **Open an issue** in this repository.
 - Contact our **support team** for further assistance.
 
-📩 **Email:** <support@appstack.com>
+📩 **[Contact](https://www.appstack.tech/contact)**
