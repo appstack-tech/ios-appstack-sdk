@@ -1,5 +1,5 @@
 {
-  "originHash" : "edc657a0ef320abf75fc077cee8ac6f8431da469f567af3f1d59c83fd31bc717",
+  "originHash" : "9436f975ffffeb4abe6d2789faa403a726d94e31e1df1e7d544f83bd6fe1a3d2",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -97,7 +97,7 @@
       "location" : "https://github.com/appstack-tech/ios-appstack-sdk",
       "state" : {
         "branch" : "main",
-        "revision" : "89acfb6c1a0cc3b6660d0c7dbb3bab894b44fb71"
+        "revision" : "8853c927009aa0d97d363dbe540b7722cd4c228a"
       }
     },
     {

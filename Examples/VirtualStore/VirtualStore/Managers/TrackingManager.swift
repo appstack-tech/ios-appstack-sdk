@@ -37,7 +37,7 @@ class TrackingManager: ObservableObject {
     func trackEvent(name: String, parameters: [String: Any]? = nil) {
         // Send event to Appstack with revenue parameter if available
         if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
-            Appstack.shared.sendEvent(event: name, params: [.revenue: revenue])
+            Appstack.shared.sendEvent(event: name, revenue: revenue)
         } else {
             Appstack.shared.sendEvent(event: name)
         }
@@ -56,14 +56,14 @@ class TrackingManager: ObservableObject {
     
     /// Extracts revenue value from parameters dictionary
     /// Supports Double, Int, Float, and String values as per SDK documentation
-    private func extractRevenue(from parameters: [String: Any]) -> Any? {
+    private func extractRevenue(from parameters: [String: Any]) -> Decimal? {
         // Check for common revenue parameter names
         let revenueKeys = ["value", "revenue", "price", "amount"]
         
         for key in revenueKeys {
             if let value = parameters[key] {
                 // Return the value as-is since SDK supports multiple types
-                return value
+                return value as? Decimal
             }
         }
         
