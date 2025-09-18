@@ -4,11 +4,13 @@
 
 This comprehensive guide demonstrates how to integrate multiple measurement SDKs (Appstack, Meta, TikTok, and Firebase) in your iOS application while ensuring that only Appstack handles SKAdNetwork (SKAN) postbacks. Following these best practices will help you avoid attribution conflicts and ensure accurate campaign measurement.
 
-**🆕 New in SDK v2.0.0:**
+**🆕 New in SDK v2.1.0:**
 - Enhanced revenue parameter support for better conversion tracking
 - Improved Apple Search Ads attribution with iOS 14.3+ compatibility
 - Automatic revenue range matching for optimized conversion values
 - Simplified configuration process
+- **NEW API**: Updated to use `AppstackAttributionSdk` with `EventType` enum
+- **NEW API**: Enhanced configuration with debug mode and custom endpoints
 
 ## Why Single-SDK SKAN Handling Matters
 
@@ -51,25 +53,39 @@ Add the following entry to your `Info.plist` file:
 
 ```swift
 // In your AppDelegate or appropriate initialization point
-Appstack.shared.configure("YOUR_APPSTACK_VERIFICATION_KEY")
+AppstackAttributionSdk.shared.configure(
+    apiKey: "YOUR_APPSTACK_VERIFICATION_KEY",
+    isDebug: true,  // Use development URL for testing
+    endpointBaseUrl: nil,  // Use default endpoint
+    logLevel: .info  // Set log level
+)
 ```
 
 **Step 3: Track Events with Revenue Parameters**
 
 ```swift
-// Basic event tracking
-Appstack.shared.sendEvent(event: "user_registered")
+// Standard events using EventType enum
+AppstackAttributionSdk.shared.sendEvent(event: .LOGIN)
+AppstackAttributionSdk.shared.sendEvent(event: .PURCHASE, revenue: 29.99)
+AppstackAttributionSdk.shared.sendEvent(event: .SUBSCRIBE, revenue: 10.99)
 
-// Event tracking with revenue (new in v2.0.3)
-Appstack.shared.sendEvent(
-    event: "purchase_completed", 
+// Custom events
+AppstackAttributionSdk.shared.sendEvent(
+    event: .CUSTOM, 
+    name: "user_registered"
+)
+AppstackAttributionSdk.shared.sendEvent(
+    event: .CUSTOM, 
+    name: "purchase_completed", 
     revenue: 29.99
 )
 
 // Revenue parameter supports Decimal type
-Appstack.shared.sendEvent(event: "subscription", revenue: 10.99)
-Appstack.shared.sendEvent(event: "subscription", revenue: Decimal(10.99))
-
+AppstackAttributionSdk.shared.sendEvent(
+    event: .CUSTOM, 
+    name: "subscription", 
+    revenue: Decimal(10.99)
+)
 ```
 
 **Step 4: Enable Apple Search Ads Attribution**
@@ -77,7 +93,7 @@ Appstack.shared.sendEvent(event: "subscription", revenue: Decimal(10.99))
 ```swift
 // For iOS 14.3+ compatibility
 if #available(iOS 14.3, *) {
-    AppstackASAAttribution.shared.enableASAAttributionTracking()
+    AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
 
@@ -196,18 +212,30 @@ For consistent event tracking across all SDKs with revenue optimization, impleme
 class TrackingManager {
     static let shared = TrackingManager()
     
-    func trackEvent(name: String, parameters: [String: Any]? = nil) {
+    // Using EventType enum for type safety
+    func trackEvent(eventType: EventType, customEventName: String? = nil, parameters: [String: Any]? = nil) {
         // Send to Appstack with revenue parameter extraction
         if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
-            Appstack.shared.sendEvent(event: name, revenue: revenue)
+            if eventType == .CUSTOM, let customName = customEventName {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType, name: customName, revenue: revenue)
+            } else {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType, revenue: revenue)
+            }
         } else {
-            Appstack.shared.sendEvent(event: name)
+            if eventType == .CUSTOM, let customName = customEventName {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType, name: customName)
+            } else {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType)
+            }
         }
         
+        // Send to other SDKs using the event name
+        let eventName = eventType == .CUSTOM ? (customEventName ?? "custom_event") : eventType.rawValue.lowercased()
+        
         // Send to other SDKs
-        AppEvents.shared.logEvent(AppEvents.Name(name))
-        TikTokBusiness.trackTTEvent(TikTokBaseEvent(eventName: name))
-        Analytics.logEvent(name, parameters: parameters)
+        AppEvents.shared.logEvent(AppEvents.Name(eventName))
+        TikTokBusiness.trackTTEvent(TikTokBaseEvent(eventName: eventName))
+        Analytics.logEvent(eventName, parameters: parameters)
     }
     
     private func extractRevenue(from parameters: [String: Any]) -> Decimal? {
@@ -236,13 +264,14 @@ class TrackingManager {
 ```swift
 // Add to cart with product price
 TrackingManager.shared.trackEvent(
-    name: "add_to_cart",
+    eventType: .CUSTOM,
+    customEventName: "add_to_cart",
     parameters: ["revenue": 29.99, "product_id": "123"]
 )
 
-// Purchase with total order value
+// Purchase with total order value (using standard PURCHASE event)
 TrackingManager.shared.trackEvent(
-    name: "purchase",
+    eventType: .PURCHASE,
     parameters: ["revenue": 149.97, "currency": "USD", "item_count": 3]
 )
 ```
@@ -252,7 +281,7 @@ TrackingManager.shared.trackEvent(
 ### ✅ **Compatibility**
 
 - Requires **iOS 14.3+** (improved from previous iOS 15.0+ requirement)
-- Works with **AppstackSDK version 2.0.0 or later**
+- Works with **AppstackSDK version 2.1.0 or later**
 
 ### 📊 **Attribution Data Collection**
 
@@ -274,7 +303,7 @@ Apple Search Ads attribution is a **two-step process**:
 import AppstackSDK
 
 if #available(iOS 14.3, *) {
-    AppstackASAAttribution.shared.enableASAAttributionTracking()
+    AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
 
@@ -287,7 +316,7 @@ import AppstackSDK
 if #available(iOS 14.3, *) {
     ATTrackingManager.requestTrackingAuthorization { status in
         // Enable ASA Attribution after getting permission
-        AppstackASAAttribution.shared.enableASAAttributionTracking()
+        AppstackASAAttribution.shared.enableAppleAdsAttribution()
         
         switch status {
         case .authorized:
@@ -313,13 +342,18 @@ import AppstackSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Configure Appstack
-        Appstack.shared.configure("your_verification_key")
+        // Configure Appstack SDK v2.1.0
+        AppstackAttributionSdk.shared.configure(
+            apiKey: "your_verification_key",
+            isDebug: true,  // Use development URL for testing
+            endpointBaseUrl: nil,
+            logLevel: .info
+        )
         
         // Request tracking permission and enable ASA Attribution
         if #available(iOS 14.3, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
-                AppstackASAAttribution.shared.enableASAAttributionTracking()
+                AppstackASAAttribution.shared.enableAppleAdsAttribution()
             }
         }
         

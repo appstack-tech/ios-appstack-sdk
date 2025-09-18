@@ -21,7 +21,8 @@ struct ProductListView: View {
                             .onAppear {
                                 // Send detailed product view event
                                 TrackingManager.shared.trackEvent(
-                                    name: Constants.Events.viewProduct,
+                                    eventType: .CUSTOM,
+                                    customEventName: Constants.Events.viewProduct,
                                     parameters: [
                                         "product_id": product.id,
                                         "product_name": product.name,
@@ -44,7 +45,10 @@ struct ProductListView: View {
                     CartView()
                         .onAppear {
                             // Send cart view event
-                            TrackingManager.shared.trackEvent(name: Constants.Events.viewCart)
+                            TrackingManager.shared.trackEvent(
+                                eventType: .CUSTOM,
+                                customEventName: Constants.Events.viewCart
+                            )
                         }
                 } label: {
                     ZStack(alignment: .topTrailing) {

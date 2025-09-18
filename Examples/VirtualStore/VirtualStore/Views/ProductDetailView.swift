@@ -104,7 +104,10 @@ struct ProductDetailView: View {
                     CartView()
                         .onAppear {
                             // Send cart view event
-                            TrackingManager.shared.trackEvent(name: Constants.Events.viewCart)
+                            TrackingManager.shared.trackEvent(
+                                eventType: .CUSTOM,
+                                customEventName: Constants.Events.viewCart
+                            )
                         }
                 } label: {
                     ZStack(alignment: .topTrailing) {

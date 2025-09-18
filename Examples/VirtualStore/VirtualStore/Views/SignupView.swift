@@ -76,7 +76,10 @@ struct SignupView: View {
         .padding()
         .onAppear {
             // Send signup view event
-            TrackingManager.shared.trackEvent(name: Constants.Events.viewSignup)
+            TrackingManager.shared.trackEvent(
+                eventType: .CUSTOM,
+                customEventName: Constants.Events.viewSignup
+            )
         }
     }
 }

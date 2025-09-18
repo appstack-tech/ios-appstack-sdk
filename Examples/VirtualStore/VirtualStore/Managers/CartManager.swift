@@ -14,7 +14,8 @@ class CartManager: ObservableObject {
                 
                 // Send event for updating cart quantity
                 TrackingManager.shared.trackEvent(
-                    name: Constants.Events.updateCartQuantity,
+                    eventType: .CUSTOM,
+                    customEventName: Constants.Events.updateCartQuantity,
                     parameters: [
                         "product_id": product.id,
                         "product_name": product.name,
@@ -27,7 +28,8 @@ class CartManager: ObservableObject {
                 
                 // Send event for adding to cart with revenue
                 TrackingManager.shared.trackEvent(
-                    name: Constants.Events.addToCart,
+                    eventType: .CUSTOM,
+                    customEventName: Constants.Events.addToCart,
                     parameters: [
                         "product_id": product.id,
                         "product_name": product.name,
@@ -45,7 +47,8 @@ class CartManager: ObservableObject {
             
             // Send event for removing from cart
             TrackingManager.shared.trackEvent(
-                name: Constants.Events.removeFromCart,
+                eventType: .CUSTOM,
+                customEventName: Constants.Events.removeFromCart,
                 parameters: [
                     "product_id": product.id,
                     "product_name": product.name,
@@ -63,7 +66,8 @@ class CartManager: ObservableObject {
             
             // Send event for updating cart quantity
             TrackingManager.shared.trackEvent(
-                name: Constants.Events.updateCartQuantity,
+                eventType: .CUSTOM,
+                customEventName: Constants.Events.updateCartQuantity,
                 parameters: [
                     "product_id": cart[index].product.id,
                     "product_name": cart[index].product.name,
@@ -91,7 +95,7 @@ class CartManager: ObservableObject {
             // Send purchase event with total revenue
             // This is the most important event for conversion tracking
             TrackingManager.shared.trackEvent(
-                name: Constants.Events.purchase,
+                eventType: Constants.Events.purchase,
                 parameters: [
                     "revenue": totalValue, // Primary revenue parameter for conversion tracking
                     "currency": "USD",

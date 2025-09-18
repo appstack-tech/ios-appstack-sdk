@@ -1,4 +1,5 @@
 import Foundation
+import AppstackSDK
 
 struct Constants {
     
@@ -14,16 +15,18 @@ struct Constants {
     // Replace with your actual TikTok App ID
     static let tiktokAppId = "YOUR_TIKTOK_APP_ID"
     
-    // MARK: - Event Names
-    // These event names should match those configured in your Appstack dashboard
-    // for proper conversion tracking and revenue range matching
+    // MARK: - Event Types and Names
+    // Mapping of events to the new EventType enum and custom event names
     struct Events {
-        static let signup = "signup"
-        static let login = "login"
+        // Standard events using EventType enum
+        static let signup = EventType.LOGIN  // Using LOGIN for signup events
+        static let login = EventType.LOGIN
+        static let purchase = EventType.PURCHASE
+        
+        // Custom events (using EventType.CUSTOM with custom names)
         static let viewProductList = "view_product_list"
         static let viewProduct = "view_product"
         static let addToCart = "add_to_cart"
-        static let purchase = "purchase"
         static let viewCart = "view_cart"
         static let logout = "logout"
         static let removeFromCart = "remove_from_cart"

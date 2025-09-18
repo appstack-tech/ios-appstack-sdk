@@ -21,7 +21,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
  dependencies: [
-    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "2.0.0")
+    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "2.1.0")
  ]
 ```
 
@@ -56,15 +56,19 @@ Add the following entry to your `Info.plist` file:
 
 ## 🚀 Initialization
 
-### **AppDelegate**
-
 ```swift
 import AppstackSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Appstack.shared.configure("your_api_key")
+        // Configure Appstack SDK v2.1.0
+        AppstackAttributionSdk.shared.configure(
+            apiKey: "your_api_key",
+            isDebug: true,  // Use development URL for testing
+            endpointBaseUrl: nil,  // Use default endpoint
+            logLevel: .info  // Set log level
+        )
         return true
     }
 }
@@ -77,7 +81,12 @@ import AppstackSDK
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        Appstack.shared.configure("your_api_key")
+        AppstackAttributionSdk.shared.configure(
+            apiKey: "your_api_key",
+            isDebug: true,
+            endpointBaseUrl: nil,
+            logLevel: .info
+        )
     }
 }
 ```
@@ -91,7 +100,12 @@ import AppstackSDK
 @main
 struct MyApp: App {
     init() {
-        Appstack.shared.configure("your_api_key")
+        AppstackAttributionSdk.shared.configure(
+            apiKey: "your_api_key",
+            isDebug: true,
+            endpointBaseUrl: nil,
+            logLevel: .info
+        )
     }
     
     var body: some Scene {
@@ -106,37 +120,39 @@ struct MyApp: App {
 
 ## 📡 Sending Events
 
-### **Basic Event Tracking**
+### **Using EventType Enum**
 
-To send events defined in the **Appstack platform (Mapping section)**:
-
-```swift
-Appstack.shared.sendEvent(event: "event_name")
-```
-
-### **Event Tracking with Parameters**
-
-The SDK supports sending additional parameters with events. Currently, the **revenue** parameter is supported for tracking monetary values:
+The SDK provides better type safety with predefined event types:
 
 ```swift
-// Send event with revenue parameter
-Appstack.shared.sendEvent(
-    event: "purchase_completed", 
-    revenue: 29.99
+// Standard events using EventType enum
+AppstackAttributionSdk.shared.sendEvent(event: .LOGIN)
+AppstackAttributionSdk.shared.sendEvent(event: .PURCHASE, revenue: 29.99)
+AppstackAttributionSdk.shared.sendEvent(event: .SUBSCRIBE, revenue: 9.99)
+
+// Custom events
+AppstackAttributionSdk.shared.sendEvent(
+    event: .CUSTOM, 
+    name: "user_registered"
+)
+AppstackAttributionSdk.shared.sendEvent(
+    event: .CUSTOM, 
+    name: "purchase_completed", 
+    revenue: 49.99
 )
 ```
 
-### **Examples:**
+### **Available EventType Values:**
 
 ```swift
-// Send a basic event
-Appstack.shared.sendEvent(event: "user_registered")
-
-// Send event with revenue (recommended for purchase events)
-Appstack.shared.sendEvent(event: "purchase_completed", revenue: 49.99)
-
-// Revenue parameter accepts Decimal for precise monetary values
-Appstack.shared.sendEvent(event: "subscription_renewed", revenue: Decimal(9.99))
+public enum EventType: String {
+    case PURCHASE = "PURCHASE"
+    case SUBSCRIBE = "SUBSCRIBE" 
+    case LOGIN = "LOGIN"
+    case INSTALL = "INSTALL"
+    case TUTORIAL_COMPLETE = "TUTORIAL_COMPLETE"
+    case CUSTOM = "CUSTOM"  // For custom events
+}
 ```
 
 ### **Revenue Range Matching**
@@ -162,7 +178,7 @@ The SDK automatically matches events with revenue parameters to configured **rev
 ### ✅ **Compatibility**
 
 - Requires **iOS 14.3+**
-- Works with **AppstackSDK version 2.0.0 or later**
+- Works with **AppstackSDK version 2.1.0 or later**
 
 ### 📊 **Attribution Data Collection**
 
@@ -184,7 +200,7 @@ Apple Search Ads attribution is a **two-step process**:
 import AppstackSDK
 
 if #available(iOS 14.3, *) {
-    AppstackASAAttribution.shared.enableASAAttributionTracking()
+    AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
 
@@ -195,23 +211,19 @@ import AppTrackingTransparency
 import AppstackSDK
 
 if #available(iOS 14.3, *) {
-    if ATTrackingManager.trackingAuthorizationStatus != .notDetermined {
-        if #available(iOS 15.0, *) {
-            AppstackASAAttribution.shared.enableASAAttributionTracking()
-        }
-    }
-}
-```
-
-🔹 **Request user consent before enabling detailed attribution:**
-
-```swift
-if #available(iOS 14.3, *) {
-    if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
-        ATTrackingManager.requestTrackingAuthorization { status in
-            if #available(iOS 15.0, *) {
-                AppstackASAAttribution.shared.enableASAAttributionTracking()
-            }
+    ATTrackingManager.requestTrackingAuthorization { status in
+        // Enable ASA Attribution after getting permission
+        AppstackASAAttribution.shared.enableAppleAdsAttribution()
+        
+        switch status {
+        case .authorized:
+            // User allowed tracking - detailed attribution available
+            print("ATTrackingManager: Authorized")
+        case .denied, .restricted, .notDetermined:
+            // User denied tracking - standard attribution still works
+            print("ATTrackingManager: Not authorized")
+        @unknown default:
+            break
         }
     }
 }
@@ -227,30 +239,22 @@ import AppstackSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Configure Appstack
-        Appstack.shared.configure("your_api_key")
+        // Configure Appstack SDK v2.1.0
+        AppstackAttributionSdk.shared.configure(
+            apiKey: "your_api_key",
+            isDebug: true,  // Use development URL for testing
+            endpointBaseUrl: nil,
+            logLevel: .info
+        )
         
-        // Enable ASA Attribution if tracking is already decided
+        // Request tracking permission and enable ASA Attribution
         if #available(iOS 14.3, *) {
-            if ATTrackingManager.trackingAuthorizationStatus != .notDetermined {
-                if #available(iOS 15.0, *) {
-                    AppstackASAAttribution.shared.enableASAAttributionTracking()
-                }
+            ATTrackingManager.requestTrackingAuthorization { status in
+                AppstackASAAttribution.shared.enableAppleAdsAttribution()
             }
         }
         
         return true
-    }
-}
-
-// Request tracking permission at the appropriate time
-func requestTrackingPermission() {
-    if #available(iOS 14.3, *) {
-        ATTrackingManager.requestTrackingAuthorization { status in
-            if #available(iOS 15.0, *) {
-                AppstackASAAttribution.shared.enableASAAttributionTracking()
-            }
-        }
     }
 }
 ```
@@ -261,6 +265,47 @@ func requestTrackingPermission() {
 - **Standard attribution** works even if the user denies tracking.
 - **Attribution data may take up to 24 hours** to appear in the Appstack dashboard.
 - **iOS 14.3+**: Implement **ATT permission request** before enabling ASA tracking.
+
+---
+
+## ⚙️ Configuration Parameters
+
+The `AppstackAttributionSdk.shared.configure()` method supports additional parameters:
+
+### **Parameters:**
+
+- **`apiKey`** (String, required): Your Appstack API key
+- **`isDebug`** (Bool, default: false): If `true`, uses development URL automatically
+- **`endpointBaseUrl`** (String?, default: nil): Custom endpoint URL (optional)
+- **`logLevel`** (LogLevel, default: .info): Logging level for debugging
+
+### **Configuration Examples:**
+
+```swift
+// Development configuration
+AppstackAttributionSdk.shared.configure(
+    apiKey: "your_api_key",
+    isDebug: true,  // Uses https://api.event.dev.appstack.tech
+    endpointBaseUrl: nil,
+    logLevel: .debug
+)
+
+// Production configuration
+AppstackAttributionSdk.shared.configure(
+    apiKey: "your_api_key",
+    isDebug: false,  // Uses production URL
+    endpointBaseUrl: nil,
+    logLevel: .info
+)
+
+// Custom endpoint configuration
+AppstackAttributionSdk.shared.configure(
+    apiKey: "your_api_key",
+    isDebug: false,
+    endpointBaseUrl: "https://your-custom-endpoint.com",
+    logLevel: .warning
+)
+```
 
 ---
 
@@ -284,6 +329,8 @@ The SDK automatically:
 - Events are matched against configured revenue ranges in real-time
 
 ---
+
+
 
 ## ❓ Support
 

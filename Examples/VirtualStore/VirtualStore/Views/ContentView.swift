@@ -34,7 +34,10 @@ struct ContentView: View {
                             ProductListView()
                                 .onAppear {
                                     // Send product view event
-                                    TrackingManager.shared.trackEvent(name: Constants.Events.viewProductList)
+                                    TrackingManager.shared.trackEvent(
+                                        eventType: .CUSTOM,
+                                        customEventName: Constants.Events.viewProductList
+                                    )
                                 }
                         } label: {
                             HStack {
@@ -56,7 +59,10 @@ struct ContentView: View {
                             CartView()
                                 .onAppear {
                                     // Send cart view event
-                                    TrackingManager.shared.trackEvent(name: Constants.Events.viewCart)
+                                    TrackingManager.shared.trackEvent(
+                                        eventType: .CUSTOM,
+                                        customEventName: Constants.Events.viewCart
+                                    )
                                 }
                         } label: {
                             HStack {
@@ -115,7 +121,10 @@ struct ContentView: View {
             .navigationBarHidden(true)
             .onAppear {
                 // Send home view event
-                TrackingManager.shared.trackEvent(name: Constants.Events.viewHome)
+                TrackingManager.shared.trackEvent(
+                    eventType: .CUSTOM,
+                    customEventName: Constants.Events.viewHome
+                )
             }
         }
     }

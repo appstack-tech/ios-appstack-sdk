@@ -13,15 +13,6 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-@_hasMissingDesignatedInitializers public class Appstack : @unchecked Swift.Sendable {
-  public static var shared: AppstackSDK.Appstack
-  public func configure(_ appstackVerificationKey: Swift.String, isDebug: Swift.Bool = false)
-  public func sendEvent(event: Swift.String, revenue: Foundation.Decimal? = nil)
-  @objc deinit
-}
-extension AppstackSDK.Appstack {
-  public func resetVerificationKeyState()
-}
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
   public static var shared: AppstackSDK.AppstackASAAttribution
@@ -29,3 +20,63 @@ final public class AppstackASAAttribution {
   final public func disableASAAttributionTracking()
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class AppstackAttributionSdk : @unchecked Swift.Sendable {
+  public static var shared: AppstackSDK.AppstackAttributionSdk
+  public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info)
+  public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, revenue: Swift.Double? = nil)
+  @objc deinit
+}
+extension AppstackSDK.AppstackAttributionSdk {
+  public func resetApiKeyState()
+}
+public enum EventType : Swift.String, Swift.CaseIterable {
+  case INSTALL
+  case LOGIN
+  case SIGN_UP
+  case REGISTER
+  case PURCHASE
+  case ADD_TO_CART
+  case ADD_TO_WISHLIST
+  case INITIATE_CHECKOUT
+  case START_TRIAL
+  case SUBSCRIBE
+  case LEVEL_START
+  case LEVEL_COMPLETE
+  case TUTORIAL_COMPLETE
+  case SEARCH
+  case VIEW_ITEM
+  case VIEW_CONTENT
+  case SHARE
+  case CUSTOM
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AppstackSDK.EventType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [AppstackSDK.EventType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension AppstackSDK.EventType {
+  public var eventName: Swift.String {
+    get
+  }
+}
+public enum LogLevel : Swift.Int {
+  case off
+  case error
+  case debug
+  case info
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension AppstackSDK.EventType : Swift.Equatable {}
+extension AppstackSDK.EventType : Swift.Hashable {}
+extension AppstackSDK.EventType : Swift.RawRepresentable {}
+extension AppstackSDK.LogLevel : Swift.Equatable {}
+extension AppstackSDK.LogLevel : Swift.Hashable {}
+extension AppstackSDK.LogLevel : Swift.RawRepresentable {}

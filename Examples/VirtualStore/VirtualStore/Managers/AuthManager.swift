@@ -16,7 +16,7 @@ class AuthManager: ObservableObject {
             self.isLoading = false
             
             // Send signup event
-            TrackingManager.shared.trackEvent(name: Constants.Events.signup)
+            TrackingManager.shared.trackEvent(eventType: Constants.Events.signup)
             //SKAdNetwork.updatePostbackConversionValue(1, coarseValue: .low)
             let postbackUpdate = PostbackUpdate(
                 fineConversionValue: 1,
@@ -41,7 +41,10 @@ class AuthManager: ObservableObject {
             self.isLoading = false
             
             // Send logout event
-            TrackingManager.shared.trackEvent(name: Constants.Events.logout)
+            TrackingManager.shared.trackEvent(
+                eventType: .CUSTOM,
+                customEventName: Constants.Events.logout
+            )
         }
     }
 }

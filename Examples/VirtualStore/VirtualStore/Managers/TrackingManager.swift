@@ -14,8 +14,13 @@ class TrackingManager: ObservableObject {
     }
     
     func configureSDKs() {
-        // Configure Appstack SDK
-        Appstack.shared.configure(Constants.appstackApiKey)
+        // Configure Appstack SDK with new parameters
+        AppstackAttributionSdk.shared.configure(
+            apiKey: Constants.appstackApiKey,
+            isDebug: true,  // Use development URL for testing
+            endpointBaseUrl: nil,  // Use default endpoint
+            logLevel: .info  // Set log level to info
+        )
         
         // Configure other SDKs
         configureFacebookSDK()
@@ -30,29 +35,42 @@ class TrackingManager: ObservableObject {
     /// Tracks an event across all integrated SDKs.
     ///
     /// - Parameters:
-    ///   - name: The name of the event to track.
+    ///   - eventType: The type of event to track (using EventType enum).
+    ///   - customEventName: Custom event name (only used when eventType is .CUSTOM).
     ///   - parameters: Optional parameters to include with the event.
     ///     For Appstack SDK, revenue parameters are automatically extracted
     ///     and sent using the new .revenue parameter format.
-    func trackEvent(name: String, parameters: [String: Any]? = nil) {
+    func trackEvent(eventType: EventType, customEventName: String? = nil, parameters: [String: Any]? = nil) {
         // Send event to Appstack with revenue parameter if available
         if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
-            Appstack.shared.sendEvent(event: name, revenue: revenue)
+            if eventType == .CUSTOM, let customName = customEventName {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType, name: customName, revenue: revenue)
+            } else {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType, revenue: revenue)
+            }
         } else {
-            Appstack.shared.sendEvent(event: name)
+            if eventType == .CUSTOM, let customName = customEventName {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType, name: customName)
+            } else {
+                AppstackAttributionSdk.shared.sendEvent(event: eventType)
+            }
         }
         
+        // Send to other SDKs using the event name
+        let eventName = eventType == .CUSTOM ? (customEventName ?? "custom_event") : eventType.rawValue.lowercased()
+        
         // Send event to Meta
-        AppEvents.shared.logEvent(AppEvents.Name(name))
+        AppEvents.shared.logEvent(AppEvents.Name(eventName))
         
         // Send event to TikTok
-        TikTokBusiness.trackTTEvent(TikTokBaseEvent(eventName: name))
+        TikTokBusiness.trackTTEvent(TikTokBaseEvent(eventName: eventName))
         
         // Send event to Firebase
-        Analytics.logEvent(name, parameters: parameters)
+        Analytics.logEvent(eventName, parameters: parameters)
         
-        print("📊 Event '\(name)' sent to all SDKs")
+        print("📊 Event '\(eventName)' sent to all SDKs")
     }
+    
     
     /// Extracts revenue value from parameters dictionary
     /// Supports Double, Int, Float, and String values as per SDK documentation
@@ -124,7 +142,7 @@ class TrackingManager: ObservableObject {
             ATTrackingManager.requestTrackingAuthorization { status in
                 // Enable ASA Attribution tracking after getting permission
                 if #available(iOS 14.3, *) {
-                    AppstackASAAttribution.shared.enableASAAttributionTracking()
+                    AppstackAttributionSdk.shared.enableASAAttributionTracking()
                 }
                 
                 switch status {
