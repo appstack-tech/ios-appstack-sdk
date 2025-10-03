@@ -261,130 +261,6 @@
           },
           {
             "kind": "Var",
-            "name": "asaAttributionTrackingRepository",
-            "printedName": "asaAttributionTrackingRepository",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvp",
-            "mangledName": "$s11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASAAttributionTrackingRepositoryProtocol",
-                        "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                        "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvg",
-                "mangledName": "$s11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASAAttributionTrackingRepositoryProtocol",
-                        "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                        "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvs",
-                "mangledName": "$s11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvs",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvM",
-                "mangledName": "$s11AppstackSDK0A14ASAAttributionC32asaAttributionTrackingRepositoryAA0cfG8Protocol_pSgvM",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "intro_Macosx": "12.0",
-                "intro_iOS": "15.0",
-                "declAttributes": [
-                  "Final",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "eventsRepository",
             "printedName": "eventsRepository",
             "children": [
@@ -5297,41 +5173,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "asaAttributionTrackingRepository",
-            "printedName": "asaAttributionTrackingRepository",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK17PurchaseProcessorC32asaAttributionTrackingRepository33_93DFDCBA2B182DF76FD5672AB5EB19E5LLAA014ASAAttributiongH8Protocol_pSgvp",
-            "mangledName": "$s11AppstackSDK17PurchaseProcessorC32asaAttributionTrackingRepository33_93DFDCBA2B182DF76FD5672AB5EB19E5LLAA014ASAAttributiongH8Protocol_pSgvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
             "name": "eventsRepository",
             "printedName": "eventsRepository",
             "children": [
@@ -5358,9 +5199,10 @@
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
-            "fixedbinaryorder": 1,
+            "fixedbinaryorder": 0,
             "isLet": true,
             "hasStorage": true
           },
@@ -5386,34 +5228,20 @@
               "HasStorage",
               "AccessControl"
             ],
-            "fixedbinaryorder": 2,
+            "fixedbinaryorder": 1,
             "isLet": true,
             "hasStorage": true
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(asaAttributionTrackingRepository:eventsRepository:userDefaults:)",
+            "printedName": "init(eventsRepository:userDefaults:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "PurchaseProcessor",
                 "printedName": "AppstackSDK.PurchaseProcessor",
                 "usr": "s:11AppstackSDK17PurchaseProcessorC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -5438,8 +5266,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppstackSDK17PurchaseProcessorC32asaAttributionTrackingRepository06eventsH012userDefaultsAcA014ASAAttributiongH8Protocol_pSg_AA06EventshM0_pSgSo06NSUserK0Ctcfc",
-            "mangledName": "$s11AppstackSDK17PurchaseProcessorC32asaAttributionTrackingRepository06eventsH012userDefaultsAcA014ASAAttributiongH8Protocol_pSg_AA06EventshM0_pSgSo06NSUserK0Ctcfc",
+            "usr": "s:11AppstackSDK17PurchaseProcessorC16eventsRepository12userDefaultsAcA06EventsF8Protocol_pSg_So06NSUserH0Ctcfc",
+            "mangledName": "$s11AppstackSDK17PurchaseProcessorC16eventsRepository12userDefaultsAcA06EventsF8Protocol_pSg_So06NSUserH0Ctcfc",
             "moduleName": "AppstackSDK",
             "declAttributes": [
               "RawDocComment"
@@ -6715,6 +6543,104 @@
           },
           {
             "kind": "Var",
+            "name": "installEventSent",
+            "printedName": "installEventSent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK6ConfigV16installEventSentSSvpZ",
+            "mangledName": "$s11AppstackSDK6ConfigV16installEventSentSSvpZ",
+            "moduleName": "AppstackSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK6ConfigV16installEventSentSSvgZ",
+                "mangledName": "$s11AppstackSDK6ConfigV16installEventSentSSvgZ",
+                "moduleName": "AppstackSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "asaTokenKey",
+            "printedName": "asaTokenKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK6ConfigV11asaTokenKeySSvpZ",
+            "mangledName": "$s11AppstackSDK6ConfigV11asaTokenKeySSvpZ",
+            "moduleName": "AppstackSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11AppstackSDK6ConfigV11asaTokenKeySSvgZ",
+                "mangledName": "$s11AppstackSDK6ConfigV11asaTokenKeySSvgZ",
+                "moduleName": "AppstackSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "sdkVersionNumber",
             "printedName": "sdkVersionNumber",
             "children": [
@@ -6814,186 +6740,6 @@
             "printedName": "BitwiseCopyable",
             "usr": "s:s15BitwiseCopyableP",
             "mangledName": "$ss15BitwiseCopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AppstackSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "AppleSearchAdsApiClientProtocol",
-        "printedName": "AppleSearchAdsApiClientProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "fetchAttributionData",
-            "printedName": "fetchAttributionData(token:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionResponse",
-                "printedName": "AppstackSDK.ASAAttributionResponse",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK31AppleSearchAdsApiClientProtocolP20fetchAttributionData5tokenAA22ASAAttributionResponseVSS_tYaKF",
-            "mangledName": "$s11AppstackSDK31AppleSearchAdsApiClientProtocolP20fetchAttributionData5tokenAA22ASAAttributionResponseVSS_tYaKF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.AppleSearchAdsApiClientProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.AppleSearchAdsApiClientProtocol>",
-            "protocolReq": true,
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:11AppstackSDK31AppleSearchAdsApiClientProtocolP",
-        "mangledName": "$s11AppstackSDK31AppleSearchAdsApiClientProtocolP",
-        "moduleName": "AppstackSDK",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "AppleSearchAdsApiClient",
-        "printedName": "AppleSearchAdsApiClient",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "networkManager",
-            "printedName": "networkManager",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "NetworkManagerProtocol",
-                "printedName": "any AppstackSDK.NetworkManagerProtocol",
-                "usr": "s:11AppstackSDK22NetworkManagerProtocolP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK23AppleSearchAdsApiClientC14networkManager33_6C6648BCFC7CBAE8F92A5CCC1EE526D5LLAA07NetworkI8Protocol_pvp",
-            "mangledName": "$s11AppstackSDK23AppleSearchAdsApiClientC14networkManager33_6C6648BCFC7CBAE8F92A5CCC1EE526D5LLAA07NetworkI8Protocol_pvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(networkManager:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AppleSearchAdsApiClient",
-                "printedName": "AppstackSDK.AppleSearchAdsApiClient",
-                "usr": "s:11AppstackSDK23AppleSearchAdsApiClientC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NetworkManagerProtocol",
-                "printedName": "any AppstackSDK.NetworkManagerProtocol",
-                "usr": "s:11AppstackSDK22NetworkManagerProtocolP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK23AppleSearchAdsApiClientC14networkManagerAcA07NetworkI8Protocol_p_tcfc",
-            "mangledName": "$s11AppstackSDK23AppleSearchAdsApiClientC14networkManagerAcA07NetworkI8Protocol_p_tcfc",
-            "moduleName": "AppstackSDK",
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "fetchAttributionData",
-            "printedName": "fetchAttributionData(token:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionResponse",
-                "printedName": "AppstackSDK.ASAAttributionResponse",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK23AppleSearchAdsApiClientC20fetchAttributionData5tokenAA22ASAAttributionResponseVSS_tYaKF",
-            "mangledName": "$s11AppstackSDK23AppleSearchAdsApiClientC20fetchAttributionData5tokenAA22ASAAttributionResponseVSS_tYaKF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11AppstackSDK23AppleSearchAdsApiClientC",
-        "mangledName": "$s11AppstackSDK23AppleSearchAdsApiClientC",
-        "moduleName": "AppstackSDK",
-        "declAttributes": [
-          "Final"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AppleSearchAdsApiClientProtocol",
-            "printedName": "AppleSearchAdsApiClientProtocol",
-            "usr": "s:11AppstackSDK31AppleSearchAdsApiClientProtocolP",
-            "mangledName": "$s11AppstackSDK31AppleSearchAdsApiClientProtocolP"
           }
         ]
       },
@@ -7637,41 +7383,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "asaAttributionRepository",
-            "printedName": "asaAttributionRepository",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK23EventServerLogApiClientC24asaAttributionRepository33_D010694E5A59F40457C11C01A4731084LLAA022ASAAttributionTrackingJ8Protocol_pSgvp",
-            "mangledName": "$s11AppstackSDK23EventServerLogApiClientC24asaAttributionRepository33_D010694E5A59F40457C11C01A4731084LLAA022ASAAttributionTrackingJ8Protocol_pSgvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
             "name": "userDataRepository",
             "printedName": "userDataRepository",
             "children": [
@@ -7691,16 +7402,17 @@
               "Final",
               "HasStorage",
               "ReferenceOwnership",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
-            "fixedbinaryorder": 1,
+            "fixedbinaryorder": 0,
             "ownership": 1,
             "hasStorage": true
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(networkManager:appstackVerificationKey:asaAttributionRepository:userDataRepository:)",
+            "printedName": "init(networkManager:appstackVerificationKey:userDataRepository:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7723,21 +7435,6 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
                 "printedName": "(any AppstackSDK.UserDataRepositoryProtocol)?",
                 "children": [
                   {
@@ -7752,8 +7449,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppstackSDK23EventServerLogApiClientC14networkManager23appstackVerificationKey24asaAttributionRepository08userDataO0AcA07NetworkI8Protocol_p_SSAA022ASAAttributionTrackingoS0_pSgAA04UserqoS0_pSgtcfc",
-            "mangledName": "$s11AppstackSDK23EventServerLogApiClientC14networkManager23appstackVerificationKey24asaAttributionRepository08userDataO0AcA07NetworkI8Protocol_p_SSAA022ASAAttributionTrackingoS0_pSgAA04UserqoS0_pSgtcfc",
+            "usr": "s:11AppstackSDK23EventServerLogApiClientC14networkManager23appstackVerificationKey18userDataRepositoryAcA07NetworkI8Protocol_p_SSAA04UsernoQ0_pSgtcfc",
+            "mangledName": "$s11AppstackSDK23EventServerLogApiClientC14networkManager23appstackVerificationKey18userDataRepositoryAcA07NetworkI8Protocol_p_SSAA04UsernoQ0_pSgtcfc",
             "moduleName": "AppstackSDK",
             "declAttributes": [
               "RawDocComment"
@@ -7926,1740 +7623,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AppstackSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ASAAttributionResponse",
-        "printedName": "ASAAttributionResponse",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "attribution",
-            "printedName": "attribution",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV11attributionSbSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV11attributionSbSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Bool?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV11attributionSbSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV11attributionSbSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "campaignId",
-            "printedName": "campaignId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV10campaignIdSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10campaignIdSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 1,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10campaignIdSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10campaignIdSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "adGroupId",
-            "printedName": "adGroupId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV9adGroupIdSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9adGroupIdSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 2,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV9adGroupIdSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9adGroupIdSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "keywordId",
-            "printedName": "keywordId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV9keywordIdSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9keywordIdSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 3,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV9keywordIdSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9keywordIdSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "countryOrRegion",
-            "printedName": "countryOrRegion",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV15countryOrRegionSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV15countryOrRegionSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 4,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV15countryOrRegionSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV15countryOrRegionSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "conversionType",
-            "printedName": "conversionType",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV14conversionTypeSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV14conversionTypeSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 5,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV14conversionTypeSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV14conversionTypeSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "clickDate",
-            "printedName": "clickDate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV9clickDateSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9clickDateSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 6,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV9clickDateSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9clickDateSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "impressionDate",
-            "printedName": "impressionDate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV14impressionDateSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV14impressionDateSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 7,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV14impressionDateSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV14impressionDateSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "adId",
-            "printedName": "adId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV4adIdSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV4adIdSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 8,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV4adIdSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV4adIdSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "orgId",
-            "printedName": "orgId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV5orgIdSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV5orgIdSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 9,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV5orgIdSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV5orgIdSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "claimType",
-            "printedName": "claimType",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV9claimTypeSSSgvp",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9claimTypeSSSgvp",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "fixedbinaryorder": 10,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV9claimTypeSSSgvg",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV9claimTypeSSSgvg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "TypeDecl",
-            "name": "CodingKeys",
-            "printedName": "CodingKeys",
-            "children": [
-              {
-                "kind": "Var",
-                "name": "attribution",
-                "printedName": "attribution",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO11attributionyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO11attributionyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 0
-              },
-              {
-                "kind": "Var",
-                "name": "campaignId",
-                "printedName": "campaignId",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO10campaignIdyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO10campaignIdyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 1
-              },
-              {
-                "kind": "Var",
-                "name": "adGroupId",
-                "printedName": "adGroupId",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO9adGroupIdyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO9adGroupIdyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 2
-              },
-              {
-                "kind": "Var",
-                "name": "keywordId",
-                "printedName": "keywordId",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO9keywordIdyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO9keywordIdyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 3
-              },
-              {
-                "kind": "Var",
-                "name": "countryOrRegion",
-                "printedName": "countryOrRegion",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO15countryOrRegionyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO15countryOrRegionyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 4
-              },
-              {
-                "kind": "Var",
-                "name": "conversionType",
-                "printedName": "conversionType",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO14conversionTypeyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO14conversionTypeyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 5
-              },
-              {
-                "kind": "Var",
-                "name": "clickDate",
-                "printedName": "clickDate",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO9clickDateyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO9clickDateyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 6
-              },
-              {
-                "kind": "Var",
-                "name": "impressionDate",
-                "printedName": "impressionDate",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO14impressionDateyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO14impressionDateyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 7
-              },
-              {
-                "kind": "Var",
-                "name": "adId",
-                "printedName": "adId",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO4adIdyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO4adIdyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 8
-              },
-              {
-                "kind": "Var",
-                "name": "orgId",
-                "printedName": "orgId",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO5orgIdyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO5orgIdyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 9
-              },
-              {
-                "kind": "Var",
-                "name": "claimType",
-                "printedName": "claimType",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(AppstackSDK.ASAAttributionResponse.CodingKeys.Type) -> AppstackSDK.ASAAttributionResponse.CodingKeys",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CodingKeys",
-                            "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO9claimTypeyA2EmF",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO9claimTypeyA2EmF",
-                "moduleName": "AppstackSDK",
-                "fixedbinaryorder": 10
-              },
-              {
-                "kind": "Constructor",
-                "name": "init",
-                "printedName": "init(rawValue:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Constructor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO8rawValueAESgSS_tcfc",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO8rawValueAESgSS_tcfc",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "init_kind": "Designated"
-              },
-              {
-                "kind": "Var",
-                "name": "rawValue",
-                "printedName": "rawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO8rawValueSSvp",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO8rawValueSSvp",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO8rawValueSSvg",
-                    "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO8rawValueSSvg",
-                    "moduleName": "AppstackSDK",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "stringValue",
-                "printedName": "stringValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO11stringValueSSvp",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO11stringValueSSvp",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO11stringValueSSvg",
-                    "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO11stringValueSSvg",
-                    "moduleName": "AppstackSDK",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Constructor",
-                "name": "init",
-                "printedName": "init(stringValue:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Constructor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO11stringValueAESgSS_tcfc",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO11stringValueAESgSS_tcfc",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "init_kind": "Designated"
-              },
-              {
-                "kind": "Var",
-                "name": "intValue",
-                "printedName": "intValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Int?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO8intValueSiSgvp",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO8intValueSiSgvp",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.Int?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Int",
-                            "printedName": "Swift.Int",
-                            "usr": "s:Si"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO8intValueSiSgvg",
-                    "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO8intValueSiSgvg",
-                    "moduleName": "AppstackSDK",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Constructor",
-                "name": "init",
-                "printedName": "init(intValue:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CodingKeys",
-                        "printedName": "AppstackSDK.ASAAttributionResponse.CodingKeys",
-                        "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Constructor",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO8intValueAESgSi_tcfc",
-                "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO8intValueAESgSi_tcfc",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "init_kind": "Designated"
-              }
-            ],
-            "declKind": "Enum",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV10CodingKeysO",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV10CodingKeysO",
-            "moduleName": "AppstackSDK",
-            "enumRawTypeName": "String",
-            "isEnumExhaustive": true,
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Equatable",
-                "printedName": "Equatable",
-                "usr": "s:SQ",
-                "mangledName": "$sSQ"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Hashable",
-                "printedName": "Hashable",
-                "usr": "s:SH",
-                "mangledName": "$sSH"
-              },
-              {
-                "kind": "Conformance",
-                "name": "RawRepresentable",
-                "printedName": "RawRepresentable",
-                "children": [
-                  {
-                    "kind": "TypeWitness",
-                    "name": "RawValue",
-                    "printedName": "RawValue",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:SY",
-                "mangledName": "$sSY"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CodingKey",
-                "printedName": "CodingKey",
-                "usr": "s:s9CodingKeyP",
-                "mangledName": "$ss9CodingKeyP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomDebugStringConvertible",
-                "printedName": "CustomDebugStringConvertible",
-                "usr": "s:s28CustomDebugStringConvertibleP",
-                "mangledName": "$ss28CustomDebugStringConvertibleP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomStringConvertible",
-                "printedName": "CustomStringConvertible",
-                "usr": "s:s23CustomStringConvertibleP",
-                "mangledName": "$ss23CustomStringConvertibleP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Sendable",
-                "printedName": "Sendable",
-                "usr": "s:s8SendableP",
-                "mangledName": "$ss8SendableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "BitwiseCopyable",
-                "printedName": "BitwiseCopyable",
-                "usr": "s:s15BitwiseCopyableP",
-                "mangledName": "$ss15BitwiseCopyableP"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(attribution:campaignId:adGroupId:keywordId:countryOrRegion:conversionType:clickDate:impressionDate:adId:orgId:claimType:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionResponse",
-                "printedName": "AppstackSDK.ASAAttributionResponse",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV11attribution10campaignId07adGroupG007keywordG015countryOrRegion14conversionType9clickDate010impressionQ00hG003orgG005claimO0ACSbSg_SSSgA9Ptcfc",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV11attribution10campaignId07adGroupG007keywordG015countryOrRegion14conversionType9clickDate010impressionQ00hG003orgG005claimO0ACSbSg_SSSgA9Ptcfc",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionResponse",
-                "printedName": "AppstackSDK.ASAAttributionResponse",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK22ASAAttributionResponseV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s11AppstackSDK22ASAAttributionResponseV6encode2toys7Encoder_p_tKF",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:11AppstackSDK22ASAAttributionResponseV",
-        "mangledName": "$s11AppstackSDK22ASAAttributionResponseV",
-        "moduleName": "AppstackSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -10095,40 +8058,27 @@
           },
           {
             "kind": "Var",
-            "name": "attributionDetails",
-            "printedName": "attributionDetails",
+            "name": "asaToken",
+            "printedName": "asaToken",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
+                "printedName": "Swift.String?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvp",
-            "mangledName": "$s11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvp",
+            "usr": "s:11AppstackSDK21EventServerLogRequestV8asaTokenSSSgvp",
+            "mangledName": "$s11AppstackSDK21EventServerLogRequestV8asaTokenSSSgvp",
             "moduleName": "AppstackSDK",
             "declAttributes": [
               "HasStorage"
@@ -10145,34 +8095,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "[Swift.String : Any]?",
+                    "printedName": "Swift.String?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Any]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ProtocolComposition",
-                            "printedName": "Any"
-                          }
-                        ],
-                        "usr": "s:SD"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvg",
-                "mangledName": "$s11AppstackSDK21EventServerLogRequestV18attributionDetailsSDySSypGSgvg",
+                "usr": "s:11AppstackSDK21EventServerLogRequestV8asaTokenSSSgvg",
+                "mangledName": "$s11AppstackSDK21EventServerLogRequestV8asaTokenSSSgvg",
                 "moduleName": "AppstackSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -10582,8 +8519,8 @@
               },
               {
                 "kind": "Var",
-                "name": "attributionDetails",
-                "printedName": "attributionDetails",
+                "name": "asaToken",
+                "printedName": "asaToken",
                 "children": [
                   {
                     "kind": "TypeFunc",
@@ -10613,8 +8550,8 @@
                   }
                 ],
                 "declKind": "EnumElement",
-                "usr": "s:11AppstackSDK21EventServerLogRequestV10CodingKeysO18attributionDetailsyA2EmF",
-                "mangledName": "$s11AppstackSDK21EventServerLogRequestV10CodingKeysO18attributionDetailsyA2EmF",
+                "usr": "s:11AppstackSDK21EventServerLogRequestV10CodingKeysO8asaTokenyA2EmF",
+                "mangledName": "$s11AppstackSDK21EventServerLogRequestV10CodingKeysO8asaTokenyA2EmF",
                 "moduleName": "AppstackSDK",
                 "fixedbinaryorder": 8
               },
@@ -10986,7 +8923,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(eventType:customEventName:asaAttributionRepository:userData:)",
+            "printedName": "init(eventType:customEventName:userData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11018,21 +8955,6 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
                 "printedName": "[Swift.String : Any]?",
                 "children": [
                   {
@@ -11060,15 +8982,15 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppstackSDK21EventServerLogRequestV9eventType06customC4Name24asaAttributionRepository8userDataAcA0cH0O_SSSgAA022ASAAttributionTrackingM8Protocol_pSgSDySSypGSgtcfc",
-            "mangledName": "$s11AppstackSDK21EventServerLogRequestV9eventType06customC4Name24asaAttributionRepository8userDataAcA0cH0O_SSSgAA022ASAAttributionTrackingM8Protocol_pSgSDySSypGSgtcfc",
+            "usr": "s:11AppstackSDK21EventServerLogRequestV9eventType06customC4Name8userDataAcA0cH0O_SSSgSDySSypGSgtcfc",
+            "mangledName": "$s11AppstackSDK21EventServerLogRequestV9eventType06customC4Name8userDataAcA0cH0O_SSSgSDySSypGSgtcfc",
             "moduleName": "AppstackSDK",
             "init_kind": "Designated"
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(eventType:transactionDetails:asaAttributionRepository:userData:)",
+            "printedName": "init(eventType:transactionDetails:userData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11112,21 +9034,6 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(any AppstackSDK.ASAAttributionTrackingRepositoryProtocol)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryProtocol",
-                    "printedName": "any AppstackSDK.ASAAttributionTrackingRepositoryProtocol",
-                    "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
                 "printedName": "[Swift.String : Any]?",
                 "children": [
                   {
@@ -11154,8 +9061,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppstackSDK21EventServerLogRequestV9eventType18transactionDetails24asaAttributionRepository8userDataAcA0cH0O_SDySSypGSgAA022ASAAttributionTrackingM8Protocol_pSgAKtcfc",
-            "mangledName": "$s11AppstackSDK21EventServerLogRequestV9eventType18transactionDetails24asaAttributionRepository8userDataAcA0cH0O_SDySSypGSgAA022ASAAttributionTrackingM8Protocol_pSgAKtcfc",
+            "usr": "s:11AppstackSDK21EventServerLogRequestV9eventType18transactionDetails8userDataAcA0cH0O_SDySSypGSgAJtcfc",
+            "mangledName": "$s11AppstackSDK21EventServerLogRequestV9eventType18transactionDetails8userDataAcA0cH0O_SDySSypGSgAJtcfc",
             "moduleName": "AppstackSDK",
             "declAttributes": [
               "RawDocComment"
@@ -11256,6 +9163,13 @@
             "mangledName": "$ss8SendableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       },
       {
         "kind": "TypeDecl",
@@ -12026,9 +9940,35 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "userDefaults",
+            "printedName": "userDefaults",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "usr": "c:objc(cs)NSUserDefaults"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK17UserDataApiClientC12userDefaults33_7BCC7755E4B46377742F1C6B5C8478F3LLSo06NSUserH0Cvp",
+            "mangledName": "$s11AppstackSDK17UserDataApiClientC12userDefaults33_7BCC7755E4B46377742F1C6B5C8478F3LLSo06NSUserH0Cvp",
+            "moduleName": "AppstackSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(networkManager:)",
+            "printedName": "init(networkManager:userDefaults:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12041,11 +9981,18 @@
                 "name": "NetworkManagerProtocol",
                 "printedName": "any AppstackSDK.NetworkManagerProtocol",
                 "usr": "s:11AppstackSDK22NetworkManagerProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSUserDefaults"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11AppstackSDK17UserDataApiClientC14networkManagerAcA07NetworkH8Protocol_p_tcfc",
-            "mangledName": "$s11AppstackSDK17UserDataApiClientC14networkManagerAcA07NetworkH8Protocol_p_tcfc",
+            "usr": "s:11AppstackSDK17UserDataApiClientC14networkManager12userDefaultsAcA07NetworkH8Protocol_p_So06NSUserJ0Ctcfc",
+            "mangledName": "$s11AppstackSDK17UserDataApiClientC14networkManager12userDefaultsAcA07NetworkH8Protocol_p_So06NSUserJ0Ctcfc",
             "moduleName": "AppstackSDK",
             "init_kind": "Designated"
           },
@@ -18887,479 +16834,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ASADataPersistenceProtocol",
-        "printedName": "ASADataPersistenceProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "saveASAData",
-            "printedName": "saveASAData(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionResponse",
-                "printedName": "AppstackSDK.ASAAttributionResponse",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP04saveC0yyAA22ASAAttributionResponseVF",
-            "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP04saveC0yyAA22ASAAttributionResponseVF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASADataPersistenceProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASADataPersistenceProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "loadASAData",
-            "printedName": "loadASAData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AppstackSDK.ASAAttributionResponse?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionResponse",
-                    "printedName": "AppstackSDK.ASAAttributionResponse",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP04loadC0AA22ASAAttributionResponseVSgyF",
-            "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP04loadC0AA22ASAAttributionResponseVSgyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASADataPersistenceProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASADataPersistenceProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "loadASADataAsDictionary",
-            "printedName": "loadASADataAsDictionary()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP04loadC12AsDictionarySDySSypGSgyF",
-            "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP04loadC12AsDictionarySDySSypGSgyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASADataPersistenceProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASADataPersistenceProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearASAData",
-            "printedName": "clearASAData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP05clearC0yyF",
-            "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP05clearC0yyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASADataPersistenceProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASADataPersistenceProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "hasASAData",
-            "printedName": "hasASAData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP03hasC0SbyF",
-            "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP03hasC0SbyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASADataPersistenceProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASADataPersistenceProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP",
-        "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP",
-        "moduleName": "AppstackSDK",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ASADataPersistence",
-        "printedName": "ASADataPersistence",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "fileManager",
-            "printedName": "fileManager",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "FileManager",
-                "printedName": "Foundation.FileManager",
-                "usr": "c:objc(cs)NSFileManager"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC11fileManager33_9EA894511CE99392BB297CAB3BF3AA02LLSo06NSFileF0Cvp",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC11fileManager33_9EA894511CE99392BB297CAB3BF3AA02LLSo06NSFileF0Cvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
-            "name": "documentsDirectory",
-            "printedName": "documentsDirectory",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC18documentsDirectory33_9EA894511CE99392BB297CAB3BF3AA02LL10Foundation3URLVvp",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC18documentsDirectory33_9EA894511CE99392BB297CAB3BF3AA02LL10Foundation3URLVvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 1,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
-            "name": "asaDataFileName",
-            "printedName": "asaDataFileName",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC15asaDataFileName33_9EA894511CE99392BB297CAB3BF3AA02LLSSvp",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC15asaDataFileName33_9EA894511CE99392BB297CAB3BF3AA02LLSSvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 2,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(fileManager:documentsDirectory:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASADataPersistence",
-                "printedName": "AppstackSDK.ASADataPersistence",
-                "usr": "s:11AppstackSDK18ASADataPersistenceC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "FileManager",
-                "printedName": "Foundation.FileManager",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)NSFileManager"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.URL?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC11fileManager18documentsDirectoryACSo06NSFileF0C_10Foundation3URLVSgtcfc",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC11fileManager18documentsDirectoryACSo06NSFileF0C_10Foundation3URLVSgtcfc",
-            "moduleName": "AppstackSDK",
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "saveASAData",
-            "printedName": "saveASAData(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionResponse",
-                "printedName": "AppstackSDK.ASAAttributionResponse",
-                "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC04saveC0yyAA22ASAAttributionResponseVF",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC04saveC0yyAA22ASAAttributionResponseVF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "loadASAData",
-            "printedName": "loadASAData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AppstackSDK.ASAAttributionResponse?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionResponse",
-                    "printedName": "AppstackSDK.ASAAttributionResponse",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC04loadC0AA22ASAAttributionResponseVSgyF",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC04loadC0AA22ASAAttributionResponseVSgyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "loadASADataAsDictionary",
-            "printedName": "loadASADataAsDictionary()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC04loadC12AsDictionarySDySSypGSgyF",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC04loadC12AsDictionarySDySSypGSgyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearASAData",
-            "printedName": "clearASAData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC05clearC0yyF",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC05clearC0yyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "hasASAData",
-            "printedName": "hasASAData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK18ASADataPersistenceC03hasC0SbyF",
-            "mangledName": "$s11AppstackSDK18ASADataPersistenceC03hasC0SbyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11AppstackSDK18ASADataPersistenceC",
-        "mangledName": "$s11AppstackSDK18ASADataPersistenceC",
-        "moduleName": "AppstackSDK",
-        "declAttributes": [
-          "Final"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ASADataPersistenceProtocol",
-            "printedName": "ASADataPersistenceProtocol",
-            "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP",
-            "mangledName": "$s11AppstackSDK26ASADataPersistenceProtocolP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AppstackSDK"
-      },
-      {
-        "kind": "TypeDecl",
         "name": "ConversionValuesPersistenceProtocol",
         "printedName": "ConversionValuesPersistenceProtocol",
         "children": [
@@ -20360,679 +17834,6 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AppstackSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AppstackSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ASAAttributionTrackingRepositoryError",
-        "printedName": "ASAAttributionTrackingRepositoryError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "noAttributionData",
-            "printedName": "noAttributionData",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(AppstackSDK.ASAAttributionTrackingRepositoryError.Type) -> AppstackSDK.ASAAttributionTrackingRepositoryError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryError",
-                    "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError",
-                    "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASAAttributionTrackingRepositoryError",
-                        "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError",
-                        "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO17noAttributionDatayA2CmF",
-            "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO17noAttributionDatayA2CmF",
-            "moduleName": "AppstackSDK",
-            "fixedbinaryorder": 0
-          },
-          {
-            "kind": "Var",
-            "name": "attributionDataFetchFailed",
-            "printedName": "attributionDataFetchFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(AppstackSDK.ASAAttributionTrackingRepositoryError.Type) -> AppstackSDK.ASAAttributionTrackingRepositoryError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionTrackingRepositoryError",
-                    "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError",
-                    "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ASAAttributionTrackingRepositoryError",
-                        "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError",
-                        "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO26attributionDataFetchFailedyA2CmF",
-            "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO26attributionDataFetchFailedyA2CmF",
-            "moduleName": "AppstackSDK",
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionTrackingRepositoryError",
-                "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError",
-                "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionTrackingRepositoryError",
-                "printedName": "AppstackSDK.ASAAttributionTrackingRepositoryError",
-                "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO2eeoiySbAC_ACtFZ",
-            "moduleName": "AppstackSDK",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO9hashValueSivp",
-            "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO9hashValueSivp",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO9hashValueSivg",
-                "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO9hashValueSivg",
-                "moduleName": "AppstackSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO4hash4intoys6HasherVz_tF",
-            "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO4hash4intoys6HasherVz_tF",
-            "moduleName": "AppstackSDK",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:11AppstackSDK37ASAAttributionTrackingRepositoryErrorO",
-        "mangledName": "$s11AppstackSDK37ASAAttributionTrackingRepositoryErrorO",
-        "moduleName": "AppstackSDK",
-        "isEnumExhaustive": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "BitwiseCopyable",
-            "printedName": "BitwiseCopyable",
-            "usr": "s:s15BitwiseCopyableP",
-            "mangledName": "$ss15BitwiseCopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ASAAttributionTrackingRepositoryProtocol",
-        "printedName": "ASAAttributionTrackingRepositoryProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "fetchAndStoreAttributionData",
-            "printedName": "fetchAndStoreAttributionData(token:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP28fetchAndStoreAttributionData5tokenySS_tYaKF",
-            "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP28fetchAndStoreAttributionData5tokenySS_tYaKF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "protocolReq": true,
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getStoredAttributionData",
-            "printedName": "getStoredAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AppstackSDK.ASAAttributionResponse?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionResponse",
-                    "printedName": "AppstackSDK.ASAAttributionResponse",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP24getStoredAttributionDataAA0C8ResponseVSgyF",
-            "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP24getStoredAttributionDataAA0C8ResponseVSgyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getStoredAttributionData",
-            "printedName": "getStoredAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP24getStoredAttributionDataSDySSypGSgyF",
-            "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP24getStoredAttributionDataSDySSypGSgyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "hasAttributionData",
-            "printedName": "hasAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP18hasAttributionDataSbyF",
-            "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP18hasAttributionDataSbyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearAttributionData",
-            "printedName": "clearAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP20clearAttributionDatayyF",
-            "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP20clearAttributionDatayyF",
-            "moduleName": "AppstackSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "sugared_genericSig": "<Self where Self : AppstackSDK.ASAAttributionTrackingRepositoryProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP",
-        "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP",
-        "moduleName": "AppstackSDK",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ASAAttributionTrackingRepository",
-        "printedName": "ASAAttributionTrackingRepository",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "appleApiClient",
-            "printedName": "appleApiClient",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AppleSearchAdsApiClientProtocol",
-                "printedName": "any AppstackSDK.AppleSearchAdsApiClientProtocol",
-                "usr": "s:11AppstackSDK31AppleSearchAdsApiClientProtocolP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC14appleApiClient33_3ED71C127CA8E12BCE6F243CF34293F3LLAA014AppleSearchAdsgH8Protocol_pvp",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC14appleApiClient33_3ED71C127CA8E12BCE6F243CF34293F3LLAA014AppleSearchAdsgH8Protocol_pvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
-            "name": "asaDataPersistence",
-            "printedName": "asaDataPersistence",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASADataPersistenceProtocol",
-                "printedName": "any AppstackSDK.ASADataPersistenceProtocol",
-                "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC18asaDataPersistence33_3ED71C127CA8E12BCE6F243CF34293F3LLAA07ASADataH8Protocol_pvp",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC18asaDataPersistence33_3ED71C127CA8E12BCE6F243CF34293F3LLAA07ASADataH8Protocol_pvp",
-            "moduleName": "AppstackSDK",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 1,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(appleApiClient:asaDataPersistence:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ASAAttributionTrackingRepository",
-                "printedName": "AppstackSDK.ASAAttributionTrackingRepository",
-                "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AppleSearchAdsApiClientProtocol",
-                "printedName": "any AppstackSDK.AppleSearchAdsApiClientProtocol",
-                "usr": "s:11AppstackSDK31AppleSearchAdsApiClientProtocolP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ASADataPersistenceProtocol",
-                "printedName": "any AppstackSDK.ASADataPersistenceProtocol",
-                "usr": "s:11AppstackSDK26ASADataPersistenceProtocolP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC14appleApiClient18asaDataPersistenceAcA014AppleSearchAdsgH8Protocol_p_AA07ASADatakO0_ptcfc",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC14appleApiClient18asaDataPersistenceAcA014AppleSearchAdsgH8Protocol_p_AA07ASADatakO0_ptcfc",
-            "moduleName": "AppstackSDK",
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "fetchAndStoreAttributionData",
-            "printedName": "fetchAndStoreAttributionData(token:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC28fetchAndStoreAttributionData5tokenySS_tYaKF",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC28fetchAndStoreAttributionData5tokenySS_tYaKF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getStoredAttributionData",
-            "printedName": "getStoredAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AppstackSDK.ASAAttributionResponse?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ASAAttributionResponse",
-                    "printedName": "AppstackSDK.ASAAttributionResponse",
-                    "usr": "s:11AppstackSDK22ASAAttributionResponseV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC24getStoredAttributionDataAA0C8ResponseVSgyF",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC24getStoredAttributionDataAA0C8ResponseVSgyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getStoredAttributionData",
-            "printedName": "getStoredAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC24getStoredAttributionDataSDySSypGSgyF",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC24getStoredAttributionDataSDySSypGSgyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "hasAttributionData",
-            "printedName": "hasAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC18hasAttributionDataSbyF",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC18hasAttributionDataSbyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearAttributionData",
-            "printedName": "clearAttributionData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC20clearAttributionDatayyF",
-            "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC20clearAttributionDatayyF",
-            "moduleName": "AppstackSDK",
-            "declAttributes": [
-              "Final"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11AppstackSDK32ASAAttributionTrackingRepositoryC",
-        "mangledName": "$s11AppstackSDK32ASAAttributionTrackingRepositoryC",
-        "moduleName": "AppstackSDK",
-        "declAttributes": [
-          "Final"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ASAAttributionTrackingRepositoryProtocol",
-            "printedName": "ASAAttributionTrackingRepositoryProtocol",
-            "usr": "s:11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP",
-            "mangledName": "$s11AppstackSDK40ASAAttributionTrackingRepositoryProtocolP"
-          }
-        ]
       },
       {
         "kind": "Import",
@@ -25795,6 +22596,39 @@
           },
           {
             "kind": "Var",
+            "name": "queryItems",
+            "printedName": "queryItems",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.URLQueryItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLQueryItem",
+                    "printedName": "Foundation.URLQueryItem",
+                    "usr": "s:10Foundation12URLQueryItemV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11AppstackSDK22UserDataRequestBuilderC10queryItems33_E1429A01D69BD73077EC97ED92FD7C5FLLSay10Foundation12URLQueryItemVGvp",
+            "mangledName": "$s11AppstackSDK22UserDataRequestBuilderC10queryItems33_E1429A01D69BD73077EC97ED92FD7C5FLLSay10Foundation12URLQueryItemVGvp",
+            "moduleName": "AppstackSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 2,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
             "name": "timeoutInterval",
             "printedName": "timeoutInterval",
             "children": [
@@ -25815,7 +22649,7 @@
               "HasStorage",
               "AccessControl"
             ],
-            "fixedbinaryorder": 2,
+            "fixedbinaryorder": 3,
             "hasStorage": true
           },
           {
@@ -25840,7 +22674,7 @@
               "HasStorage",
               "AccessControl"
             ],
-            "fixedbinaryorder": 3,
+            "fixedbinaryorder": 4,
             "hasStorage": true
           },
           {
@@ -25905,6 +22739,47 @@
             "declKind": "Func",
             "usr": "s:11AppstackSDK22UserDataRequestBuilderC7headersyACXDSDyS2SGF",
             "mangledName": "$s11AppstackSDK22UserDataRequestBuilderC7headersyACXDSDyS2SGF",
+            "moduleName": "AppstackSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryParameters",
+            "printedName": "queryParameters(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK22UserDataRequestBuilderC15queryParametersyACXDSDyS2SGF",
+            "mangledName": "$s11AppstackSDK22UserDataRequestBuilderC15queryParametersyACXDSDyS2SGF",
             "moduleName": "AppstackSDK",
             "isOpen": true,
             "declAttributes": [
@@ -26975,7 +23850,7 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/AppstackASAAttribution.swift",
       "kind": "StringLiteral",
-      "offset": 700,
+      "offset": 616,
       "length": 2,
       "value": "\"\""
     },
@@ -27066,28 +23941,28 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "Dictionary",
-      "offset": 28135,
+      "offset": 29250,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 28264,
+      "offset": 29379,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 28405,
+      "offset": 29520,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 28513,
+      "offset": 29628,
       "length": 5,
       "value": "false"
     },
@@ -27241,77 +24116,91 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1234,
+      "offset": 1229,
+      "length": 18,
+      "value": "\"InstallEventSent\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 1277,
+      "length": 10,
+      "value": "\"ASAToken\""
+    },
+    {
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 1327,
       "length": 7,
       "value": "\"2.2.0\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 423,
+      "offset": 406,
       "length": 10,
       "value": "\"event_id\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 459,
+      "offset": 442,
       "length": 12,
       "value": "\"event_name\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 498,
+      "offset": 481,
       "length": 13,
       "value": "\"appstack_id\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 533,
+      "offset": 516,
       "length": 8,
       "value": "\"app_id\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 567,
+      "offset": 550,
       "length": 12,
       "value": "\"event_type\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 607,
+      "offset": 590,
       "length": 14,
       "value": "\"trigger_type\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 648,
+      "offset": 631,
       "length": 13,
       "value": "\"sdk_version\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 696,
+      "offset": 679,
       "length": 21,
       "value": "\"transaction_details\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 752,
-      "length": 21,
-      "value": "\"attribution_details\""
+      "offset": 725,
+      "length": 11,
+      "value": "\"asa_token\""
     },
     {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogResponse.swift",
+      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/ApiClients\/Model\/EventServerLogRequest.swift",
       "kind": "StringLiteral",
-      "offset": 798,
+      "offset": 761,
       "length": 11,
       "value": "\"user_data\""
     },
@@ -27377,13 +24266,6 @@
       "offset": 956,
       "length": 13,
       "value": "\"deeplink_id\""
-    },
-    {
-      "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Persistence\/ASADataPersistence.swift",
-      "kind": "StringLiteral",
-      "offset": 457,
-      "length": 27,
-      "value": "\"asa_attribution_data.json\""
     },
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/Data\/Persistence\/ConversionValuesPersistence.swift",
@@ -27458,7 +24340,7 @@
     {
       "filePath": "\/Users\/antoniojimenezmartinez\/Developer\/Appstack\/ios-sdk\/appstack-ios-sdk\/AppstackSDK\/Sources\/NetworkTools\/UserDataRequestBuilder.swift",
       "kind": "FloatLiteral",
-      "offset": 341,
+      "offset": 387,
       "length": 4,
       "value": "60.0"
     },
