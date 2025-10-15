@@ -1,9 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppstackSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppstackSDK
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AdAttributionKit
 import AdServices
+@_exported import AppstackSDK
 import Foundation
 import StoreKit
 import Swift
@@ -13,21 +14,25 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
+@_hasMissingDesignatedInitializers public class AppstackAttributionSdk : @unchecked Swift.Sendable {
+  public static var shared: AppstackSDK.AppstackAttributionSdk
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, revenue: Swift.Double? = nil)
+  #endif
+  @objc deinit
+}
+extension AppstackSDK.AppstackAttributionSdk {
+  public func resetApiKeyState()
+}
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
   public static var shared: AppstackSDK.AppstackASAAttribution
   final public func enableAppleAdsAttribution()
   final public func disableASAAttributionTracking()
   @objc deinit
-}
-@_hasMissingDesignatedInitializers public class AppstackAttributionSdk : @unchecked Swift.Sendable {
-  public static var shared: AppstackSDK.AppstackAttributionSdk
-  public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info)
-  public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, revenue: Swift.Double? = nil)
-  @objc deinit
-}
-extension AppstackSDK.AppstackAttributionSdk {
-  public func resetApiKeyState()
 }
 public enum EventType : Swift.String, Swift.CaseIterable {
   case INSTALL
@@ -48,7 +53,9 @@ public enum EventType : Swift.String, Swift.CaseIterable {
   case VIEW_CONTENT
   case SHARE
   case CUSTOM
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [AppstackSDK.EventType]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [AppstackSDK.EventType] {
@@ -71,7 +78,9 @@ public struct UserData : Swift.Codable, Swift.Equatable {
   public let redirectionUrl: Swift.String
   public let deeplinkId: Swift.String
   public let gclid: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(appId: Swift.String, clientFingerprint: Swift.String, timestamp: Swift.String, expiresAt: Swift.String, redirectionUrl: Swift.String, deeplinkId: Swift.String, gclid: Swift.String? = nil)
+  #endif
   public static func == (a: AppstackSDK.UserData, b: AppstackSDK.UserData) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -81,7 +90,9 @@ public enum LogLevel : Swift.Int {
   case error
   case debug
   case info
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
