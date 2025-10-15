@@ -2948,7 +2948,7 @@
       "kind": "StringLiteral",
       "offset": 1327,
       "length": 7,
-      "value": "\"2.2.0\""
+      "value": "\"2.5.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
