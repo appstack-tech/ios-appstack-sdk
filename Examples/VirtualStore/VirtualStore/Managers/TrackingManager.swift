@@ -74,14 +74,14 @@ class TrackingManager: ObservableObject {
     
     /// Extracts revenue value from parameters dictionary
     /// Supports Double, Int, Float, and String values as per SDK documentation
-    private func extractRevenue(from parameters: [String: Any]) -> Decimal? {
+    private func extractRevenue(from parameters: [String: Any]) -> Double? {
         // Check for common revenue parameter names
         let revenueKeys = ["value", "revenue", "price", "amount"]
         
         for key in revenueKeys {
             if let value = parameters[key] {
                 // Return the value as-is since SDK supports multiple types
-                return value as? Decimal
+                return value as? Double
             }
         }
         
@@ -142,7 +142,7 @@ class TrackingManager: ObservableObject {
             ATTrackingManager.requestTrackingAuthorization { status in
                 // Enable ASA Attribution tracking after getting permission
                 if #available(iOS 14.3, *) {
-                    AppstackAttributionSdk.shared.enableASAAttributionTracking()
+                    AppstackASAAttribution.shared.enableAppleAdsAttribution()
                 }
                 
                 switch status {
