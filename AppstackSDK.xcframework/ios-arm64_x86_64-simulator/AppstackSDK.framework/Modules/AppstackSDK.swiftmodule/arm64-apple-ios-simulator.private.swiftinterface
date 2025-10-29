@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AdAttributionKit
 import AdServices
+import AdSupport
 @_exported import AppstackSDK
 import Foundation
 import StoreKit
@@ -26,6 +27,9 @@ import os
 }
 extension AppstackSDK.AppstackAttributionSdk {
   public func resetApiKeyState()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getAppstackId() -> Swift.String?
+  #endif
 }
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
