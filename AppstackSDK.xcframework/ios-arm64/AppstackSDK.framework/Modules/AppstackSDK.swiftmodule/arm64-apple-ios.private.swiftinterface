@@ -30,6 +30,7 @@ extension AppstackSDK.AppstackAttributionSdk {
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAppstackId() -> Swift.String?
   #endif
+  public func isSdkDisabled() -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
