@@ -21,7 +21,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
  dependencies: [
-    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "2.1.0")
+    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "2.6.3")
  ]
 ```
 
