@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppstackSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AdAttributionKit
 import AdServices
 import AdSupport
@@ -21,7 +21,7 @@ import os
   public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, revenue: Swift.Double? = nil)
+  public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
   #endif
   @objc deinit
 }
