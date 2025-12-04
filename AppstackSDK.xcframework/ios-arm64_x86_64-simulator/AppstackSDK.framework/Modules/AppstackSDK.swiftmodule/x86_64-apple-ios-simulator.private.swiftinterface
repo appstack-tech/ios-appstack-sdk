@@ -75,7 +75,7 @@ extension AppstackSDK.EventType {
     get
   }
 }
-public struct UserData : Swift.Codable, Swift.Equatable {
+public struct UserData : Swift.Decodable, Swift.Encodable, Swift.Equatable {
   public let appId: Swift.String
   public let clientFingerprint: Swift.String
   public let timestamp: Swift.String
@@ -86,9 +86,9 @@ public struct UserData : Swift.Codable, Swift.Equatable {
   #if compiler(>=5.3) && $NonescapableTypes
   public init(appId: Swift.String, clientFingerprint: Swift.String, timestamp: Swift.String, expiresAt: Swift.String, redirectionUrl: Swift.String, deeplinkId: Swift.String, gclid: Swift.String? = nil)
   #endif
-  public static func == (a: AppstackSDK.UserData, b: AppstackSDK.UserData) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: AppstackSDK.UserData, b: AppstackSDK.UserData) -> Swift.Bool
 }
 public enum LogLevel : Swift.Int {
   case off

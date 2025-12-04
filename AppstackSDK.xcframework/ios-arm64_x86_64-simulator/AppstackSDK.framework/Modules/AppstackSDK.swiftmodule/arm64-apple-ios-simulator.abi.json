@@ -2156,7 +2156,10 @@
             "usr": "s:11AppstackSDK8UserDataV4fromACs7Decoder_p_tKcfc",
             "mangledName": "$s11AppstackSDK8UserDataV4fromACs7Decoder_p_tKcfc",
             "moduleName": "AppstackSDK",
-            "implicit": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -2181,7 +2184,9 @@
             "usr": "s:11AppstackSDK8UserDataV6encode2toys7Encoder_p_tKF",
             "mangledName": "$s11AppstackSDK8UserDataV6encode2toys7Encoder_p_tKF",
             "moduleName": "AppstackSDK",
-            "implicit": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
           },
@@ -3036,7 +3041,7 @@
       "kind": "StringLiteral",
       "offset": 1359,
       "length": 7,
-      "value": "\"3.0.0\""
+      "value": "\"3.0.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
@@ -3062,35 +3067,35 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 758,
+      "offset": 771,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 800,
+      "offset": 813,
       "length": 20,
       "value": "\"client_fingerprint\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 869,
+      "offset": 882,
       "length": 12,
       "value": "\"expires_at\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 912,
+      "offset": 925,
       "length": 17,
       "value": "\"redirection_url\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 956,
+      "offset": 969,
       "length": 13,
       "value": "\"deeplink_id\""
     },
