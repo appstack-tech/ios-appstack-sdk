@@ -24,6 +24,7 @@ extension AppstackSDK.AppstackAttributionSdk {
   public func resetApiKeyState()
   public func getAppstackId() -> Swift.String?
   public func isSdkDisabled() -> Swift.Bool
+  public func getAttributionParams() -> [Swift.String : Any]?
 }
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
@@ -66,18 +67,29 @@ extension AppstackSDK.EventType {
     get
   }
 }
-public struct UserData : Swift.Decodable, Swift.Encodable, Swift.Equatable {
-  public let appId: Swift.String
-  public let clientFingerprint: Swift.String
-  public let timestamp: Swift.String
-  public let expiresAt: Swift.String
-  public let redirectionUrl: Swift.String
-  public let deeplinkId: Swift.String
-  public let gclid: Swift.String?
-  public init(appId: Swift.String, clientFingerprint: Swift.String, timestamp: Swift.String, expiresAt: Swift.String, redirectionUrl: Swift.String, deeplinkId: Swift.String, gclid: Swift.String? = nil)
+public struct AnyCodable : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  public static func == (a: AppstackSDK.UserData, b: AppstackSDK.UserData) -> Swift.Bool
+}
+public struct UserData : Swift.Decodable, Swift.Encodable {
+  public let deeplinkId: Swift.String
+  public let appId: Swift.String
+  public let redirectionUrl: Swift.String
+  public let timestamp: Swift.String
+  public let fingerprint: Swift.String
+  public let method: Swift.String
+  public let url: Swift.String
+  public let queryParams: [Swift.String : AppstackSDK.AnyCodable]
+  public let pathParams: [Swift.String : AppstackSDK.AnyCodable]
+  public let cookies: [Swift.String : AppstackSDK.AnyCodable]
+  public let installId: Swift.String?
+  public let eventType: Swift.String
+  public let dateDay: Swift.String
+  public let expiresAt: Swift.String?
+  public let gclid: Swift.String?
+  public init(deeplinkId: Swift.String, appId: Swift.String, redirectionUrl: Swift.String, timestamp: Swift.String, fingerprint: Swift.String, method: Swift.String, url: Swift.String, queryParams: [Swift.String : AppstackSDK.AnyCodable], pathParams: [Swift.String : AppstackSDK.AnyCodable], cookies: [Swift.String : AppstackSDK.AnyCodable], installId: Swift.String?, eventType: Swift.String, dateDay: Swift.String, expiresAt: Swift.String? = nil, gclid: Swift.String? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public enum LogLevel : Swift.Int {
   case off
