@@ -5,6 +5,71 @@
 
 SDK for integrating Appstack into iOS applications.
 
+## Overview
+
+The Appstack iOS SDK lets you:
+
+- Track standardized and custom events
+- Track revenue events with currency (for ROAS / optimization)
+- Enable Apple Ads attribution
+- Retrieve the Appstack installation ID and attribution parameters
+
+## Features (with examples)
+
+### SDK initialization
+
+```swift
+import AppstackSDK
+
+AppstackAttributionSdk.shared.configure(
+    apiKey: "your_api_key",
+    isDebug: false,
+    endpointBaseUrl: nil,
+    logLevel: .info
+)
+```
+
+### Event tracking (standard + custom)
+
+```swift
+// Standard
+AppstackAttributionSdk.shared.sendEvent(event: .LOGIN)
+
+// Custom
+AppstackAttributionSdk.shared.sendEvent(
+    event: .CUSTOM,
+    name: "level_completed",
+    parameters: ["level": 12]
+)
+```
+
+### Revenue tracking (recommended for all ad networks)
+
+```swift
+AppstackAttributionSdk.shared.sendEvent(
+    event: .PURCHASE,
+    parameters: ["revenue": 29.99, "currency": "EUR"]
+)
+// `price` is also accepted instead of `revenue`
+```
+
+### Installation ID + attribution parameters
+
+```swift
+let appstackId = AppstackAttributionSdk.shared.getAppstackId()
+let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
+```
+
+### Apple Ads attribution
+
+```swift
+import AppstackSDK
+
+if #available(iOS 14.3, *) {
+    AppstackASAAttribution.shared.enableAppleAdsAttribution()
+}
+```
+
 ## 📋 Requirements
 
 - **iOS** 13.0+
@@ -21,7 +86,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
  dependencies: [
-    .package(url: "https://github.com/appstack/ios-appstack-sdk.git", from: "2.6.3")
+    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "3.1.1")
  ]
 ```
 
@@ -127,8 +192,8 @@ The SDK provides better type safety with predefined event types:
 ```swift
 // Standard events using EventType enum
 AppstackAttributionSdk.shared.sendEvent(event: .LOGIN)
-AppstackAttributionSdk.shared.sendEvent(event: .PURCHASE, revenue: 29.99)
-AppstackAttributionSdk.shared.sendEvent(event: .SUBSCRIBE, revenue: 9.99)
+AppstackAttributionSdk.shared.sendEvent(event: .PURCHASE, parameters: ["revenue": 29.99, "currency": "EUR"])
+AppstackAttributionSdk.shared.sendEvent(event: .SUBSCRIBE, parameters: ["revenue": 9.99, "currency": "EUR"])
 
 // Custom events
 AppstackAttributionSdk.shared.sendEvent(
@@ -138,7 +203,7 @@ AppstackAttributionSdk.shared.sendEvent(
 AppstackAttributionSdk.shared.sendEvent(
     event: .CUSTOM, 
     name: "purchase_completed", 
-    revenue: 49.99
+    parameters: ["revenue": 49.99, "currency": "EUR"]
 )
 ```
 
@@ -168,7 +233,7 @@ The SDK automatically matches events with revenue parameters to configured **rev
 
 - Always **initialize the SDK** before sending events
 - Event names **must match** those defined in the **Appstack platform**
-- Revenue parameters support automatic type conversion (`Double`, `Int`, `Float`, `String`)
+- For revenue events, always pass a `revenue` (or `price`) and a `currency` parameter
 - Revenue ranges are configured in the Appstack platform and automatically synchronized
 
 ---
@@ -340,3 +405,31 @@ For any questions or issues, please:
 - Contact our **support team** for further assistance.
 
 📩 **[Contact](https://www.appstack.tech/contact)**
+
+---
+
+## EAC recommendations
+
+### Revenue events (all ad networks)
+
+For any event that represents revenue, we recommend sending:
+
+- `revenue` **or** `price` (number)
+- `currency` (string, e.g. `EUR`, `USD`)
+
+```swift
+AppstackAttributionSdk.shared.sendEvent(
+    event: .PURCHASE,
+    parameters: ["revenue": 4.99, "currency": "EUR"]
+)
+```
+
+### Meta matching (send once per installation, as early as possible)
+
+For Meta, we recommend sending **one time** (because the information will then be associated to every event sent with the same **installation ID**), **as early as possible**, the following parameters (if you have them):
+
+- `email`
+- `name` (first name + last name in the same parameter)
+- `phone_number`
+- `date_of_birth`
+```
