@@ -60,6 +60,36 @@ let appstackId = AppstackAttributionSdk.shared.getAppstackId()
 let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
 ```
 
+### `getAttributionParams() -> [String: Any]`
+Retrieve attribution parameters from the SDK. This returns all available attribution data that the SDK has collected.
+
+**Returns:** A dictionary containing attribution parameters (key-value pairs).
+
+**Returns data on success:** Dictionary with various attribution-related data depending on availability.
+
+**Returns empty dictionary:** `[:]` if no attribution parameters are available.
+
+**Example:**
+```swift
+let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
+print("Attribution parameters:", attributionParams)
+
+// Example output (varies by device / store install):
+// [
+//   "attribution_source": "app_store",
+//   "install_timestamp": "1733629800",
+//   "attributed": "true",
+//   ...
+// ]
+```
+
+**Use Cases:**
+- Retrieve attribution data for analytics
+- Check if the app was attributed to a specific campaign
+- Log attribution parameters for debugging
+- Send attribution data to your backend server
+- Analyze user acquisition sources
+
 ### Apple Ads attribution
 
 ```swift
