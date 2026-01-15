@@ -4,6 +4,7 @@
 import AdAttributionKit
 import AdServices
 import AdSupport
+import AppTrackingTransparency
 @_exported import AppstackSDK
 import Foundation
 import StoreKit

@@ -454,6 +454,13 @@
         "moduleName": "AppstackSDK"
       },
       {
+        "kind": "Import",
+        "name": "AppTrackingTransparency",
+        "printedName": "AppTrackingTransparency",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "AppstackASAAttribution",
         "printedName": "AppstackASAAttribution",
@@ -3552,7 +3559,7 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackASAAttribution.swift",
       "kind": "StringLiteral",
-      "offset": 665,
+      "offset": 742,
       "length": 2,
       "value": "\"\""
     },
@@ -3715,7 +3722,7 @@
       "kind": "StringLiteral",
       "offset": 1223,
       "length": 7,
-      "value": "\"3.3.0\""
+      "value": "\"3.3.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
