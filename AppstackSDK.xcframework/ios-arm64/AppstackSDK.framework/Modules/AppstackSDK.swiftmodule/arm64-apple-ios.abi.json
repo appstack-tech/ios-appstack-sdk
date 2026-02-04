@@ -132,6 +132,41 @@
           },
           {
             "kind": "Function",
+            "name": "setInstallDateForTesting",
+            "printedName": "setInstallDateForTesting(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11AppstackSDK0A14AttributionSdkC24setInstallDateForTestingyy10Foundation0G0VSgF",
+            "mangledName": "$s11AppstackSDK0A14AttributionSdkC24setInstallDateForTestingyy10Foundation0G0VSgF",
+            "moduleName": "AppstackSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "configure",
             "printedName": "configure(apiKey:isDebug:endpointBaseUrl:logLevel:customerUserId:)",
             "children": [
@@ -3459,7 +3494,7 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1989,
+      "offset": 2481,
       "length": 5,
       "value": "false"
     },
@@ -3629,7 +3664,7 @@
       "kind": "StringLiteral",
       "offset": 1027,
       "length": 11,
-      "value": "\"3.6.0-rc5\""
+      "value": "\"3.6.0-rc6\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",

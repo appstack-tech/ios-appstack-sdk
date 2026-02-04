@@ -17,6 +17,9 @@ import os
 @_hasMissingDesignatedInitializers public class AppstackAttributionSdk : @unchecked Swift.Sendable {
   public static var shared: AppstackSDK.AppstackAttributionSdk
   #if compiler(>=5.3) && $NonescapableTypes
+  public func setInstallDateForTesting(_ date: Foundation.Date?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
