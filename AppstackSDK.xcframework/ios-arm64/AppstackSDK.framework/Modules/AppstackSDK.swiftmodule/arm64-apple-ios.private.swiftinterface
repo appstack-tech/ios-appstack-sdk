@@ -2,7 +2,6 @@
 // swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppstackSDK
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
-import AdAttributionKit
 import AdServices
 import AdSupport
 import AppTrackingTransparency
@@ -10,7 +9,6 @@ import AppTrackingTransparency
 import Foundation
 import StoreKit
 import Swift
-import _AdAttributionKit_StoreKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -18,17 +16,12 @@ import os.log
 import os
 @_hasMissingDesignatedInitializers public class AppstackAttributionSdk : @unchecked Swift.Sendable {
   public static var shared: AppstackSDK.AppstackAttributionSdk
-  public static func prewarm()
   #if compiler(>=5.3) && $NonescapableTypes
   public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
   #endif
-  @objc deinit
-}
-extension AppstackSDK.AppstackAttributionSdk {
-  public func resetApiKeyState()
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAppstackId() -> Swift.String?
   #endif
@@ -39,6 +32,8 @@ extension AppstackSDK.AppstackAttributionSdk {
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAttributionParams(completion: @escaping ([Swift.String : Any]?) -> Swift.Void)
   #endif
+  public func deleteUserData() async throws
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, *)
 final public class AppstackASAAttribution {
