@@ -3396,70 +3396,70 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "StringLiteral",
-      "offset": 408,
+      "offset": 595,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 448,
+      "offset": 635,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 491,
+      "offset": 678,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 518,
+      "offset": 705,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "StringLiteral",
-      "offset": 930,
+      "offset": 1117,
       "length": 30,
       "value": "\"com.appstack.eventProcessing\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 1218,
+      "offset": 1405,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 1223,
+      "offset": 1410,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 1228,
+      "offset": 1415,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1263,
+      "offset": 1450,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 1802,
+      "offset": 1989,
       "length": 5,
       "value": "false"
     },
@@ -3615,7 +3615,7 @@
       "kind": "StringLiteral",
       "offset": 1027,
       "length": 11,
-      "value": "\"3.6.0-rc1\""
+      "value": "\"3.6.0-rc2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
