@@ -3663,8 +3663,8 @@
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
       "offset": 1027,
-      "length": 11,
-      "value": "\"3.6.0-rc6\""
+      "length": 7,
+      "value": "\"3.6.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
