@@ -3506,6 +3506,20 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/ConfigResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 8,
+      "value": "\"app_id\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Data\/Model\/ConfigResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 201,
+      "length": 13,
+      "value": "\"sdk_enabled\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
       "offset": 62,
@@ -3615,7 +3629,7 @@
       "kind": "StringLiteral",
       "offset": 1027,
       "length": 11,
-      "value": "\"3.6.0-rc4\""
+      "value": "\"3.6.0-rc5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
