@@ -30,10 +30,7 @@ import os
   #endif
   public func isSdkDisabled() -> Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
-  public func getAttributionParams() -> [Swift.String : Any]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getAttributionParams(completion: @escaping ([Swift.String : Any]?) -> Swift.Void)
+  public func getAttributionParams() async -> [Swift.String : Any]?
   #endif
   public func deleteUserData() async throws
   @objc deinit
