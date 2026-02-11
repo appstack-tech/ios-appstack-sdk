@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -disable-upcoming-feature NonescapableTypes -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppstackSDK
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AppstackSDK
 import AdServices
 import AdSupport
 import AppTrackingTransparency
@@ -16,22 +15,12 @@ import os.log
 import os
 @_hasMissingDesignatedInitializers public class AppstackAttributionSdk : @unchecked Swift.Sendable {
   public static var shared: AppstackSDK.AppstackAttributionSdk
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setInstallDateForTesting(_ date: Foundation.Date?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func configure(apiKey appstackApiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: AppstackSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func sendEvent(event: AppstackSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getAppstackId() -> Swift.String?
-  #endif
   public func isSdkDisabled() -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getAttributionParams() async -> [Swift.String : Any]?
-  #endif
   public func deleteUserData() async throws
   @objc deinit
 }
@@ -61,9 +50,7 @@ public enum EventType : Swift.String, Swift.CaseIterable {
   case VIEW_CONTENT
   case SHARE
   case CUSTOM
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [AppstackSDK.EventType]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [AppstackSDK.EventType] {
@@ -98,9 +85,7 @@ public struct UserData : Swift.Decodable, Swift.Encodable {
   public let dateDay: Swift.String
   public let expiresAt: Swift.String?
   public let gclid: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(deeplinkId: Swift.String, appId: Swift.String, redirectionUrl: Swift.String, timestamp: Swift.String, fingerprint: Swift.String, method: Swift.String, url: Swift.String, queryParams: [Swift.String : AppstackSDK.AnyCodable], pathParams: [Swift.String : AppstackSDK.AnyCodable], cookies: [Swift.String : AppstackSDK.AnyCodable], installId: Swift.String?, eventType: Swift.String, dateDay: Swift.String, expiresAt: Swift.String? = nil, gclid: Swift.String? = nil)
-  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -109,9 +94,7 @@ public enum LogLevel : Swift.Int {
   case error
   case debug
   case info
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
