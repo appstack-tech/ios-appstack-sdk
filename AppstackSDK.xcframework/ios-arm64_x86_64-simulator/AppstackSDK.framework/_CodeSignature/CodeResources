@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/AppstackSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		HFxZ7V/yEY/wVp8XbnWFMPwHoQ8=
+		FSJuFviU/LkEVcDlJLx6OBdtFjo=
 		</data>
 		<key>Modules/AppstackSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/AppstackSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		L+XBZ7l3bmXJ8bcS5r3FQPjrubc=
+		2U2WC66wSSqjLnlqsrKicJf37Xs=
 		</data>
 		<key>Modules/AppstackSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		HFxZ7V/yEY/wVp8XbnWFMPwHoQ8=
+		FSJuFviU/LkEVcDlJLx6OBdtFjo=
 		</data>
 		<key>Modules/AppstackSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/AppstackSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rrHyHLyIi9iapiBIOlB1hgZsShs=
+		z+KwZsiDykVl6osK2FclWXLeCIA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m8N4JNPixw8OW0/ffHusH3G0BliXrF1z01c59lvRZGI=
+			n1rWi5ZG2wfK81tQzjIpkNnVBvvDyVi1vXmIj2ie0B0=
 			</data>
 		</dict>
 		<key>Modules/AppstackSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MoyCYBefj8HgXqU4r0n6Rvf7OrDbEKNagYXEfpanPCU=
+			AVxewxG3eJbtzoB8GAR5xdTvAjF6Hz5zsuzj3Rob+4w=
 			</data>
 		</dict>
 		<key>Modules/AppstackSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m8N4JNPixw8OW0/ffHusH3G0BliXrF1z01c59lvRZGI=
+			n1rWi5ZG2wfK81tQzjIpkNnVBvvDyVi1vXmIj2ie0B0=
 			</data>
 		</dict>
 		<key>Modules/AppstackSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h2dAz9I+LAnpGdBzaSnJ6mb6N9ya4ngJbxTmhaiVOnA=
+			yXTwsxlRxTISuaqOowuHIgt9o4+cS6zNfq1CLblRiGM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
