@@ -57,13 +57,13 @@ AppstackAttributionSdk.shared.sendEvent(
 
 ```swift
 let appstackId = AppstackAttributionSdk.shared.getAppstackId()
-let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
+let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
 ```
 
-### `getAttributionParams() -> [String: Any]`
+### `getAttributionParams() async -> [String: Any]?`
 Retrieve attribution parameters from the SDK. This returns all available attribution data that the SDK has collected.
 
-**Returns:** A dictionary containing attribution parameters (key-value pairs).
+**Returns:** A dictionary containing attribution parameters (key-value pairs), or `nil` if not yet available.
 
 **Returns data on success:** Dictionary with various attribution-related data depending on availability.
 
@@ -71,7 +71,7 @@ Retrieve attribution parameters from the SDK. This returns all available attribu
 
 **Example:**
 ```swift
-let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
+let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
 print("Attribution parameters:", attributionParams)
 
 // Example output (varies by device / store install):
@@ -98,6 +98,22 @@ import AppstackSDK
 if #available(iOS 14.3, *) {
     AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
+```
+
+## Sending S2S Events with Superwall
+
+The SDK integrates with Superwall so you can track lifecycle events (trial started, subscription started, in-app purchase, etc.) and forward them to your ad networks.
+
+To make this integration work end-to-end:
+
+1. Activate the Appstack integration in the Superwall dashboard.
+2. Add the following code:
+
+```swift
+Task {
+  Superwall.shared.setUserAttributes(await AppstackAttributionSdk.shared.getAttributionParams() ?? [:])
+}
+Superwall.shared.register(placement: "onboarding_paywall")
 ```
 
 ## 📋 Requirements
