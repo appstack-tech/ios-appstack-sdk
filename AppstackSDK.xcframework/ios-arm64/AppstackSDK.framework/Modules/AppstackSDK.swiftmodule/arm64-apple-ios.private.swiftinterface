@@ -5,9 +5,12 @@ import AdServices
 import AdSupport
 import AppTrackingTransparency
 @_exported import AppstackSDK
+import Darwin
 import Foundation
 import StoreKit
 import Swift
+import UIKit
+import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims

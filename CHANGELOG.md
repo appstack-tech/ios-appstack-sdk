@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.2] - 2026-04-01
+### Added
+- Optional `matchUrl` on remote configuration so the backend can supply the attribution match endpoint; older backends without this field keep working.
+- Device signal headers for match requests via `MatchDeviceSignalsProviding` / `DefaultMatchDeviceSignalsProvider` and `MatchDeviceSignals` helpers.
+
+### Changed
+- User data / match HTTP requests use the configured match URL when it is present and non-empty, and fall back to the built-in base URL otherwise.
+- `UserDataRequestBuilder` now merges query parameters with any query string already on the URL (builder values override duplicate keys).
+- Match-related logging prints URLs without query or fragment to avoid leaking sensitive query data.
+
 ## [4.0.1] - 2026-02-10
 ### Changed
 - **removing the Nonescapable types from the release CD.** 
