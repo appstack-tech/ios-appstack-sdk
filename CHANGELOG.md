@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.3] - 2026-04-08
+### Fixed
+- Event sending regression introduced in 4.0.2: `WKWebView.evaluateJavaScript` on the attribution match critical path could hang indefinitely on iOS (web content process never starts for a windowless, unloaded view), which prevented the install event and `getAttributionParams()` from ever completing.
+
+### Changed
+- `X-Device-WebKit-Version` (AppleWebKit UA token) is now resolved via a fire-and-forget background task so it never blocks the match request. The bundle Info.plist version is used as a fallback on the first request; the precise UA token is included from the second request onward once the background resolution has completed.
+
 ## [4.0.2] - 2026-04-08
 ### Added
 - Optional `matchUrl` on remote configuration so the backend can supply the attribution match endpoint; older backends without this field keep working.
