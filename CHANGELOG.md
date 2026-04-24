@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.5] - 2026-04-24
+### Fixed
+- Crash (`swift_unknownObjectRetain`) on first install affecting a small subset of users: a data race in Swift Concurrency could occur when `sendEvent` read `eventServerLogRepository` on one cooperative thread while `configureAsync` was writing it on another. The read is now performed under `stateLock` to make it atomic.
+- `configure()` now ignores duplicate calls within the same process lifetime. Previously, calling it more than once could spawn concurrent `configureAsync` Tasks that simultaneously wrote repository properties, creating a second race window that also led to the same crash.
+- Removed a `DispatchQueue.async { Task { } }` anti-pattern in `sendEvent`: the outer dispatch queue wrapper was a no-op because the inner `Task` immediately escaped to the Swift Concurrency cooperative thread pool regardless. Replaced with a direct `Task(priority: .utility)`.
+
+## [4.0.4] - 2026-04-08
+### Fixed
+- Event sending regression introduced in 4.0.2: `WKWebView.evaluateJavaScript` on the attribution match critical path could hang indefinitely on iOS (web content process never starts for a windowless, unloaded view), which prevented the install event and `getAttributionParams()` from ever completing.
+
+### Changed
+- `X-Device-WebKit-Version` (AppleWebKit UA token) is now resolved via a fire-and-forget background task so it never blocks the match request. The bundle Info.plist version is used as a fallback on the first request; the precise UA token is included from the second request onward once the background resolution has completed.
+
 ## [4.0.3] - 2026-04-08
 ### Fixed
 - Event sending regression introduced in 4.0.2: `WKWebView.evaluateJavaScript` on the attribution match critical path could hang indefinitely on iOS (web content process never starts for a windowless, unloaded view), which prevented the install event and `getAttributionParams()` from ever completing.
