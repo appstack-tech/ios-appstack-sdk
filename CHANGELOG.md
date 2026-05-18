@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.1.0] - 2026-05-15
+### Added
+- `configure()` now accepts an optional `wrapperVersion` parameter so wrapper SDKs (React Native, Flutter, etc.) can pass their version through to the backend.
+- IDFV (`identifierForVendor`) and device model (hardware machine string) are now collected at configure time and included in every event payload.
+- dSYMs are now embedded in the `AppstackSDK.xcframework` distribution, enabling crash symbolication for apps that integrate the binary framework.
+
+### Changed
+- INSTALL events triggered automatically by the SDK are now explicitly tagged `triggerType = "AUTOMATIC"`. Manually-sent INSTALL events via `sendEvent()` are tagged `"MANUAL"`, allowing the backend to filter them out.
+- Removed the word "fingerprint" entirely from the SDK source.
+
+## [4.0.6] - 2026-05-06
+### Breaking
+- `UserData`: dropped a public member that was only populated from the match response and never surfaced through `getAttributionParams()` or event payloads. Apps that read that member need to delete those references; match, persistence, and event behavior are otherwise unchanged.
+
 ## [4.0.5] - 2026-04-24
 ### Fixed
 - Crash (`swift_unknownObjectRetain`) on first install affecting a small subset of users: a data race in Swift Concurrency could occur when `sendEvent` read `eventServerLogRepository` on one cooperative thread while `configureAsync` was writing it on another. The read is now performed under `stateLock` to make it atomic.
