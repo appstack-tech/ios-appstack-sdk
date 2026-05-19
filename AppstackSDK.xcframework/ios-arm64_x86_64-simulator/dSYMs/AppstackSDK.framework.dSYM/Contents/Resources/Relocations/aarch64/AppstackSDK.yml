@@ -599,8 +599,8 @@ relocations:
   - { offset: 0x78FA0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV6encode2toys7Encoder_p_tKF', symObjAddr: 0x644, symBinAddr: 0x1A804, symSize: 0xB04 }
   - { offset: 0x791A3, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestVSeAASe4fromxs7Decoder_p_tKcfCTW', symObjAddr: 0x1148, symBinAddr: 0x1B308, symSize: 0x70 }
   - { offset: 0x791CD, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestVSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x11B8, symBinAddr: 0x1B378, symSize: 0x68 }
-  - { offset: 0x79226, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV9eventType06customC4Name8userData0G10Parameters0G2Id11isAutomaticAcA0cH0O_SSSgSDySSypGSgAnLSbtcfCTf4nnnnnnd_n', symObjAddr: 0x1220, symBinAddr: 0x1B3E0, symSize: 0x71C }
-  - { offset: 0x793FA, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV9eventType18transactionDetails8userData0G10Parameters0G2IdAcA0cH0O_SDySSypGSgA2LSSSgtcfCTf4nnnnnd_n', symObjAddr: 0x193C, symBinAddr: 0x1BAFC, symSize: 0x5B8 }
+  - { offset: 0x79226, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV9eventType06customC4Name8userData0G10Parameters0G2Id11isAutomaticAcA0cH0O_SSSgSDySSypGSgAnLSbtcfCTf4nnnnnnd_n', symObjAddr: 0x1220, symBinAddr: 0x1B3E0, symSize: 0x720 }
+  - { offset: 0x793FA, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV9eventType18transactionDetails8userData0G10Parameters0G2IdAcA0cH0O_SDySSypGSgA2LSSSgtcfCTf4nnnnnd_n', symObjAddr: 0x1940, symBinAddr: 0x1BB00, symSize: 0x5B4 }
   - { offset: 0x79534, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV10CodingKeysO8rawValueAESgSS_tcfCTf4nd_n', symObjAddr: 0x2578, symBinAddr: 0x1C708, symSize: 0x64 }
   - { offset: 0x7956B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21EventServerLogRequestV4fromACs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x25DC, symBinAddr: 0x1C76C, symSize: 0x1064 }
   - { offset: 0x7985F, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18MockNetworkManagerCMa', symObjAddr: 0x10, symBinAddr: 0x1DA48, symSize: 0x20 }
