@@ -144,27 +144,6 @@ Or directly from Xcode:
 
 ---
 
-## ⚙️ Initial Setup
-
-Before using the SDK, configure the attribution endpoint using one of the following methods:
-
-### **Option 1: Through Info.plist**
-
-Add the following entry to your `Info.plist` file:
-
-```xml
-<key>NSAdvertisingAttributionReportEndpoint</key>
-<string>https://ios-appstack.com/</string>
-```
-
-### **Option 2: Through Xcode**
-
-1. Open your `Info.plist` file.
-2. Add a new entry with the key: **Advertising attribution report endpoint URL**.
-3. Set the value to: `https://ios-appstack.com/`.
-
----
-
 ## 🚀 Initialization
 
 ```swift
