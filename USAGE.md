@@ -10,7 +10,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "3.2.0")
+    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.1.0")
 ]
 ```
 
@@ -19,14 +19,6 @@ Or directly from Xcode:
 1. Go to **File > Add Packages**.
 2. Enter the repository URL: `https://github.com/appstack-tech/ios-appstack-sdk.git`.
 3. Select the desired version and click **Add Package**.
-
-### CocoaPods
-
-Add the following line to your Podfile:
-
-```ruby
-pod 'AppstackSDK', :git => 'https://github.com/appstack-tech/ios-appstack-sdk.git', :tag => '3.2.0'
-```
 
 ## Quick Start
 
@@ -39,12 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your-ios-api-key",
             isDebug: false,
-            endpointBaseUrl: nil,
             logLevel: .info
         )
 
-        // Enable Apple Search Ads attribution (iOS 14.3+)
-        if #available(iOS 14.3, *) {
+        // Enable Apple Search Ads attribution (iOS 15.0+)
+        if #available(iOS 15.0, *) {
             AppstackASAAttribution.shared.enableAppleAdsAttribution()
         }
 
@@ -61,7 +52,7 @@ class ViewController: UIViewController {
         )
     }
 
-    private fun trackSignup() {
+    private func trackSignup() {
         AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP, name: "email_signup")
     }
 }
@@ -71,7 +62,36 @@ class ViewController: UIViewController {
 
 ```swift
 let appstackId = AppstackAttributionSdk.shared.getAppstackId()
-let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
+let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
+```
+
+`getAttributionParams()` is `async` and suspends until the initial attribution match completes (success or failure). Call it inside a `Task { }` or another async context.
+
+## Identifying users (optional)
+
+If you want to associate Appstack events with your own user identifier, pass `customerUserId` at configure time:
+
+```swift
+AppstackAttributionSdk.shared.configure(
+    apiKey: "your-ios-api-key",
+    isDebug: false,
+    logLevel: .info,
+    customerUserId: "your-internal-user-id"
+)
+```
+
+## Deleting user data
+
+For GDPR/CCPA flows you can ask Appstack to delete the stored data for the current installation:
+
+```swift
+Task {
+    do {
+        try await AppstackAttributionSdk.shared.deleteUserData()
+    } catch {
+        // Handle network/auth errors
+    }
+}
 ```
 
 ## iOS Configuration (Required)
@@ -102,7 +122,7 @@ For detailed Apple Search Ads attribution, request user permission:
 ```swift
 import AppTrackingTransparency
 
-if #available(iOS 14.5, *) {
+if #available(iOS 15.0, *) {
     ATTrackingManager.requestTrackingAuthorization { status in
         switch status {
         case .authorized:
@@ -169,8 +189,7 @@ AppstackAttributionSdk.shared.sendEvent(
 
 // Gaming Events
 AppstackAttributionSdk.shared.sendEvent(
-    event: .CUSTOM,
-    name: "level_completed",
+    event: .LEVEL_COMPLETE,
     parameters: ["level": 1, "score": 1500, "time_seconds": 45]
 )
 ```
@@ -179,17 +198,34 @@ AppstackAttributionSdk.shared.sendEvent(
 <details>
 <summary>Complete Event List</summary>
 
+> The SDK also sends an automatic `INSTALL` event on first launch, so you don't need to send it manually.
+
+**Authentication & account:**
+- `LOGIN` - User signed in
+- `SIGN_UP` - Account created
+- `REGISTER` - Alias for `SIGN_UP`
+
 **Monetization:**
 - `PURCHASE` - Purchase completed
+- `ADD_TO_CART` - Item added to cart
+- `ADD_TO_WISHLIST` - Item added to wishlist
+- `INITIATE_CHECKOUT` - Checkout started
+- `START_TRIAL` - Free trial started
 - `SUBSCRIBE` - Subscription started
 
-**User Account:**
-- `SIGN_UP` / `REGISTER` - Account created
-- `LOGIN` - User signed in
+**Games / progression:**
+- `LEVEL_START` - Level started
+- `LEVEL_COMPLETE` - Level completed
 
 **Engagement:**
-- `TUTORIAL_COMPLETE` - Onboarding done
-- `CUSTOM` - Custom events
+- `TUTORIAL_COMPLETE` - Onboarding finished
+- `SEARCH` - In-app search performed
+- `VIEW_ITEM` - Product or item viewed
+- `VIEW_CONTENT` - Generic content viewed
+- `SHARE` - Content shared
+
+**Catch-all:**
+- `CUSTOM` - App-specific events (requires a `name`)
 </details>
 
 ### Best Practices
@@ -280,9 +316,11 @@ AppstackAttributionSdk.shared.sendEvent(
 | Standard   | No                  | Immediate    |
 | Detailed   | Yes                 | 24 hours     |
 
+> Requires iOS 15.0+
+
 **Standard Attribution (No User Consent Required):**
 ```swift
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
@@ -291,7 +329,7 @@ if #available(iOS 14.3, *) {
 ```swift
 import AppTrackingTransparency
 
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     ATTrackingManager.requestTrackingAuthorization { status in
         AppstackASAAttribution.shared.enableAppleAdsAttribution()
     }
@@ -302,7 +340,7 @@ if #available(iOS 14.3, *) {
 - Detailed attribution requires user consent via ATT
 - Standard attribution works even if user denies tracking
 - Attribution data may take up to 24 hours to appear
-- Requires iOS 14.3+
+- Requires iOS 15.0+
 </details>
 
 ### Troubleshooting
@@ -317,7 +355,7 @@ if #available(iOS 14.3, *) {
 
 **Apple Search Ads attribution not working:**
 - Verify Info.plist configuration
-- Check iOS version (14.3+ required)
+- Check iOS version (15.0+ required)
 - Wait up to 24 hours for attribution data
 
 **SDK initialization issues:**
