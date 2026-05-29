@@ -98,21 +98,61 @@ if #available(iOS 15.0, *) {
 }
 ```
 
-## Sending S2S Events with Superwall
+## Integrations
 
-The SDK integrates with Superwall so you can track lifecycle events (trial started, subscription started, in-app purchase, etc.) and forward them to your ad networks.
+### Superwall
 
-To make this integration work end-to-end:
+Forward Appstack attribution to Superwall so lifecycle events (trial started, subscription started, in-app purchase, etc.) can be attributed back to the install.
+
+**Requires Superwall SDK ≥ 4.12.11.**
 
 1. Activate the Appstack integration in the Superwall dashboard.
-2. Add the following code:
+2. After both SDKs are configured, pass the Appstack ID and attribution params:
+
+```swift
+// 1. Pass the Appstack ID — this is the key the Appstack pipeline joins on.
+await Superwall.shared.setIntegrationAttribute(
+    IntegrationAttribute.appstackId,
+    AppstackAttributionSdk.shared.getAppstackId()
+)
+
+// 2. Pass attribution params as user attributes (available for campaign filters).
+Task {
+    Superwall.shared.setUserAttributes(
+        await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
+    )
+}
+
+Superwall.shared.register(placement: "onboarding_paywall")
+```
+
+See the [Superwall integration docs](https://docs.appstack.tech/Integrations/superwall) for the canonical reference.
+
+### RevenueCat
+
+Forward Appstack attribution to RevenueCat so subscription events carry `$appstackId`, campaign attributes (`$mediaSource`, `$campaign`, `$adGroup`, `$ad`, `$keyword`), and click IDs (`fbclid`, `gclid`, `wbraid`, `gbraid`, `ttclid`).
+
+**Requires RevenueCat iOS SDK ≥ 5.61.0.**
+
+After configuring both SDKs and before the first purchase, build the params dictionary from both `getAttributionParams()` and `getAppstackId()` and pass it to RevenueCat. A single call sets all attributes and refreshes offerings so AppStack-based targeting is applied before it returns.
 
 ```swift
 Task {
-  Superwall.shared.setUserAttributes(await AppstackAttributionSdk.shared.getAttributionParams() ?? [:])
+    var params = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
+    if let id = AppstackAttributionSdk.shared.getAppstackId() {
+        params["appstack_id"] = id
+    }
+    do {
+        _ = try await Purchases.shared.attribution.setAppstackAttributionParams(params)
+    } catch {
+        // Handle sync / offerings fetch error
+    }
 }
-Superwall.shared.register(placement: "onboarding_paywall")
 ```
+
+If you later request ATT permission, call `setAppstackAttributionParams()` again after the customer grants permission, rebuilding `params` from the latest values. The `AdSupport` framework is required to collect the IDFA on iOS.
+
+See the [RevenueCat integration docs](https://docs.appstack.tech/Integrations/revenuecat) for the canonical reference.
 
 ## 📋 Requirements
 
