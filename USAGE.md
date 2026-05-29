@@ -343,13 +343,21 @@ if #available(iOS 15.0, *) {
 - Ensure network connectivity
 
 **Apple Search Ads attribution not working:**
-- Verify Info.plist configuration
+- Ensure `enableAppleAdsAttribution()` is called after `configure()`
 - Check iOS version (15.0+ required)
-- Wait up to 24 hours for attribution data
+- For detailed attribution, confirm ATT is requested and `NSUserTrackingUsageDescription` is set (see [App Tracking Transparency](#app-tracking-transparency-recommended))
+- Apple Search Ads data can take up to 24 hours to appear (Apple-side delay)
 
 **SDK initialization issues:**
 - Initialize SDK in `application(_:didFinishLaunchingWithOptions:)`
 - Call configuration before any tracking calls
+
+**RevenueCat / Superwall events missing the Appstack ID (coverage below 50%):**
+
+If your dashboard shows an *"Appstack is receiving RevenueCat (or Superwall) events without the Appstack ID"* banner — or integration coverage is stuck below the 50% threshold and you can't map events to Meta/TikTok/Google — the Appstack ID isn't reaching the integration:
+- **Verify the wiring.** Confirm you call `getAppstackId()` and pass it through (`setIntegrationAttribute(.appstackId, …)` for Superwall, `setAppstackAttributionParams(...)` with `appstack_id` for RevenueCat). A missing or misconfigured call is the most common cause.
+- **Configure all SDKs in the same place.** Initialize Appstack, RevenueCat, and Superwall in a single lifecycle entry point (e.g. all inside `application(_:didFinishLaunchingWithOptions:)`). Splitting them across `AppDelegate` and `SceneDelegate` can create a race where RevenueCat/Superwall start before the Appstack ID is ready, so their events go out without it.
+- **Expect a ramp-up period.** Renewals from subscribers who installed *before* you shipped the SDK have no Appstack ID and drag the ratio down. Coverage rises as new installs adopt the SDK, so the banner can take time to clear after release.
 </details>
 
 ---

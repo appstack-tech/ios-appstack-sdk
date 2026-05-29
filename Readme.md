@@ -110,7 +110,7 @@ Forward Appstack attribution to Superwall so lifecycle events (trial started, su
 
 ```swift
 // 1. Pass the Appstack ID — this is the key the Appstack pipeline joins on.
-await Superwall.shared.setIntegrationAttribute(
+Superwall.shared.setIntegrationAttribute(
     IntegrationAttribute.appstackId,
     AppstackAttributionSdk.shared.getAppstackId()
 )
@@ -515,6 +515,7 @@ The SDK automatically:
 
 For any questions or issues, please:
 
+- Check the [Troubleshooting guide](./USAGE.md#troubleshooting) in `USAGE.md` for common issues (events not appearing, ASA attribution, RevenueCat/Superwall integration coverage).
 - **Open an issue** in this repository.
 - Contact our **support team** for further assistance.
 
