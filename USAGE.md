@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure Appstack SDK
         AppstackAttributionSdk.shared.configure(
             apiKey: "your-ios-api-key",
-            isDebug: false,
             logLevel: .info
         )
 
@@ -53,7 +52,7 @@ class ViewController: UIViewController {
     }
 
     private func trackSignup() {
-        AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP, name: "email_signup")
+        AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP)
     }
 }
 ```
@@ -74,7 +73,6 @@ If you want to associate Appstack events with your own user identifier, pass `cu
 ```swift
 AppstackAttributionSdk.shared.configure(
     apiKey: "your-ios-api-key",
-    isDebug: false,
     logLevel: .info,
     customerUserId: "your-internal-user-id"
 )
@@ -94,26 +92,11 @@ Task {
 }
 ```
 
-## iOS Configuration (Required)
+## Integrations
 
-### Advertising Attribution Report Endpoint
+To attribute purchases and subscriptions from third-party monetization tools, the SDK integrates with **Superwall** and **RevenueCat**. See the [Readme](./Readme.md#integrations) for setup instructions.
 
-Add your Application's **Advertising attribution report endpoint** to enable Apple Search Ads attribution:
-
-**Option 1: Through Info.plist**
-
-Add the following entry to your `Info.plist` file:
-
-```xml
-<key>NSAdvertisingAttributionReportEndpoint</key>
-<string>https://ios-appstack.com/</string>
-```
-
-**Option 2: Through Xcode**
-
-1. Open your `Info.plist` file.
-2. Add a new entry with the key: **Advertising attribution report endpoint URL**.
-3. Set the value to: `https://ios-appstack.com/`.
+## iOS Configuration
 
 ### App Tracking Transparency (Recommended)
 
@@ -260,7 +243,7 @@ AppstackAttributionSdk.shared.sendEvent(
 )
 
 // ✅ Simple events without parameters
-AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP, name: "email_signup")
+AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP)
 
 // ⚠️ Revenue values should be in decimal dollars, not cents
 AppstackAttributionSdk.shared.sendEvent(
@@ -290,7 +273,6 @@ class Analytics {
     static func trackSignup(method: String) {
         AppstackAttributionSdk.shared.sendEvent(
             event: .SIGN_UP,
-            name: "signup",
             parameters: ["method": method]
         )
     }
@@ -350,7 +332,7 @@ if #available(iOS 15.0, *) {
 
 **Events not appearing:**
 - Check API key is correct
-- Enable debug mode to see logs (`isDebug: true`)
+- Increase log verbosity with `logLevel: .info` (the most verbose level)
 - Ensure network connectivity
 
 **Apple Search Ads attribution not working:**
@@ -359,7 +341,7 @@ if #available(iOS 15.0, *) {
 - Wait up to 24 hours for attribution data
 
 **SDK initialization issues:**
-- Initialize SDK in `AppDelegate.applicationDidFinishLaunching`
+- Initialize SDK in `application(_:didFinishLaunchingWithOptions:)`
 - Call configuration before any tracking calls
 </details>
 

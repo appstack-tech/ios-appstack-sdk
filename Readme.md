@@ -22,7 +22,6 @@ import AppstackSDK
 
 AppstackAttributionSdk.shared.configure(
     apiKey: "your_api_key",
-    isDebug: false,
     logLevel: .info
 )
 ```
@@ -192,7 +191,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: false,
             logLevel: .info
         )
         return true
@@ -209,7 +207,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: false,
             logLevel: .info
         )
     }
@@ -227,7 +224,6 @@ struct MyApp: App {
     init() {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: false,
             logLevel: .info
         )
     }
@@ -376,7 +372,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: false,
             logLevel: .info
         )
         
@@ -407,8 +402,7 @@ The `AppstackAttributionSdk.shared.configure()` method supports the following pa
 
 ### **Parameters:**
 
-- **`apiKey`** (String, required): Your Appstack API key
-- **`isDebug`** (Bool, default: false): If `true`, the SDK targets the Appstack development environment. Set to `false` for production builds
+- **`apiKey`** (String, required): Your Appstack API key. Use your **development** API key for test builds and your **production** API key for App Store releases — this is how Appstack separates test traffic from production data.
 - **`logLevel`** (LogLevel, default: .info): Logging level for debugging
 - **`customerUserId`** (String?, default: nil): Optional identifier for your own user, associated with this installation
 
@@ -418,18 +412,56 @@ The `AppstackAttributionSdk.shared.configure()` method supports the following pa
 // Production configuration
 AppstackAttributionSdk.shared.configure(
     apiKey: "your_api_key",
-    isDebug: false,
     logLevel: .info
 )
 
 // With a customer user id
 AppstackAttributionSdk.shared.configure(
     apiKey: "your_api_key",
-    isDebug: false,
     logLevel: .info,
     customerUserId: "your-internal-user-id"
 )
 ```
+
+### **Separating development and production**
+
+Appstack keeps test traffic isolated from production data by **environment**, and the environment is selected by the **API key** you configure. There is no debug flag to toggle — each key belongs to one environment:
+
+- **Development API key** → events land in your Appstack development environment. Use it for local builds, QA, and TestFlight. These events are **not** forwarded to your ad networks, so they never pollute production conversions.
+- **Production API key** → events land in your production environment and are eligible for ad-network forwarding. Use it only for App Store releases.
+
+The recommended way to wire this is to select the key at compile time so you can never ship a debug build pointing at production:
+
+```swift
+import AppstackSDK
+
+enum AppstackConfig {
+    static var apiKey: String {
+        #if DEBUG
+        return "your_development_api_key"
+        #else
+        return "your_production_api_key"
+        #endif
+    }
+
+    static var logLevel: LogLevel {
+        #if DEBUG
+        return .info   // most verbose: logs init, every event sent, and errors
+        #else
+        return .error  // production: only log errors
+        #endif
+    }
+}
+
+AppstackAttributionSdk.shared.configure(
+    apiKey: AppstackConfig.apiKey,
+    logLevel: AppstackConfig.logLevel
+)
+```
+
+> **Log levels:** `.info` is the most verbose level (it logs initialization, every event sent, and errors), followed by `.debug` (events + errors), `.error` (errors only), and `.off`. Use `.info` while developing.
+
+> **Verifying your setup:** run a debug build, trigger a few events, and confirm they appear in the **development** environment of the Appstack dashboard (not production). With `logLevel: .info` the SDK logs the API key it was configured with at startup and each event as it is sent.
 
 ---
 
