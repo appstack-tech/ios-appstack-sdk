@@ -339,7 +339,7 @@ if #available(iOS 15.0, *) {
 
 **Events not appearing:**
 - Check API key is correct
-- Increase log verbosity with `logLevel: .info` (the most verbose level)
+- Increase log verbosity with `logLevel: .info` (currently the most verbose level; this ordering will change in a future release so `.debug` becomes the most verbose)
 - Ensure network connectivity
 
 **Apple Search Ads attribution not working:**

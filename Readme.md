@@ -466,7 +466,7 @@ AppstackAttributionSdk.shared.configure(
 )
 ```
 
-> **Log levels:** `.info` is the most verbose level (it logs initialization, every event sent, and errors), followed by `.debug` (events + errors), `.error` (errors only), and `.off`. Use `.info` while developing.
+> **Log levels:** `.info` is currently the most verbose level (it logs initialization, every event sent, and errors), followed by `.debug` (events + errors), `.error` (errors only), and `.off`. Use `.info` while developing. _Note: this ordering will change in a future release so that `.debug` becomes the most verbose level, matching standard logging conventions._
 
 > **Verifying your setup:** run a debug build, trigger a few events, and confirm they appear in the **development** environment of the Appstack dashboard (not production). With `logLevel: .info` the SDK logs the API key it was configured with at startup and each event as it is sent.
 
