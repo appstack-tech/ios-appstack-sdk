@@ -100,7 +100,14 @@ To attribute purchases and subscriptions from third-party monetization tools, th
 
 ### App Tracking Transparency (Recommended)
 
-For detailed Apple Search Ads attribution, request user permission:
+ATT is optional — the SDK works without it. Request it only if you want detailed Apple Search Ads attribution. If you do, you **must** add the `NSUserTrackingUsageDescription` key to your `Info.plist`, otherwise the prompt won't appear (the system treats it as denied) and App Store review may reject the build:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>We use your data to measure ad performance and improve your experience.</string>
+```
+
+Then request user permission:
 
 ```swift
 import AppTrackingTransparency

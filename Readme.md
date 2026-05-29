@@ -149,7 +149,7 @@ Task {
 }
 ```
 
-If you later request ATT permission, call `setAppstackAttributionParams()` again after the customer grants permission, rebuilding `params` from the latest values. The `AdSupport` framework is required to collect the IDFA on iOS.
+If you later request ATT permission, call `setAppstackAttributionParams()` again after the customer grants permission, rebuilding `params` from the latest values.
 
 See the [RevenueCat integration docs](https://docs.appstack.tech/Integrations/revenuecat) for the canonical reference.
 
@@ -336,6 +336,13 @@ if #available(iOS 15.0, *) {
 ```
 
 ### 🔵 **Detailed Attribution (Requires User Consent)**
+
+Requesting ATT requires the `NSUserTrackingUsageDescription` key in your `Info.plist` — without it the prompt won't appear (treated as denied) and App Store review may reject the build:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>We use your data to measure ad performance and improve your experience.</string>
+```
 
 ```swift
 import AppTrackingTransparency
