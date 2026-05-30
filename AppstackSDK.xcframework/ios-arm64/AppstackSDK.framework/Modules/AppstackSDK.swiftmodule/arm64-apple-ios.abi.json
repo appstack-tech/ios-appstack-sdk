@@ -3713,93 +3713,100 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1499,
+      "offset": 1498,
+      "length": 28,
+      "value": "\"AppstackStoreKitAppVersion\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "StringLiteral",
+      "offset": 1567,
       "length": 29,
       "value": "\"AppstackStoreKitEnvironment\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1564,
+      "offset": 1632,
       "length": 24,
       "value": "\"AppstackInstallVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1628,
+      "offset": 1696,
       "length": 28,
       "value": "\"AppstackLastSeenAppVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1699,
+      "offset": 1767,
       "length": 31,
       "value": "\"AppstackInstallClassification\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1766,
+      "offset": 1834,
       "length": 24,
       "value": "\"AppstackInstallSignals\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1834,
+      "offset": 1902,
       "length": 32,
       "value": "\"AppstackInstallStateComputedAt\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1900,
+      "offset": 1968,
       "length": 22,
       "value": "\"AppstackPreviousIDFV\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 1963,
+      "offset": 2031,
       "length": 29,
       "value": "\"AppstackPreviousDeviceModel\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 2035,
+      "offset": 2103,
       "length": 31,
       "value": "\"AppstackUseInstallDetectionV2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 2132,
+      "offset": 2200,
       "length": 19,
       "value": "\"MatchedAppstackId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 2194,
+      "offset": 2262,
       "length": 18,
       "value": "\"SyncedAppstackId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 2603,
+      "offset": 2671,
       "length": 21,
       "value": "\"InstalledAppstackId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
       "kind": "StringLiteral",
-      "offset": 2660,
+      "offset": 2728,
       "length": 11,
-      "value": "\"4.2.0-rc3\""
+      "value": "\"4.2.0-rc4\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
@@ -4196,28 +4203,28 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 4579,
+      "offset": 5367,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 4584,
+      "offset": 5372,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 4589,
+      "offset": 5377,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/StoreKitAppTransactionReader.swift",
       "kind": "StringLiteral",
-      "offset": 2087,
+      "offset": 2702,
       "length": 35,
       "value": "\"com.appstack.appTransactionReader\""
     }
