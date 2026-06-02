@@ -2,14 +2,14 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/runner/Library/Developer/Xcode/DerivedData/AppstackSDK-hcyzgmkbmpmkboeixuvmjmtlfeko/Build/Intermediates.noindex/ArchiveIntermediates/AppstackSDK/InstallationBuildProductsLocation/Library/Frameworks/AppstackSDK.framework/AppstackSDK'
 relocations:
-  - { offset: 0x636B2, size: 0x8, addend: 0x0, symName: _AppstackSDKVersionString, symObjAddr: 0x0, symBinAddr: 0x34C00, symSize: 0x0 }
-  - { offset: 0x636E7, size: 0x8, addend: 0x0, symName: _AppstackSDKVersionNumber, symObjAddr: 0x30, symBinAddr: 0x34C30, symSize: 0x0 }
+  - { offset: 0x636B2, size: 0x8, addend: 0x0, symName: _AppstackSDKVersionString, symObjAddr: 0x0, symBinAddr: 0x350D0, symSize: 0x0 }
+  - { offset: 0x636E7, size: 0x8, addend: 0x0, symName: _AppstackSDKVersionNumber, symObjAddr: 0x30, symBinAddr: 0x35100, symSize: 0x0 }
   - { offset: 0x6374C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC6sharedACvpZ', symObjAddr: 0xA1E8, symBinAddr: 0x49928, symSize: 0x0 }
   - { offset: 0x64141, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC20installEventSendLock33_9746125C7321D3F6476A88E11EAB3F2FLLSo6NSLockCvpZ', symObjAddr: 0xA1F8, symBinAddr: 0x49938, symSize: 0x0 }
   - { offset: 0x6415B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC23matchRequestAttemptLock33_9746125C7321D3F6476A88E11EAB3F2FLLSo6NSLockCvpZ', symObjAddr: 0xA208, symBinAddr: 0x49948, symSize: 0x0 }
-  - { offset: 0x64175, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC22testInstallStateResultAA0fgH0VSgvpZ', symObjAddr: 0x3BB48, symBinAddr: 0x4C428, symSize: 0x0 }
-  - { offset: 0x641E8, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC24testAppTransactionReaderAA0fG7Reading_pSgvpZ', symObjAddr: 0x3BB60, symBinAddr: 0x4C440, symSize: 0x0 }
-  - { offset: 0x6420E, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC12testKeychainAA0F14HelperProtocol_pSgvpZ', symObjAddr: 0x3BB88, symBinAddr: 0x4C468, symSize: 0x0 }
+  - { offset: 0x64175, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC22testInstallStateResultAA0fgH0VSgvpZ', symObjAddr: 0x3BB48, symBinAddr: 0x4C440, symSize: 0x0 }
+  - { offset: 0x641E8, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC24testAppTransactionReaderAA0fG7Reading_pSgvpZ', symObjAddr: 0x3BB60, symBinAddr: 0x4C458, symSize: 0x0 }
+  - { offset: 0x6420E, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC12testKeychainAA0F14HelperProtocol_pSgvpZ', symObjAddr: 0x3BB88, symBinAddr: 0x4C480, symSize: 0x0 }
   - { offset: 0x64251, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x1580, symSize: 0x7C }
   - { offset: 0x642D2, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC6sharedACvpZACmTK', symObjAddr: 0x1CC, symBinAddr: 0x174C, symSize: 0x74 }
   - { offset: 0x642F7, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK0A14AttributionSdkC6sharedACvpZACmTk', symObjAddr: 0x240, symBinAddr: 0x17C0, symSize: 0x7C }
@@ -670,7 +670,7 @@ relocations:
   - { offset: 0x7F676, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK17JSONBodyContainerV3add2to10Foundation10URLRequestVAH_tKF', symObjAddr: 0x46C, symBinAddr: 0x221B0, symSize: 0x1C4 }
   - { offset: 0x7F729, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK17JSONBodyContainerVyxGAA011RequestBodyD8ProtocolA2aEP3add2to10Foundation10URLRequestVAK_tKFTW', symObjAddr: 0x630, symBinAddr: 0x22374, symSize: 0x14 }
   - { offset: 0x7F8A2, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK8LogLevelO8rawValueACSgSi_tcfC', symObjAddr: 0x0, symBinAddr: 0x223B4, symSize: 0x14 }
-  - { offset: 0x7F8C6, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK6LoggerC8logLevelAA03LogE0OvpZ', symObjAddr: 0x6169, symBinAddr: 0x4C490, symSize: 0x0 }
+  - { offset: 0x7F8C6, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK6LoggerC8logLevelAA03LogE0OvpZ', symObjAddr: 0x6169, symBinAddr: 0x4C4A8, symSize: 0x0 }
   - { offset: 0x7F947, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK6LoggerC3log33_A0C32AE71959A536AB3602E07BB8DCD7LLSo06OS_os_D0CvpZ', symObjAddr: 0x9E0, symBinAddr: 0x4B8C0, symSize: 0x0 }
   - { offset: 0x7F961, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK6LoggerC13dateFormatter33_A0C32AE71959A536AB3602E07BB8DCD7LLSo06NSDateE0CvpZ', symObjAddr: 0x9E8, symBinAddr: 0x4B8C8, symSize: 0x0 }
   - { offset: 0x7F97B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK6LoggerC17dateFormatterLock33_A0C32AE71959A536AB3602E07BB8DCD7LLSo6NSLockCvpZ', symObjAddr: 0x9F0, symBinAddr: 0x4B8D0, symSize: 0x0 }
@@ -863,60 +863,61 @@ relocations:
   - { offset: 0x8811E, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK21InstallClassificationO8rawValueACSgSS_tcfCTf4nd_n', symObjAddr: 0x82C4, symBinAddr: 0x2FCF0, symSize: 0x5C }
   - { offset: 0x88155, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK14InstallSignalsV10CodingKeys33_14F0A069F783766E0D3E73249D203A3BLLO11stringValueAFSgSS_tcfCTf4nd_n', symObjAddr: 0x8320, symBinAddr: 0x2FD4C, symSize: 0x710 }
   - { offset: 0x88774, size: 0x8, addend: 0x0, symName: '_$sIeg_IyB_TR', symObjAddr: 0xBC, symBinAddr: 0x304A4, symSize: 0x20 }
-  - { offset: 0x88B48, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderCMU', symObjAddr: 0x1978, symBinAddr: 0x31C94, symSize: 0x8 }
-  - { offset: 0x88B5C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderCMr', symObjAddr: 0x1994, symBinAddr: 0x31CB0, symSize: 0x7C }
-  - { offset: 0x88B70, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSgMa', symObjAddr: 0x1A10, symBinAddr: 0x31D2C, symSize: 0x54 }
-  - { offset: 0x88B84, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwCP', symObjAddr: 0x1AA8, symBinAddr: 0x31D94, symSize: 0xE4 }
-  - { offset: 0x88B98, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwxx', symObjAddr: 0x1B8C, symBinAddr: 0x31E78, symSize: 0x74 }
-  - { offset: 0x88BAC, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwcp', symObjAddr: 0x1C00, symBinAddr: 0x31EEC, symSize: 0xB8 }
-  - { offset: 0x88BC0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwca', symObjAddr: 0x1CB8, symBinAddr: 0x31FA4, symSize: 0xEC }
-  - { offset: 0x88BD4, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwtk', symObjAddr: 0x1DA4, symBinAddr: 0x32090, symSize: 0x70 }
-  - { offset: 0x88BE8, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwta', symObjAddr: 0x1E14, symBinAddr: 0x32100, symSize: 0xAC }
-  - { offset: 0x88BFC, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwet', symObjAddr: 0x1EC0, symBinAddr: 0x321AC, symSize: 0xC }
-  - { offset: 0x88C10, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwst', symObjAddr: 0x1F48, symBinAddr: 0x32234, symSize: 0xC }
-  - { offset: 0x88C24, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVMr', symObjAddr: 0x1FC8, symBinAddr: 0x322B4, symSize: 0x80 }
-  - { offset: 0x88C38, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFs0F3KeyAAWl', symObjAddr: 0x20B0, symBinAddr: 0x32334, symSize: 0x40 }
-  - { offset: 0x88C4C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVWOc', symObjAddr: 0x2110, symBinAddr: 0x32374, symSize: 0x44 }
-  - { offset: 0x88C60, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVWOh', symObjAddr: 0x2154, symBinAddr: 0x323B8, symSize: 0x3C }
-  - { offset: 0x88C7F, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFAGyXEfU_TA', symObjAddr: 0x229C, symBinAddr: 0x32500, symSize: 0x64 }
-  - { offset: 0x88CB1, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVWOb', symObjAddr: 0x23B8, symBinAddr: 0x3261C, symSize: 0x44 }
-  - { offset: 0x88CC5, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFyyXEfU0_TA', symObjAddr: 0x23FC, symBinAddr: 0x32660, symSize: 0x30 }
-  - { offset: 0x88CE4, size: 0x8, addend: 0x0, symName: '_$sIg_Ieg_TRTA', symObjAddr: 0x243C, symBinAddr: 0x326A0, symSize: 0x20 }
-  - { offset: 0x88D0D, size: 0x8, addend: 0x0, symName: _block_copy_helper, symObjAddr: 0x245C, symBinAddr: 0x326C0, symSize: 0x10 }
-  - { offset: 0x88D21, size: 0x8, addend: 0x0, symName: _block_destroy_helper, symObjAddr: 0x246C, symBinAddr: 0x326D0, symSize: 0x8 }
-  - { offset: 0x88D35, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSgWOd', symObjAddr: 0x2474, symBinAddr: 0x326D8, symSize: 0x48 }
-  - { offset: 0x88D49, size: 0x8, addend: 0x0, symName: '_$sSo17OS_dispatch_queueCMa', symObjAddr: 0x2500, symBinAddr: 0x32720, symSize: 0x44 }
-  - { offset: 0x88D5D, size: 0x8, addend: 0x0, symName: '_$sSaySo17OS_dispatch_queueC8DispatchE10AttributesVGSayxGSTsWl', symObjAddr: 0x2584, symBinAddr: 0x32764, symSize: 0x48 }
-  - { offset: 0x88D71, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOMa', symObjAddr: 0x27B4, symBinAddr: 0x327AC, symSize: 0x10 }
-  - { offset: 0x88D85, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOSHAASQWb', symObjAddr: 0x27C4, symBinAddr: 0x327BC, symSize: 0x4 }
-  - { offset: 0x88D99, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFSQAAWl', symObjAddr: 0x27C8, symBinAddr: 0x327C0, symSize: 0x40 }
-  - { offset: 0x88DAD, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAs28CustomDebugStringConvertiblePWb', symObjAddr: 0x2808, symBinAddr: 0x32800, symSize: 0x4 }
-  - { offset: 0x88DC1, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFs28CustomDebugStringConvertibleAAWl', symObjAddr: 0x280C, symBinAddr: 0x32804, symSize: 0x40 }
-  - { offset: 0x88DD5, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAs23CustomStringConvertiblePWb', symObjAddr: 0x284C, symBinAddr: 0x32844, symSize: 0x4 }
-  - { offset: 0x88DE9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFs23CustomStringConvertibleAAWl', symObjAddr: 0x2850, symBinAddr: 0x32848, symSize: 0x40 }
-  - { offset: 0x88E23, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs28CustomDebugStringConvertibleAAsAGP16debugDescriptionSSvgTW', symObjAddr: 0x7D8, symBinAddr: 0x30AF4, symSize: 0x28 }
-  - { offset: 0x88E3F, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs23CustomStringConvertibleAAsAGP11descriptionSSvgTW', symObjAddr: 0x800, symBinAddr: 0x30B1C, symSize: 0x28 }
-  - { offset: 0x88E8B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLO11stringValueSSvg', symObjAddr: 0xDC, symBinAddr: 0x304C4, symSize: 0xB4 }
-  - { offset: 0x88EF0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV6encode2toys7Encoder_p_tKF', symObjAddr: 0x190, symBinAddr: 0x30578, symSize: 0x1E8 }
-  - { offset: 0x88F27, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV4fromACs7Decoder_p_tKcfC', symObjAddr: 0x378, symBinAddr: 0x30760, symSize: 0x35C }
-  - { offset: 0x88F5B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAsAGP11stringValueSSvgTW', symObjAddr: 0x794, symBinAddr: 0x30ABC, symSize: 0x8 }
-  - { offset: 0x88F76, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAsAGP11stringValuexSgSS_tcfCTW', symObjAddr: 0x79C, symBinAddr: 0x30AC4, symSize: 0x24 }
-  - { offset: 0x88F9F, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAsAGP8intValuexSgSi_tcfCTW', symObjAddr: 0x7CC, symBinAddr: 0x30AE8, symSize: 0xC }
-  - { offset: 0x88FB9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSeAASe4fromxs7Decoder_p_tKcfCTW', symObjAddr: 0x828, symBinAddr: 0x30B44, symSize: 0x14 }
-  - { offset: 0x88FCD, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x83C, symBinAddr: 0x30B58, symSize: 0x14 }
-  - { offset: 0x88FE8, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x850, symBinAddr: 0x30B6C, symSize: 0x4 }
-  - { offset: 0x89000, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x850, symBinAddr: 0x30B6C, symSize: 0x4 }
-  - { offset: 0x89079, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC12userDefaultsACSo06NSUserI0C_tcfc', symObjAddr: 0x854, symBinAddr: 0x30B70, symSize: 0x248 }
-  - { offset: 0x89124, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC10loadCached33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LL4fromAA0eF4InfoVSgSo14NSUserDefaultsC_tFZ', symObjAddr: 0xA9C, symBinAddr: 0x30DB8, symSize: 0x470 }
-  - { offset: 0x891CA, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaF', symObjAddr: 0xF0C, symBinAddr: 0x31228, symSize: 0x20 }
-  - { offset: 0x891EE, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFyyXEfU0_', symObjAddr: 0x1660, symBinAddr: 0x3197C, symSize: 0xC0 }
-  - { offset: 0x8925D, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTY0_', symObjAddr: 0xF2C, symBinAddr: 0x31248, symSize: 0x1EC }
-  - { offset: 0x892EA, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTQ1_', symObjAddr: 0x1118, symBinAddr: 0x31434, symSize: 0x60 }
-  - { offset: 0x89319, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTY2_', symObjAddr: 0x1178, symBinAddr: 0x31494, symSize: 0x1C0 }
-  - { offset: 0x893E0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTY3_', symObjAddr: 0x1338, symBinAddr: 0x31654, symSize: 0x108 }
-  - { offset: 0x89534, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC7extract33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LL4fromAA0eF4InfoV0cD018VerificationResultOyAI0eF0VG_tFZ', symObjAddr: 0x1440, symBinAddr: 0x3175C, symSize: 0x220 }
-  - { offset: 0x8965B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC7persist33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLyyAA0eF4InfoVF', symObjAddr: 0x1720, symBinAddr: 0x31A3C, symSize: 0x208 }
-  - { offset: 0x896C0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderCfD', symObjAddr: 0x1928, symBinAddr: 0x31C44, symSize: 0x50 }
-  - { offset: 0x896F9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV2eeoiySbAC_ACtFZTf4nnd_n', symObjAddr: 0x2190, symBinAddr: 0x323F4, symSize: 0x10C }
-  - { offset: 0x897CE, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLO11stringValueAFSgSS_tcfCTf4nd_n', symObjAddr: 0x2890, symBinAddr: 0x32888, symSize: 0x1C4 }
+  - { offset: 0x88B78, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderCMU', symObjAddr: 0x1964, symBinAddr: 0x31C80, symSize: 0x8 }
+  - { offset: 0x88B8C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderCMr', symObjAddr: 0x1980, symBinAddr: 0x31C9C, symSize: 0x7C }
+  - { offset: 0x88BA0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSgMa', symObjAddr: 0x19FC, symBinAddr: 0x31D18, symSize: 0x54 }
+  - { offset: 0x88BB4, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwCP', symObjAddr: 0x1A94, symBinAddr: 0x31D80, symSize: 0xE4 }
+  - { offset: 0x88BC8, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwxx', symObjAddr: 0x1B78, symBinAddr: 0x31E64, symSize: 0x74 }
+  - { offset: 0x88BDC, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwcp', symObjAddr: 0x1BEC, symBinAddr: 0x31ED8, symSize: 0xB8 }
+  - { offset: 0x88BF0, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwca', symObjAddr: 0x1CA4, symBinAddr: 0x31F90, symSize: 0xEC }
+  - { offset: 0x88C04, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwtk', symObjAddr: 0x1D90, symBinAddr: 0x3207C, symSize: 0x70 }
+  - { offset: 0x88C18, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwta', symObjAddr: 0x1E00, symBinAddr: 0x320EC, symSize: 0xAC }
+  - { offset: 0x88C2C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwet', symObjAddr: 0x1EAC, symBinAddr: 0x32198, symSize: 0xC }
+  - { offset: 0x88C40, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVwst', symObjAddr: 0x1F34, symBinAddr: 0x32220, symSize: 0xC }
+  - { offset: 0x88C54, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVMr', symObjAddr: 0x1FB4, symBinAddr: 0x322A0, symSize: 0x80 }
+  - { offset: 0x88C68, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFs0F3KeyAAWl', symObjAddr: 0x209C, symBinAddr: 0x32320, symSize: 0x40 }
+  - { offset: 0x88C7C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVWOc', symObjAddr: 0x20FC, symBinAddr: 0x32360, symSize: 0x44 }
+  - { offset: 0x88C90, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVWOh', symObjAddr: 0x2140, symBinAddr: 0x323A4, symSize: 0x3C }
+  - { offset: 0x88CAF, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFAGyXEfU_TA', symObjAddr: 0x2288, symBinAddr: 0x324EC, symSize: 0x64 }
+  - { offset: 0x88CE1, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVWOb', symObjAddr: 0x2870, symBinAddr: 0x32AD4, symSize: 0x44 }
+  - { offset: 0x88CF5, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFyyXEfU0_TA', symObjAddr: 0x28B4, symBinAddr: 0x32B18, symSize: 0x30 }
+  - { offset: 0x88D14, size: 0x8, addend: 0x0, symName: '_$sIg_Ieg_TRTA', symObjAddr: 0x28F4, symBinAddr: 0x32B58, symSize: 0x20 }
+  - { offset: 0x88D3D, size: 0x8, addend: 0x0, symName: _block_copy_helper, symObjAddr: 0x2914, symBinAddr: 0x32B78, symSize: 0x10 }
+  - { offset: 0x88D51, size: 0x8, addend: 0x0, symName: _block_destroy_helper, symObjAddr: 0x2924, symBinAddr: 0x32B88, symSize: 0x8 }
+  - { offset: 0x88D65, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSgWOd', symObjAddr: 0x292C, symBinAddr: 0x32B90, symSize: 0x48 }
+  - { offset: 0x88D79, size: 0x8, addend: 0x0, symName: '_$sSo17OS_dispatch_queueCMa', symObjAddr: 0x29B8, symBinAddr: 0x32BD8, symSize: 0x44 }
+  - { offset: 0x88D8D, size: 0x8, addend: 0x0, symName: '_$sSaySo17OS_dispatch_queueC8DispatchE10AttributesVGSayxGSTsWl', symObjAddr: 0x2A3C, symBinAddr: 0x32C1C, symSize: 0x48 }
+  - { offset: 0x88DA1, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOMa', symObjAddr: 0x2C6C, symBinAddr: 0x32C64, symSize: 0x10 }
+  - { offset: 0x88DB5, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOSHAASQWb', symObjAddr: 0x2C7C, symBinAddr: 0x32C74, symSize: 0x4 }
+  - { offset: 0x88DC9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFSQAAWl', symObjAddr: 0x2C80, symBinAddr: 0x32C78, symSize: 0x40 }
+  - { offset: 0x88DDD, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAs28CustomDebugStringConvertiblePWb', symObjAddr: 0x2CC0, symBinAddr: 0x32CB8, symSize: 0x4 }
+  - { offset: 0x88DF1, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFs28CustomDebugStringConvertibleAAWl', symObjAddr: 0x2CC4, symBinAddr: 0x32CBC, symSize: 0x40 }
+  - { offset: 0x88E05, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAs23CustomStringConvertiblePWb', symObjAddr: 0x2D04, symBinAddr: 0x32CFC, symSize: 0x4 }
+  - { offset: 0x88E19, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOAFs23CustomStringConvertibleAAWl', symObjAddr: 0x2D08, symBinAddr: 0x32D00, symSize: 0x40 }
+  - { offset: 0x88E53, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs28CustomDebugStringConvertibleAAsAGP16debugDescriptionSSvgTW', symObjAddr: 0x7D8, symBinAddr: 0x30AF4, symSize: 0x28 }
+  - { offset: 0x88E6F, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs23CustomStringConvertibleAAsAGP11descriptionSSvgTW', symObjAddr: 0x800, symBinAddr: 0x30B1C, symSize: 0x28 }
+  - { offset: 0x88EBB, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLO11stringValueSSvg', symObjAddr: 0xDC, symBinAddr: 0x304C4, symSize: 0xB4 }
+  - { offset: 0x88F20, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV6encode2toys7Encoder_p_tKF', symObjAddr: 0x190, symBinAddr: 0x30578, symSize: 0x1E8 }
+  - { offset: 0x88F57, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV4fromACs7Decoder_p_tKcfC', symObjAddr: 0x378, symBinAddr: 0x30760, symSize: 0x35C }
+  - { offset: 0x88F8B, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAsAGP11stringValueSSvgTW', symObjAddr: 0x794, symBinAddr: 0x30ABC, symSize: 0x8 }
+  - { offset: 0x88FA6, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAsAGP11stringValuexSgSS_tcfCTW', symObjAddr: 0x79C, symBinAddr: 0x30AC4, symSize: 0x24 }
+  - { offset: 0x88FCF, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLOs0F3KeyAAsAGP8intValuexSgSi_tcfCTW', symObjAddr: 0x7CC, symBinAddr: 0x30AE8, symSize: 0xC }
+  - { offset: 0x88FE9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSeAASe4fromxs7Decoder_p_tKcfCTW', symObjAddr: 0x828, symBinAddr: 0x30B44, symSize: 0x14 }
+  - { offset: 0x88FFD, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x83C, symBinAddr: 0x30B58, symSize: 0x14 }
+  - { offset: 0x89018, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x850, symBinAddr: 0x30B6C, symSize: 0x4 }
+  - { offset: 0x89030, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoVSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x850, symBinAddr: 0x30B6C, symSize: 0x4 }
+  - { offset: 0x890A9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC12userDefaultsACSo06NSUserI0C_tcfc', symObjAddr: 0x854, symBinAddr: 0x30B70, symSize: 0x248 }
+  - { offset: 0x8915A, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC10loadCached33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LL4fromAA0eF4InfoVSgSo14NSUserDefaultsC_tFZ', symObjAddr: 0xA9C, symBinAddr: 0x30DB8, symSize: 0x470 }
+  - { offset: 0x89200, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaF', symObjAddr: 0xF0C, symBinAddr: 0x31228, symSize: 0x20 }
+  - { offset: 0x89224, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFyyXEfU0_', symObjAddr: 0x164C, symBinAddr: 0x31968, symSize: 0xC0 }
+  - { offset: 0x89293, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTY0_', symObjAddr: 0xF2C, symBinAddr: 0x31248, symSize: 0x1EC }
+  - { offset: 0x89320, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTQ1_', symObjAddr: 0x1118, symBinAddr: 0x31434, symSize: 0x60 }
+  - { offset: 0x8934F, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTY2_', symObjAddr: 0x1178, symBinAddr: 0x31494, symSize: 0x1C0 }
+  - { offset: 0x8941D, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC4readAA0eF4InfoVSgyYaFTY3_', symObjAddr: 0x1338, symBinAddr: 0x31654, symSize: 0xF4 }
+  - { offset: 0x89592, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC7extract33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LL4fromAA0eF4InfoV0cD018VerificationResultOyAI0eF0VG_tFZ', symObjAddr: 0x142C, symBinAddr: 0x31748, symSize: 0x220 }
+  - { offset: 0x896B9, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC7persist33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLyyAA0eF4InfoVF', symObjAddr: 0x170C, symBinAddr: 0x31A28, symSize: 0x208 }
+  - { offset: 0x8971E, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderCfD', symObjAddr: 0x1914, symBinAddr: 0x31C30, symSize: 0x50 }
+  - { offset: 0x89757, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV2eeoiySbAC_ACtFZTf4nnd_n', symObjAddr: 0x217C, symBinAddr: 0x323E0, symSize: 0x10C }
+  - { offset: 0x8982C, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK28StoreKitAppTransactionReaderC8describe33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLySSs5Error_pFZTf4nd_n', symObjAddr: 0x22EC, symBinAddr: 0x32550, symSize: 0x4CC }
+  - { offset: 0x89B36, size: 0x8, addend: 0x0, symName: '_$s11AppstackSDK18AppTransactionInfoV10CodingKeys33_DDDFBDAFE7CF5D2DAE3BC6BEEFBF56E4LLO11stringValueAFSgSS_tcfCTf4nd_n', symObjAddr: 0x2D48, symBinAddr: 0x32D40, symSize: 0x1C4 }
 ...
