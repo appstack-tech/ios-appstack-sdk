@@ -3390,6 +3390,13 @@
         "printedName": "StoreKit",
         "declKind": "Import",
         "moduleName": "AppstackSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppstackSDK"
       }
     ],
     "json_format_version": 8
@@ -3482,7 +3489,7 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/AppstackAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 4084,
+      "offset": 4243,
       "length": 5,
       "value": "false"
     },
@@ -3806,7 +3813,7 @@
       "kind": "StringLiteral",
       "offset": 2728,
       "length": 12,
-      "value": "\"4.2.0-rc12\""
+      "value": "\"4.2.0-rc13\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
@@ -4238,63 +4245,84 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 10514,
+      "offset": 11717,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 10519,
+      "offset": 11722,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 10524,
+      "offset": 11727,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 11077,
+      "offset": 12359,
+      "length": 2,
+      "value": "48"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12364,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12369,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12922,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 11082,
+      "offset": 12927,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 11637,
+      "offset": 13482,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 11642,
+      "offset": 13487,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "BooleanLiteral",
-      "offset": 13259,
+      "offset": 15542,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/AppstackMain\/InstallStateClassifier.swift",
       "kind": "StringLiteral",
-      "offset": 30609,
+      "offset": 36699,
       "length": 17,
       "value": "\"^\\d+(\\.\\d+)*$\""
     },
