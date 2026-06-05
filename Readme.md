@@ -1,5 +1,4 @@
 # AppstackSDK
-[![License](https://img.shields.io/cocoapods/l/RevenueCat.svg?style=flat)](http://cocoapods.org/pods/RevenueCat)
 [![SPM Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
 ![Version](https://img.shields.io/github/v/tag/appstack-tech/ios-appstack-sdk?label=version)
 
@@ -23,8 +22,6 @@ import AppstackSDK
 
 AppstackAttributionSdk.shared.configure(
     apiKey: "your_api_key",
-    isDebug: false,
-    endpointBaseUrl: nil,
     logLevel: .info
 )
 ```
@@ -95,30 +92,70 @@ print("Attribution parameters:", attributionParams)
 ```swift
 import AppstackSDK
 
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
 
-## Sending S2S Events with Superwall
+## Integrations
 
-The SDK integrates with Superwall so you can track lifecycle events (trial started, subscription started, in-app purchase, etc.) and forward them to your ad networks.
+### Superwall
 
-To make this integration work end-to-end:
+Forward Appstack attribution to Superwall so lifecycle events (trial started, subscription started, in-app purchase, etc.) can be attributed back to the install.
+
+**Requires Superwall SDK ≥ 4.12.11.**
 
 1. Activate the Appstack integration in the Superwall dashboard.
-2. Add the following code:
+2. After both SDKs are configured, pass the Appstack ID and attribution params:
 
 ```swift
+// 1. Pass the Appstack ID — this is the key the Appstack pipeline joins on.
+Superwall.shared.setIntegrationAttribute(
+    IntegrationAttribute.appstackId,
+    AppstackAttributionSdk.shared.getAppstackId()
+)
+
+// 2. Pass attribution params as user attributes (available for campaign filters).
 Task {
-  Superwall.shared.setUserAttributes(await AppstackAttributionSdk.shared.getAttributionParams() ?? [:])
+    Superwall.shared.setUserAttributes(
+        await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
+    )
 }
+
 Superwall.shared.register(placement: "onboarding_paywall")
 ```
 
+See the [Superwall integration docs](https://docs.appstack.tech/Integrations/superwall) for the canonical reference.
+
+### RevenueCat
+
+Forward Appstack attribution to RevenueCat so subscription events carry `$appstackId`, campaign attributes (`$mediaSource`, `$campaign`, `$adGroup`, `$ad`, `$keyword`), and click IDs (`fbclid`, `gclid`, `wbraid`, `gbraid`, `ttclid`).
+
+**Requires RevenueCat iOS SDK ≥ 5.61.0.**
+
+After configuring both SDKs and before the first purchase, build the params dictionary from both `getAttributionParams()` and `getAppstackId()` and pass it to RevenueCat. A single call sets all attributes and refreshes offerings so AppStack-based targeting is applied before it returns.
+
+```swift
+Task {
+    var params = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
+    if let id = AppstackAttributionSdk.shared.getAppstackId() {
+        params["appstack_id"] = id
+    }
+    do {
+        _ = try await Purchases.shared.attribution.setAppstackAttributionParams(params)
+    } catch {
+        // Handle sync / offerings fetch error
+    }
+}
+```
+
+If you later request ATT permission, call `setAppstackAttributionParams()` again after the customer grants permission, rebuilding `params` from the latest values.
+
+See the [RevenueCat integration docs](https://docs.appstack.tech/Integrations/revenuecat) for the canonical reference.
+
 ## 📋 Requirements
 
-- **iOS** 13.0+
+- **iOS** 15.0+
 - **Xcode** 14.0+
 - **Swift** 5.0+
 
@@ -132,14 +169,14 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
  dependencies: [
-    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "3.1.1")
+    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.1.0")
  ]
 ```
 
 Or directly from Xcode:
 
 1. Go to **File > Add Packages**.
-2. Enter the repository URL: `https://github.com/appstack/ios-appstack-sdk.git`.
+2. Enter the repository URL: `https://github.com/appstack-tech/ios-appstack-sdk.git`.
 3. Select the desired version and click **Add Package**.
 
 ---
@@ -152,12 +189,9 @@ import AppstackSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Configure Appstack SDK v2.1.0
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: true,  // Use development URL for testing
-            endpointBaseUrl: nil,  // Use default endpoint
-            logLevel: .info  // Set log level
+            logLevel: .info
         )
         return true
     }
@@ -173,8 +207,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: true,
-            endpointBaseUrl: nil,
             logLevel: .info
         )
     }
@@ -192,8 +224,6 @@ struct MyApp: App {
     init() {
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: true,
-            endpointBaseUrl: nil,
             logLevel: .info
         )
     }
@@ -234,32 +264,44 @@ AppstackAttributionSdk.shared.sendEvent(
 
 ### **Available EventType Values:**
 
+> The SDK also sends an automatic `INSTALL` event on first launch, so you don't need to send it manually.
+
 ```swift
 public enum EventType: String {
-    case PURCHASE = "PURCHASE"
-    case SUBSCRIBE = "SUBSCRIBE" 
-    case LOGIN = "LOGIN"
-    case INSTALL = "INSTALL"
-    case TUTORIAL_COMPLETE = "TUTORIAL_COMPLETE"
-    case CUSTOM = "CUSTOM"  // For custom events
+    // Authentication & account
+    case LOGIN
+    case SIGN_UP
+    case REGISTER          // Alias for SIGN_UP
+
+    // Monetization
+    case PURCHASE
+    case ADD_TO_CART
+    case ADD_TO_WISHLIST
+    case INITIATE_CHECKOUT
+    case START_TRIAL
+    case SUBSCRIBE
+
+    // Games / progression
+    case LEVEL_START
+    case LEVEL_COMPLETE
+
+    // Engagement
+    case TUTORIAL_COMPLETE
+    case SEARCH
+    case VIEW_ITEM
+    case VIEW_CONTENT
+    case SHARE
+
+    // Catch-all
+    case CUSTOM
 }
 ```
-
-### **Revenue Range Matching**
-
-The SDK automatically matches events with revenue parameters to configured **revenue ranges** in the Appstack platform:
-
-- Events are tracked with their revenue values
-- The SDK evaluates if the revenue falls within the configured ranges
-- Conversion values are triggered when revenue requirements are met
-- Multiple events can contribute to the same conversion value
 
 ### ⚠️ **Important Notes:**
 
 - Always **initialize the SDK** before sending events
 - Event names **must match** those defined in the **Appstack platform**
 - For revenue events, always pass a `revenue` (or `price`) and a `currency` parameter
-- Revenue ranges are configured in the Appstack platform and automatically synchronized
 
 ---
 
@@ -267,8 +309,7 @@ The SDK automatically matches events with revenue parameters to configured **rev
 
 ### ✅ **Compatibility**
 
-- Requires **iOS 14.3+**
-- Works with **AppstackSDK version 2.1.0 or later**
+- Requires **iOS 15.0+**
 
 ### 📊 **Attribution Data Collection**
 
@@ -289,18 +330,25 @@ Apple Search Ads attribution is a **two-step process**:
 ```swift
 import AppstackSDK
 
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
 
 ### 🔵 **Detailed Attribution (Requires User Consent)**
 
+Requesting ATT requires the `NSUserTrackingUsageDescription` key in your `Info.plist` — without it the prompt won't appear (treated as denied) and App Store review may reject the build:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>We use your data to measure ad performance and improve your experience.</string>
+```
+
 ```swift
 import AppTrackingTransparency
 import AppstackSDK
 
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     ATTrackingManager.requestTrackingAuthorization { status in
         // Enable ASA Attribution after getting permission
         AppstackASAAttribution.shared.enableAppleAdsAttribution()
@@ -329,16 +377,13 @@ import AppstackSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Configure Appstack SDK v2.1.0
         AppstackAttributionSdk.shared.configure(
             apiKey: "your_api_key",
-            isDebug: true,  // Use development URL for testing
-            endpointBaseUrl: nil,
             logLevel: .info
         )
         
         // Request tracking permission and enable ASA Attribution
-        if #available(iOS 14.3, *) {
+        if #available(iOS 15.0, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
                 AppstackASAAttribution.shared.enableAppleAdsAttribution()
             }
@@ -354,48 +399,94 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 - **Detailed attribution** requires **user consent**.
 - **Standard attribution** works even if the user denies tracking.
 - **Attribution data may take up to 24 hours** to appear in the Appstack dashboard.
-- **iOS 14.3+**: Implement **ATT permission request** before enabling ASA tracking.
+- **iOS 15.0+**: Implement **ATT permission request** before enabling ASA tracking.
 
 ---
 
 ## ⚙️ Configuration Parameters
 
-The `AppstackAttributionSdk.shared.configure()` method supports additional parameters:
+The `AppstackAttributionSdk.shared.configure()` method supports the following parameters:
 
 ### **Parameters:**
 
-- **`apiKey`** (String, required): Your Appstack API key
-- **`isDebug`** (Bool, default: false): If `true`, uses development URL automatically
-- **`endpointBaseUrl`** (String?, default: nil): Custom endpoint URL (optional)
+- **`apiKey`** (String, required): Your Appstack API key. Use your **development** API key for test builds and your **production** API key for App Store releases — this is how Appstack separates test traffic from production data.
 - **`logLevel`** (LogLevel, default: .info): Logging level for debugging
+- **`customerUserId`** (String?, default: nil): Optional identifier for your own user, associated with this installation
 
 ### **Configuration Examples:**
 
 ```swift
-// Development configuration
-AppstackAttributionSdk.shared.configure(
-    apiKey: "your_api_key",
-    isDebug: true,  // Uses https://api.event.dev.appstack.tech
-    endpointBaseUrl: nil,
-    logLevel: .debug
-)
-
 // Production configuration
 AppstackAttributionSdk.shared.configure(
     apiKey: "your_api_key",
-    isDebug: false,  // Uses production URL
-    endpointBaseUrl: nil,
     logLevel: .info
 )
 
-// Custom endpoint configuration
+// With a customer user id
 AppstackAttributionSdk.shared.configure(
     apiKey: "your_api_key",
-    isDebug: false,
-    endpointBaseUrl: "https://your-custom-endpoint.com",
-    logLevel: .warning
+    logLevel: .info,
+    customerUserId: "your-internal-user-id"
 )
 ```
+
+### **Separating development and production**
+
+Appstack keeps test traffic isolated from production data by **environment**, and the environment is selected by the **API key** you configure. There is no debug flag to toggle — each key belongs to one environment:
+
+- **Development API key** → events land in your Appstack development environment. Use it for local builds, QA, and TestFlight. These events are **not** forwarded to your ad networks, so they never pollute production conversions.
+- **Production API key** → events land in your production environment and are eligible for ad-network forwarding. Use it only for App Store releases.
+
+The recommended way to wire this is to select the key at compile time so you can never ship a debug build pointing at production:
+
+```swift
+import AppstackSDK
+
+enum AppstackConfig {
+    static var apiKey: String {
+        #if DEBUG
+        return "your_development_api_key"
+        #else
+        return "your_production_api_key"
+        #endif
+    }
+
+    static var logLevel: LogLevel {
+        #if DEBUG
+        return .info   // most verbose: logs init, every event sent, and errors
+        #else
+        return .error  // production: only log errors
+        #endif
+    }
+}
+
+AppstackAttributionSdk.shared.configure(
+    apiKey: AppstackConfig.apiKey,
+    logLevel: AppstackConfig.logLevel
+)
+```
+
+> **Log levels:** `.info` is currently the most verbose level (it logs initialization, every event sent, and errors), followed by `.debug` (events + errors), `.error` (errors only), and `.off`. Use `.info` while developing. _Note: this ordering will change in a future release so that `.debug` becomes the most verbose level, matching standard logging conventions._
+
+> **Verifying your setup:** run a debug build, trigger a few events, and confirm they appear in the **development** environment of the Appstack dashboard (not production). With `logLevel: .info` the SDK logs the API key it was configured with at startup and each event as it is sent.
+
+---
+
+## 🧹 Deleting user data
+
+For GDPR/CCPA flows you can request that Appstack delete the data stored for the current installation:
+
+```swift
+Task {
+    do {
+        try await AppstackAttributionSdk.shared.deleteUserData()
+    } catch {
+        // Handle network or auth errors
+    }
+}
+```
+
+On success, locally cached attribution data is also cleared.
 
 ---
 
@@ -405,10 +496,9 @@ AppstackAttributionSdk.shared.configure(
 
 The SDK automatically:
 
-- Fetches configuration from Appstack servers
-- Manages conversion value updates based on event tracking
-- Handles revenue range matching for conversion optimization
-- Processes events in time-based windows (0-2 days, 3-7 days, 8-35 days)
+- Fetches configuration from Appstack servers on launch
+- Sends an `INSTALL` event on first launch
+- Runs a single attribution match at launch
 - Queues events when configuration is not ready
 
 ### **Event Processing**
@@ -416,7 +506,6 @@ The SDK automatically:
 - Events are processed asynchronously to avoid blocking the main thread
 - The SDK queues events if configuration is not yet loaded
 - Revenue parameters are automatically validated and converted to numeric values
-- Events are matched against configured revenue ranges in real-time
 
 ---
 
@@ -426,6 +515,7 @@ The SDK automatically:
 
 For any questions or issues, please:
 
+- Check the [Troubleshooting guide](./USAGE.md#troubleshooting) in `USAGE.md` for common issues (events not appearing, ASA attribution, RevenueCat/Superwall integration coverage).
 - **Open an issue** in this repository.
 - Contact our **support team** for further assistance.
 

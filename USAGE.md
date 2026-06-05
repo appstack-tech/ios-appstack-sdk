@@ -10,7 +10,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "3.2.0")
+    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.1.0")
 ]
 ```
 
@@ -19,14 +19,6 @@ Or directly from Xcode:
 1. Go to **File > Add Packages**.
 2. Enter the repository URL: `https://github.com/appstack-tech/ios-appstack-sdk.git`.
 3. Select the desired version and click **Add Package**.
-
-### CocoaPods
-
-Add the following line to your Podfile:
-
-```ruby
-pod 'AppstackSDK', :git => 'https://github.com/appstack-tech/ios-appstack-sdk.git', :tag => '3.2.0'
-```
 
 ## Quick Start
 
@@ -38,13 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure Appstack SDK
         AppstackAttributionSdk.shared.configure(
             apiKey: "your-ios-api-key",
-            isDebug: false,
-            endpointBaseUrl: nil,
             logLevel: .info
         )
 
-        // Enable Apple Search Ads attribution (iOS 14.3+)
-        if #available(iOS 14.3, *) {
+        // Enable Apple Search Ads attribution (iOS 15.0+)
+        if #available(iOS 15.0, *) {
             AppstackASAAttribution.shared.enableAppleAdsAttribution()
         }
 
@@ -61,8 +51,8 @@ class ViewController: UIViewController {
         )
     }
 
-    private fun trackSignup() {
-        AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP, name: "email_signup")
+    private func trackSignup() {
+        AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP)
     }
 }
 ```
@@ -71,38 +61,58 @@ class ViewController: UIViewController {
 
 ```swift
 let appstackId = AppstackAttributionSdk.shared.getAppstackId()
-let attributionParams = AppstackAttributionSdk.shared.getAttributionParams()
+let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
 ```
 
-## iOS Configuration (Required)
+`getAttributionParams()` is `async` and suspends until the initial attribution match completes (success or failure). Call it inside a `Task { }` or another async context.
 
-### Advertising Attribution Report Endpoint
+## Identifying users (optional)
 
-Add your Application's **Advertising attribution report endpoint** to enable Apple Search Ads attribution:
+If you want to associate Appstack events with your own user identifier, pass `customerUserId` at configure time:
 
-**Option 1: Through Info.plist**
-
-Add the following entry to your `Info.plist` file:
-
-```xml
-<key>NSAdvertisingAttributionReportEndpoint</key>
-<string>https://ios-appstack.com/</string>
+```swift
+AppstackAttributionSdk.shared.configure(
+    apiKey: "your-ios-api-key",
+    logLevel: .info,
+    customerUserId: "your-internal-user-id"
+)
 ```
 
-**Option 2: Through Xcode**
+## Deleting user data
 
-1. Open your `Info.plist` file.
-2. Add a new entry with the key: **Advertising attribution report endpoint URL**.
-3. Set the value to: `https://ios-appstack.com/`.
+For GDPR/CCPA flows you can ask Appstack to delete the stored data for the current installation:
+
+```swift
+Task {
+    do {
+        try await AppstackAttributionSdk.shared.deleteUserData()
+    } catch {
+        // Handle network/auth errors
+    }
+}
+```
+
+## Integrations
+
+To attribute purchases and subscriptions from third-party monetization tools, the SDK integrates with **Superwall** and **RevenueCat**. See the [Readme](./Readme.md#integrations) for setup instructions.
+
+## iOS Configuration
 
 ### App Tracking Transparency (Recommended)
 
-For detailed Apple Search Ads attribution, request user permission:
+ATT is optional — the SDK works without it. Request it only if you want detailed Apple Search Ads attribution. If you do, you **must** add the `NSUserTrackingUsageDescription` key to your `Info.plist`, otherwise the prompt won't appear (the system treats it as denied) and App Store review may reject the build:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>We use your data to measure ad performance and improve your experience.</string>
+```
+
+Then request user permission:
 
 ```swift
 import AppTrackingTransparency
 
-if #available(iOS 14.5, *) {
+if #available(iOS 15.0, *) {
     ATTrackingManager.requestTrackingAuthorization { status in
         switch status {
         case .authorized:
@@ -169,8 +179,7 @@ AppstackAttributionSdk.shared.sendEvent(
 
 // Gaming Events
 AppstackAttributionSdk.shared.sendEvent(
-    event: .CUSTOM,
-    name: "level_completed",
+    event: .LEVEL_COMPLETE,
     parameters: ["level": 1, "score": 1500, "time_seconds": 45]
 )
 ```
@@ -179,17 +188,34 @@ AppstackAttributionSdk.shared.sendEvent(
 <details>
 <summary>Complete Event List</summary>
 
+> The SDK also sends an automatic `INSTALL` event on first launch, so you don't need to send it manually.
+
+**Authentication & account:**
+- `LOGIN` - User signed in
+- `SIGN_UP` - Account created
+- `REGISTER` - Alias for `SIGN_UP`
+
 **Monetization:**
 - `PURCHASE` - Purchase completed
+- `ADD_TO_CART` - Item added to cart
+- `ADD_TO_WISHLIST` - Item added to wishlist
+- `INITIATE_CHECKOUT` - Checkout started
+- `START_TRIAL` - Free trial started
 - `SUBSCRIBE` - Subscription started
 
-**User Account:**
-- `SIGN_UP` / `REGISTER` - Account created
-- `LOGIN` - User signed in
+**Games / progression:**
+- `LEVEL_START` - Level started
+- `LEVEL_COMPLETE` - Level completed
 
 **Engagement:**
-- `TUTORIAL_COMPLETE` - Onboarding done
-- `CUSTOM` - Custom events
+- `TUTORIAL_COMPLETE` - Onboarding finished
+- `SEARCH` - In-app search performed
+- `VIEW_ITEM` - Product or item viewed
+- `VIEW_CONTENT` - Generic content viewed
+- `SHARE` - Content shared
+
+**Catch-all:**
+- `CUSTOM` - App-specific events (requires a `name`)
 </details>
 
 ### Best Practices
@@ -224,7 +250,7 @@ AppstackAttributionSdk.shared.sendEvent(
 )
 
 // ✅ Simple events without parameters
-AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP, name: "email_signup")
+AppstackAttributionSdk.shared.sendEvent(event: .SIGN_UP)
 
 // ⚠️ Revenue values should be in decimal dollars, not cents
 AppstackAttributionSdk.shared.sendEvent(
@@ -254,7 +280,6 @@ class Analytics {
     static func trackSignup(method: String) {
         AppstackAttributionSdk.shared.sendEvent(
             event: .SIGN_UP,
-            name: "signup",
             parameters: ["method": method]
         )
     }
@@ -280,9 +305,11 @@ AppstackAttributionSdk.shared.sendEvent(
 | Standard   | No                  | Immediate    |
 | Detailed   | Yes                 | 24 hours     |
 
+> Requires iOS 15.0+
+
 **Standard Attribution (No User Consent Required):**
 ```swift
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
@@ -291,7 +318,7 @@ if #available(iOS 14.3, *) {
 ```swift
 import AppTrackingTransparency
 
-if #available(iOS 14.3, *) {
+if #available(iOS 15.0, *) {
     ATTrackingManager.requestTrackingAuthorization { status in
         AppstackASAAttribution.shared.enableAppleAdsAttribution()
     }
@@ -302,7 +329,7 @@ if #available(iOS 14.3, *) {
 - Detailed attribution requires user consent via ATT
 - Standard attribution works even if user denies tracking
 - Attribution data may take up to 24 hours to appear
-- Requires iOS 14.3+
+- Requires iOS 15.0+
 </details>
 
 ### Troubleshooting
@@ -312,17 +339,25 @@ if #available(iOS 14.3, *) {
 
 **Events not appearing:**
 - Check API key is correct
-- Enable debug mode to see logs (`isDebug: true`)
+- Increase log verbosity with `logLevel: .info` (currently the most verbose level; this ordering will change in a future release so `.debug` becomes the most verbose)
 - Ensure network connectivity
 
 **Apple Search Ads attribution not working:**
-- Verify Info.plist configuration
-- Check iOS version (14.3+ required)
-- Wait up to 24 hours for attribution data
+- Ensure `enableAppleAdsAttribution()` is called after `configure()`
+- Check iOS version (15.0+ required)
+- For detailed attribution, confirm ATT is requested and `NSUserTrackingUsageDescription` is set (see [App Tracking Transparency](#app-tracking-transparency-recommended))
+- Apple Search Ads data can take up to 24 hours to appear (Apple-side delay)
 
 **SDK initialization issues:**
-- Initialize SDK in `AppDelegate.applicationDidFinishLaunching`
+- Initialize SDK in `application(_:didFinishLaunchingWithOptions:)`
 - Call configuration before any tracking calls
+
+**RevenueCat / Superwall events missing the Appstack ID (coverage below 50%):**
+
+If your dashboard shows an *"Appstack is receiving RevenueCat (or Superwall) events without the Appstack ID"* banner — or integration coverage is stuck below the 50% threshold and you can't map events to Meta/TikTok/Google — the Appstack ID isn't reaching the integration:
+- **Verify the wiring.** Confirm you call `getAppstackId()` and pass it through (`setIntegrationAttribute(.appstackId, …)` for Superwall, `setAppstackAttributionParams(...)` with `appstack_id` for RevenueCat). A missing or misconfigured call is the most common cause.
+- **Configure all SDKs in the same place.** Initialize Appstack, RevenueCat, and Superwall in a single lifecycle entry point (e.g. all inside `application(_:didFinishLaunchingWithOptions:)`). Splitting them across `AppDelegate` and `SceneDelegate` can create a race where RevenueCat/Superwall start before the Appstack ID is ready, so their events go out without it.
+- **Expect a ramp-up period.** Renewals from subscribers who installed *before* you shipped the SDK have no Appstack ID and drag the ratio down. Coverage rises as new installs adopt the SDK, so the banner can take time to clear after release.
 </details>
 
 ---
