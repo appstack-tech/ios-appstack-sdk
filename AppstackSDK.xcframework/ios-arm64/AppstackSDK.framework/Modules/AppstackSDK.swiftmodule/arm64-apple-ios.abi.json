@@ -3258,7 +3258,8 @@
         "mangledName": "$s11AppstackSDK8LogLevelO",
         "moduleName": "AppstackSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "enumRawTypeName": "Int",
         "conformances": [
@@ -3806,7 +3807,14 @@
       "kind": "StringLiteral",
       "offset": 2584,
       "length": 7,
-      "value": "\"4.2.0\""
+      "value": "\"4.2.1\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Config.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3393,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/RequestBuilder.swift",
@@ -4063,44 +4071,51 @@
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
-      "offset": 76,
+      "offset": 833,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
-      "offset": 87,
+      "offset": 844,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
-      "offset": 102,
+      "offset": 859,
       "length": 5,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "IntegerLiteral",
-      "offset": 117,
+      "offset": 874,
       "length": 4,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 217,
+      "offset": 1053,
       "length": 25,
       "value": "\"tech.app-stack.appstack\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 277,
+      "offset": 1207,
       "length": 13,
       "value": "\"AppstackSDK\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/Utils\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 1527,
+      "length": 22,
+      "value": "\"AppstackSDK.Internal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/appstack-ios-sdk\/appstack-ios-sdk\/source-repo\/AppstackSDK\/Sources\/NetworkTools\/UserDataRequestBuilder.swift",
