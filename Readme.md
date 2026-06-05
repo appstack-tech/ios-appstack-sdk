@@ -1,6 +1,6 @@
 # AppstackSDK
 [![SPM Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
-![Version](https://img.shields.io/github/v/tag/appstack-tech/ios-appstack-sdk?label=version)
+![Version](https://img.shields.io/github/v/release/appstack-tech/ios-appstack-sdk?label=version)
 
 SDK for integrating Appstack into iOS applications.
 
