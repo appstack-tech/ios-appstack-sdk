@@ -8,6 +8,7 @@ import AppTrackingTransparency
 @_exported import AppstackSDK
 import Darwin
 import Foundation
+import Network
 import Security
 import StoreKit
 import Swift
@@ -96,8 +97,8 @@ public struct UserData : Swift.Decodable, Swift.Encodable {
 public enum LogLevel : Swift.Int {
   case off
   case error
-  case debug
   case info
+  case debug
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {

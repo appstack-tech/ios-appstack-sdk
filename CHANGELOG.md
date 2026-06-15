@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- `LogLevel.debug` is now a true public verbose level for sanitized SDK integration troubleshooting, while Appstack-only diagnostics use the internal `Logger.internalDebug` channel.
+- Attribution match request logging moved from `.info` to `.debug`; `.info` is limited to high-level lifecycle output.
+- Lower-level networking, persistence, purchase, and repository failures now log only on the internal diagnostics channel; public errors are sanitized at SDK API boundaries.
+- Integrator-facing `Logger.error`, `Logger.info`, and `Logger.debug` messages are emitted as public unified-log strings so they remain readable in release-device Console output.
+
+## [4.2.1] - 2026-06-05
+### Changed
+- Internal diagnostics logging (introduced in 4.2.0) is now gated behind a compile-time flag that the release workflow sets only for `-rc` builds. Production releases are fully silent; the flag is never enabled in app-store binaries.
+
+## [4.2.0] - 2026-06-04
+### Added
+- **Install detection v2** — a new `InstallStateClassifier` replaces the previous heuristic. It correlates multiple signals (StoreKit `AppTransaction.originalAppVersion` / `appVersion`, keychain markers, bundle-container creation date, and an iTunes lookup for the current version's App Store release date) to distinguish fresh installs, reinstalls, and updates with a confidence level. The backend supplies configurable `DecisionThresholds` so the classification logic can be tuned server-side without an SDK update.
+- `AppStoreLookupReader` fetches the current marketing version and its `currentVersionReleaseDate` from the iTunes lookup API to anchor time-based install classification.
+- `hasMatchedKeychainId` and `matchedKeychainIdDiffersFromCurrent` signals added to `InstallSignals` for accurate reinstall detection (e.g. detecting App Store team transfers).
+- `bundleContainerCreationDate` signal in `InstallSignals` to differentiate fresh installs from updates based on the app container's filesystem creation time.
+- `storeKitAppVersionKey` added to `Config` to persist the current app version sourced from StoreKit.
+- `AppTransactionInfo` now carries `appVersion` alongside `originalAppVersion` for version-comparison consistency across the SDK.
+- Diagnostic logging channel in `Logger` for production builds, used internally during install-detection validation (see 4.2.1 for gating).
+
+### Changed
+- Minimum iOS deployment target raised to **iOS 15**; Swift tools version bumped to 5.5.
+- `EventServerLogRequest` extended with new fields for install classification results and signals.
+- `ConfigRepository` manages the new `DecisionThresholds` block from server configuration; `useInstallDetectionV2` toggle removed (v2 is now always active).
+- When the config fetch fails on first launch, install classification is deferred to the next launch to avoid sending an erroneous install event.
+- Install classification terminology unified: `freshInstall` renamed to `newInstall` throughout.
+- Xcode version in the release workflow bumped to 16.4; `StoreKitAppTransactionReader` availability updated for iOS 18.4.
+
 ## [4.1.0] - 2026-05-15
 ### Added
 - `configure()` now accepts an optional `wrapperVersion` parameter so wrapper SDKs (React Native, Flutter, etc.) can pass their version through to the backend.
