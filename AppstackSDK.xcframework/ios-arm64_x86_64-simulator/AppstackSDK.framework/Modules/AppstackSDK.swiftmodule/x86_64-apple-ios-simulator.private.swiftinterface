@@ -39,6 +39,8 @@ final public class AppstackASAAttribution {
 }
 public enum EventType : Swift.String, Swift.CaseIterable {
   case INSTALL
+  case FIRST_OPEN
+  case FIRST_OPEN_GUARDED
   case LOGIN
   case SIGN_UP
   case REGISTER
