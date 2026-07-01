@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.1] - 2026-06-24
+### Added
+- `getAppstackId()` now returns a stable ID even when called before `configure()`. It mints a local identity on first access, so the value is consistent regardless of when it's requested.
+
+### Changed
+- `logLevel` now controls only integrator-facing console output:
+  - `.off` — no SDK logs.
+  - `.error` — actionable errors only (e.g. invalid API key, incorrect SDK usage).
+  - `.info` — errors plus high-level lifecycle confirmations.
+  - `.debug` — info plus sanitized integration troubleshooting details.
+
+### Reliability
+- More resilient install tracking under poor or intermittent connectivity.
+- Events sent before `configure()` are buffered and flushed once the SDK is ready.
+- Thread-safety hardening to prevent data races under concurrent access.
+
 ## [4.2.1] - 2026-06-05
 ### Changed
 - Internal diagnostics logging (introduced in 4.2.0) is now gated behind a compile-time flag that the release workflow sets only for `-rc` builds. Production releases are fully silent; the flag is never enabled in app-store binaries.
