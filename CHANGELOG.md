@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Breaking
+- Removed the public test-only API `AppstackAttributionSdk.setInstallDateForTesting(_:)`. Tests and internal SDK validation now use production-shaped dependency injection through internal environment seams.
+
 ### Changed
 - `LogLevel.debug` is now a true public verbose level for sanitized SDK integration troubleshooting, while Appstack-only diagnostics use the internal `Logger.internalDebug` channel.
 - Attribution match request logging moved from `.info` to `.debug`; `.info` is limited to high-level lifecycle output.
