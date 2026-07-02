@@ -1,174 +1,50 @@
 import Foundation
-import StoreKit
 import AppstackSDK
-import FacebookCore
-import TikTokBusinessSDK
-import Firebase
-import AppTrackingTransparency
 
+/// Thin wrapper around the Appstack SDK for the VirtualStore example.
+///
+/// The Appstack SDK tracks **installs**, **first-open**, and **StoreKit purchases**
+/// automatically — you never fire those yourself. This manager only handles:
+///   1. One-time SDK configuration at launch (`configure`).
+///   2. Forwarding the funnel events the app chooses to send manually (`trackEvent`).
 class TrackingManager: ObservableObject {
     static let shared = TrackingManager()
-    
+
     private init() {
         // Private initialization to ensure singleton
     }
-    
-    func configureSDKs() {
-        // Configure Appstack SDK with new parameters
+
+    /// Configure the Appstack SDK. Call once, as early as possible at launch.
+    ///
+    /// `configure` returns immediately: the config fetch, attribution match, and the
+    /// automatic install / first-open events all run on a background task, so there is
+    /// no measurable impact on launch time.
+    func configure() {
         AppstackAttributionSdk.shared.configure(
             apiKey: Constants.appstackApiKey,
-            isDebug: true,  // Use development URL for testing
-            endpointBaseUrl: nil,  // Use default endpoint
-            logLevel: .info  // Set log level to info
+            logLevel: .debug  // .debug surfaces integration troubleshooting logs; use .info or .error in production
         )
-        
-        // Configure other SDKs
-        configureFacebookSDK()
-        configureTiktokSDK()
-        configureFirebaseSDK()
-        
-        setupTracking()
-        registerSKAdNetwork()
-        print("🔄 All SDKs have been configured")
+
+        // Optional: enable Apple Search Ads attribution (iOS 15+).
+        if #available(iOS 15.0, *) {
+            AppstackASAAttribution.shared.enableAppleAdsAttribution()
+        }
+
+        print("✅ Appstack SDK configured")
     }
-    
-    /// Tracks an event across all integrated SDKs.
+
+    /// Send a funnel event to Appstack.
     ///
     /// - Parameters:
-    ///   - eventType: The type of event to track (using EventType enum).
-    ///   - customEventName: Custom event name (only used when eventType is .CUSTOM).
-    ///   - parameters: Optional parameters to include with the event.
-    ///     For Appstack SDK, revenue parameters are automatically extracted
-    ///     and sent using the new .revenue parameter format.
-    func trackEvent(eventType: EventType, customEventName: String? = nil, parameters: [String: Any]? = nil) {
-        // Send event to Appstack with revenue parameter if available
-        if let parameters = parameters, let revenue = extractRevenue(from: parameters) {
-            if eventType == .CUSTOM, let customName = customEventName {
-                AppstackAttributionSdk.shared.sendEvent(event: eventType, name: customName, revenue: revenue)
-            } else {
-                AppstackAttributionSdk.shared.sendEvent(event: eventType, revenue: revenue)
-            }
-        } else {
-            if eventType == .CUSTOM, let customName = customEventName {
-                AppstackAttributionSdk.shared.sendEvent(event: eventType, name: customName)
-            } else {
-                AppstackAttributionSdk.shared.sendEvent(event: eventType)
-            }
-        }
-        
-        // Send to other SDKs using the event name
-        let eventName = eventType == .CUSTOM ? (customEventName ?? "custom_event") : eventType.rawValue.lowercased()
-        
-        // Send event to Meta
-        AppEvents.shared.logEvent(AppEvents.Name(eventName))
-        
-        // Send event to TikTok
-        TikTokBusiness.trackTTEvent(TikTokBaseEvent(eventName: eventName))
-        
-        // Send event to Firebase
-        Analytics.logEvent(eventName, parameters: parameters)
-        
-        print("📊 Event '\(eventName)' sent to all SDKs")
-    }
-    
-    
-    /// Extracts revenue value from parameters dictionary
-    /// Supports Double, Int, Float, and String values as per SDK documentation
-    private func extractRevenue(from parameters: [String: Any]) -> Double? {
-        // Check for common revenue parameter names
-        let revenueKeys = ["value", "revenue", "price", "amount"]
-        
-        for key in revenueKeys {
-            if let value = parameters[key] {
-                // Return the value as-is since SDK supports multiple types
-                return value as? Double
-            }
-        }
-        
-        return nil
-    }
-    
-    private func configureFacebookSDK() {
-        ApplicationDelegate.shared.application(
-            UIApplication.shared,
-            didFinishLaunchingWithOptions: nil
-        )
-        
-        // Disable automatic event logging in Meta SDK
-        // This prevents Meta from automatically logging app events
-        Settings.shared.isAutoLogAppEventsEnabled = false
-        
-        // Disable SKAdNetwork reporting in Meta SDK
-        // This prevents Meta from sending conversion values to Apple via SKAdNetwork
-        // Note: You should also disable this in Meta Business Manager:
-        // 1. Go to business.facebook.com
-        // 2. Navigate to "Data Sources" -> "Settings"
-        // 3. Under "Apple's SKAdNetwork" -> "View Additional Settings"
-        // 4. Toggle off "SKAdNetwork for the Facebook SDK"
-    }
-    
-    private func configureTiktokSDK() {
-        // Configure TikTok SDK
-        let tiktokConfig = TikTokConfig(appId: Constants.appId, tiktokAppId: Constants.tiktokAppId)
-#if DEBUG
-        // Enable debug mode only for testing purposes
-        tiktokConfig?.enableDebugMode()
-#endif
-        // Disable SKAdNetwork support in TikTok SDK
-        // This prevents TikTok from sending conversion values to Apple via SKAdNetwork
-        // Documentation: https://ads.tiktok.com/marketing_api/docs?id=1739381752981505
-        tiktokConfig?.disableSKAdNetworkSupport()
-        
-        TikTokBusiness.initializeSdk(tiktokConfig)
-    }
-    
-    private func configureFirebaseSDK() {
-        // Initialize Firebase
-        FirebaseApp.configure()
-        
-        // Disable SKAdNetwork reporting in Firebase
-        // Firebase doesn't provide a programmatic way to disable SKAdNetwork reporting
-        // You must add the following key to your Info.plist file:
-        //
-        // <key>GOOGLE_ANALYTICS_REGISTRATION_WITH_AD_NETWORK_ENABLED</key>
-        // <false/>
-        //
-        // Documentation: https://firebase.google.com/docs/analytics/get-started?platform=ios#optional_disable_apple_ad_network_attribution_registration
-        // Note: There is NO option to disable this in the Firebase Console.
-    }
-    
-    private func setupTracking() {
-        if #available(iOS 14.0, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                // Enable ASA Attribution tracking after getting permission
-                if #available(iOS 14.3, *) {
-                    AppstackASAAttribution.shared.enableAppleAdsAttribution()
-                }
-                
-                switch status {
-                case .authorized:
-                    Settings.shared.isAdvertiserIDCollectionEnabled = true
-                case .denied, .notDetermined, .restricted:
-                    Settings.shared.isAdvertiserIDCollectionEnabled = false
-                @unknown default:
-                    fatalError("Invalid authorization status")
-                }
-            }
-        }
-    }
-    
-    private func registerSKAdNetwork() {
-        if !UserDefaults.standard.bool(forKey: "IsSkAdNetworkInstallReported") {
-            if #available(iOS 15.4, *) {
-                SKAdNetwork.updatePostbackConversionValue(0) { error in
-                    if error == nil {
-                        UserDefaults.standard.set(true, forKey: "IsSkAdNetworkInstallReported")
-                    }
-                }
-            } else {
-                SKAdNetwork.registerAppForAdNetworkAttribution()
-                UserDefaults.standard.set(true, forKey: "IsSkAdNetworkInstallReported")
-            }
-        }
+    ///   - event: A standard `EventType` (e.g. `.SIGN_UP`, `.ADD_TO_CART`, `.PURCHASE`),
+    ///            or `.CUSTOM` for app-specific events.
+    ///   - name: Required when `event` is `.CUSTOM`; ignored otherwise.
+    ///   - parameters: Optional key/value pairs. For revenue events include
+    ///                 `revenue` (or `price`) and `currency` — the SDK reads them directly.
+    func trackEvent(event: EventType, name: String? = nil, parameters: [String: Any]? = nil) {
+        AppstackAttributionSdk.shared.sendEvent(event: event, name: name, parameters: parameters)
+
+        let label = event == .CUSTOM ? (name ?? "custom_event") : event.eventName
+        print("📊 Event '\(label)' sent to Appstack")
     }
 }

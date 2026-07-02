@@ -102,13 +102,6 @@ struct ProductDetailView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
                     CartView()
-                        .onAppear {
-                            // Send cart view event
-                            TrackingManager.shared.trackEvent(
-                                eventType: .CUSTOM,
-                                customEventName: Constants.Events.viewCart
-                            )
-                        }
                 } label: {
                     ZStack(alignment: .topTrailing) {
                         Image(systemName: "cart")

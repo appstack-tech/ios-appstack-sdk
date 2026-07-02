@@ -61,6 +61,17 @@ struct CartView: View {
                         // Checkout button
                         Button {
                             lastPurchaseTotal = cartManager.formattedCartTotal
+
+                            // Standard INITIATE_CHECKOUT event fired when checkout begins.
+                            TrackingManager.shared.trackEvent(
+                                event: Constants.Events.initiateCheckout,
+                                parameters: [
+                                    "revenue": cartManager.cartTotal,
+                                    "currency": "USD",
+                                    "item_count": cartManager.totalItems
+                                ]
+                            )
+
                             cartManager.purchase()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
                                 showingPurchaseConfirmation = true
