@@ -1,15 +1,15 @@
 import SwiftUI
-import FacebookCore
 
 @main
 struct VirtualStoreApp: App {
     @StateObject private var authManager = AuthManager()
     @StateObject private var cartManager = CartManager()
-    
+
     init() {
-        TrackingManager.shared.configureSDKs()
+        // Configure the Appstack SDK once, at launch.
+        TrackingManager.shared.configure()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             if authManager.isLoggedIn {

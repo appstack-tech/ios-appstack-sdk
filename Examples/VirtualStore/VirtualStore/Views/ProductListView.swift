@@ -19,14 +19,14 @@ struct ProductListView: View {
                     NavigationLink {
                         ProductDetailView(product: product)
                             .onAppear {
-                                // Send detailed product view event
+                                // Send standard VIEW_ITEM event
                                 TrackingManager.shared.trackEvent(
-                                    eventType: .CUSTOM,
-                                    customEventName: Constants.Events.viewProduct,
+                                    event: Constants.Events.viewProduct,
                                     parameters: [
                                         "product_id": product.id,
                                         "product_name": product.name,
-                                        "price": product.price
+                                        "price": product.price,
+                                        "currency": "USD"
                                     ]
                                 )
                             }
@@ -43,13 +43,6 @@ struct ProductListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
                     CartView()
-                        .onAppear {
-                            // Send cart view event
-                            TrackingManager.shared.trackEvent(
-                                eventType: .CUSTOM,
-                                customEventName: Constants.Events.viewCart
-                            )
-                        }
                 } label: {
                     ZStack(alignment: .topTrailing) {
                         Image(systemName: "cart")

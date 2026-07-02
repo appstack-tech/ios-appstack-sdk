@@ -32,13 +32,6 @@ struct ContentView: View {
                     VStack(spacing: 15) {
                         NavigationLink {
                             ProductListView()
-                                .onAppear {
-                                    // Send product view event
-                                    TrackingManager.shared.trackEvent(
-                                        eventType: .CUSTOM,
-                                        customEventName: Constants.Events.viewProductList
-                                    )
-                                }
                         } label: {
                             HStack {
                                 Image(systemName: "list.bullet")
@@ -57,13 +50,6 @@ struct ContentView: View {
                         
                         NavigationLink {
                             CartView()
-                                .onAppear {
-                                    // Send cart view event
-                                    TrackingManager.shared.trackEvent(
-                                        eventType: .CUSTOM,
-                                        customEventName: Constants.Events.viewCart
-                                    )
-                                }
                         } label: {
                             HStack {
                                 Image(systemName: "cart")
@@ -119,13 +105,6 @@ struct ContentView: View {
                 .padding()
             }
             .navigationBarHidden(true)
-            .onAppear {
-                // Send home view event
-                TrackingManager.shared.trackEvent(
-                    eventType: .CUSTOM,
-                    customEventName: Constants.Events.viewHome
-                )
-            }
         }
     }
 }
