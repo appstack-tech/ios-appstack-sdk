@@ -1,10 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
     name: "AppstackSDK",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AppstackSDK",
-            path: "./AppstackSDK.xcframework")
+            url: "https://github.com/appstack-tech/ios-appstack-sdk/releases/download/4.4.0-rc2/AppstackSDK.xcframework.zip",
+            checksum: "5a6423cc8e2992f114afbfc4d2ec15b95d90f1786a3dc2c17d1648378cb4a157")
     ]
 )
-
