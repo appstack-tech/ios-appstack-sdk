@@ -5,6 +5,10 @@ All notable changes to the Appstack iOS SDK are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Fixed
+- `sendEvent(event:)` now ignores `INSTALL`, which the SDK already tracks automatically. Sending it by hand previously double-counted installs; such calls are now logged and discarded.
+
 ## [4.4.0] - 2026-07-17
 ### Added
 - Added Mac Catalyst support to the prebuilt XCFramework.
