@@ -5,6 +5,27 @@ All notable changes to the Appstack iOS SDK are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.5.0] - 2026-08-11
+### Added
+- `setCustomerUserId(_:)` sets the customer user id after `configure()`, for when the id is only
+  known once the user logs in. It applies to every event sent from that point on, including events
+  already buffered but not yet delivered.
+- `getAttributionParams()` now always carries an `appstack_match_status` key telling you whether the
+  attribution request succeeded: `matched`, `matched_no_params`, `organic`, `skipped`, `failed` or
+  `not_configured`. Only `failed` is worth re-reading later; the rest are settled answers.
+- Attribution match outcomes are now visible on the `.debug` log channel.
+
+### Changed
+- `getAttributionParams()` no longer returns `nil` — where the result was previously `nil` or empty,
+  it now carries the status key explaining why. Existing call sites keep compiling, but code using
+  an empty result to mean "not attributed" should switch to the status key.
+
+### Fixed
+- `deleteUserData()` now also clears the stored customer user id.
+- A blank customer user id is treated as absent instead of being sent as an empty string.
+- A `setCustomerUserId(...)` call made immediately after `configure()` is no longer overwritten by
+  the value passed to `configure()`.
+
 ## [4.4.1] - 2026-08-03
 ### Added
 - Attribution matching now includes additional network context to improve match diagnostics.
