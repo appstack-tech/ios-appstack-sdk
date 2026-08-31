@@ -5,6 +5,35 @@ All notable changes to the Appstack iOS SDK are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Added
+- Custom event parameters that are not needed in the clear are now encrypted on the device before
+  being sent, so personal data such as an email or phone number leaves the app already protected.
+  Which parameter names stay readable (for example `currency`, `revenue`, campaign fields) is
+  controlled by Appstack's backend — every other parameter is encrypted automatically, with no code
+  change on your side. Requires iOS 17 or later **and** Appstack having enabled the feature for your
+  app: until then, and on iOS 15 and 16, behaviour is unchanged and the values are encrypted
+  server-side as before. Purchase `transaction_details` and deeplink user data are not affected, so
+  revenue reporting is unchanged. If a value cannot be encrypted it is left out of the event rather
+  than sent unprotected, and the rest of the event still sends.
+
+### Fixed
+- Numeric event parameters whose value was `0` or `1` were sent as the booleans `false` and `true`.
+  This affected custom event parameters, purchase `transaction_details` (notably `quantity`, which is
+  `1` on most transactions), deeplink user data and install signals. They are now sent as numbers.
+  Values of `2` and above were never affected.
+- A `null` in the attribution match response no longer discards the whole response. Previously one
+  null query parameter could cost an install its attribution data.
+- Event parameters holding `null` no longer cause the event to be silently dropped. Null values are
+  now omitted from the payload (nulls inside arrays are kept), matching the Android SDK. This
+  covered a nil Swift `Optional` passed as a parameter, any dictionary decoded from JSON that
+  carries a null field, Dart `null` from Flutter, and nested nulls from React Native.
+- `sendEvent(event:name:parameters:)` no longer crashes the app when a parameter holds a value JSON
+  cannot represent — a `Date`, `URL`, `Data`, `Set`, custom object, or a `NaN`/infinite number.
+  Such keys are now dropped individually and named in an error log; the event still sends with its
+  remaining parameters. Send strings, finite numbers, booleans, arrays, and nested string-keyed
+  dictionaries.
+
 ## [4.5.1] - 2026-08-14
 ### Added
 - Added an Apple privacy manifest declaring the SDK's required-reason API usage.
