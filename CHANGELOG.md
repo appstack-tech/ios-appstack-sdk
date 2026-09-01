@@ -5,6 +5,12 @@ All notable changes to the Appstack iOS SDK are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.5.2] - 2026-09-01
+### Added
+- Events now carry an internal diagnostic recording whether Apple Ads attribution was enabled and
+  whether the AdServices token fetch is pending, succeeded, or failed. The SDK sends an automatic
+  diagnostic event when the token resolution completes, so no later app event is required.
+
 ## [4.5.1] - 2026-08-14
 ### Added
 - Added an Apple privacy manifest declaring the SDK's required-reason API usage.
