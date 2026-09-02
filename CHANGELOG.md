@@ -5,6 +5,29 @@ All notable changes to the Appstack iOS SDK are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.6.0] - 2026-09-02
+### Added
+- Custom event parameters are encrypted on the device before being sent, so personal data such as an
+  email or phone number leaves the app already protected. Parameter names that need to stay readable
+  — for example `currency`, `revenue` and campaign fields — are excluded, and that list is
+  controlled server-side, so no code change is required in your app. Requires iOS 17 or later; on
+  iOS 15 and 16 the values are encrypted server-side as before. Purchase `transaction_details` and
+  deeplink user data are unaffected, so revenue reporting is unchanged. A value that cannot be
+  encrypted is omitted from the event, and the rest of the event still sends.
+
+### Fixed
+- A `null` in the attribution match response no longer discards the whole response. Previously one
+  null query parameter could cost an install its attribution data.
+- Event parameters holding `null` no longer cause the event to be silently dropped. Null values are
+  now omitted from the payload (nulls inside arrays are kept), matching the Android SDK. This
+  covered a nil Swift `Optional` passed as a parameter, any dictionary decoded from JSON that
+  carries a null field, Dart `null` from Flutter, and nested nulls from React Native.
+- `sendEvent(event:name:parameters:)` no longer crashes the app when a parameter holds a value JSON
+  cannot represent — a `Date`, `URL`, `Data`, `Set`, custom object, or a `NaN`/infinite number.
+  Such keys are now dropped individually and named in an error log; the event still sends with its
+  remaining parameters. Send strings, finite numbers, booleans, arrays, and nested string-keyed
+  dictionaries.
+
 ## [4.5.2] - 2026-09-01
 ### Added
 - Events now carry an internal diagnostic recording whether Apple Ads attribution was enabled and
@@ -102,16 +125,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   unchanged.
 
 ## [4.0.5] - 2026-04-24
+
 ### Fixed
 - Fixed a rare crash on first install caused by a data race.
 - `configure()` now ignores duplicate calls within the same app session.
 
 ## [4.0.4] - 2026-04-08
+
 ### Fixed
 - Fixed a regression where the install event and `getAttributionParams()` could
   hang and never complete.
 
 ## [4.0.3] - 2026-04-08
+
 ### Fixed
 - Fixed a regression where the install event and `getAttributionParams()` could
   hang and never complete.
@@ -121,6 +147,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal improvements to attribution matching and request handling.
 
 ## [4.0.1] - 2026-02-10
+
 ### Fixed
 - Build and compatibility fixes for the released framework.
 
@@ -131,6 +158,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   which waits for the initial match to complete.
 
 ## [3.6.2] - 2026-02-08
+
 ### Fixed
 - Fixed compatibility with older Swift compilers (Xcode 16.0 / 16.1), resolving
   "has no member" errors when consuming the SDK (e.g. in React Native projects).
@@ -147,6 +175,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Startup-time improvements.
 
 ## [3.5.0] - 2026-01-28
+
 ### Fixed
 - Fixed some crashes that could occur while using the SDK.
 - Updates are no longer counted as installs during the app's first days running
@@ -165,6 +194,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Linked the AppTrackingTransparency framework to support ATT access.
 
 ## [3.3.0] - 2025-01-14
+
 ### Fixed
 - Reverted earlier changes to automatic purchase-event handling.
 
