@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AppstackSDK",
-            url: "https://github.com/appstack-tech/ios-appstack-sdk/releases/download/4.6.0/AppstackSDK.xcframework.zip",
-            checksum: "60f9c41142e5cfc176cfc87fd334bfabbf13d59dca124e7cec8582849db15f72")
+            url: "https://github.com/appstack-tech/ios-appstack-sdk/releases/download/4.7.0-rc1/AppstackSDK.xcframework.zip",
+            checksum: "bb5b43afb33123aebf029da61b26419dc486ed55ff7c06c7f8a48d08477b0517")
     ]
 )
