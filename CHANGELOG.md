@@ -5,6 +5,20 @@ All notable changes to the Appstack iOS SDK are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+- Universal Links accept a URL directly and support optional host filtering. Branded HTTPS
+  and shared domains work by default; unsupported URL structures and non-standard
+  multi-segment paths return nil. Expanded setup guidance covers SwiftUI, scene cold starts,
+  and domain associations.
+### Added
+- `handleUniversalLink(_:)` handles a tapped Universal Link for an already-installed app,
+  parsing `deeplinkId` and query params directly off the tapped URL with no network round
+  trip. Call it from `application(_:continue:restorationHandler:)` / `scene(_:continue:)`.
+  Requires adding the Associated Domains entitlement (`applinks:appstack.link`,
+  `applinks:dev.appstack.link`, and any custom domain) to your app target. See the
+  Universal Links section in the README.
+
 ## [4.6.0] - 2026-09-02
 ### Added
 - Custom event parameters are encrypted on the device before being sent, so personal data such as an
