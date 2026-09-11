@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.7.1] - 2026-09-11
+
+### Fixed
+- Fixed Swift 6 build errors when accessing `AppstackAttributionSdk.shared` or
+  `AppstackASAAttribution.shared`. If you added
+  `@preconcurrency import AppstackSDK` as a workaround, you can now remove it.
+
 ## [4.7.0] - 2026-09-09
 
 ### Changed
