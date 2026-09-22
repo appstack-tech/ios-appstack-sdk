@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.7.2] - 2026-09-22
+
+### Fixed
+- The automatic Apple Ads attribution event is no longer sent more than once after successful
+  delivery when `enableAppleAdsAttribution()` is called again. If delivery fails, a later call
+  retries with the same event ID.
+
 ## [4.7.1] - 2026-09-11
 
 ### Fixed
