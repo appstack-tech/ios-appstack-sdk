@@ -14,8 +14,9 @@ to demonstrate SDK setup and event tracking, not to be a real store.
 
 1. Open `VirtualStore.xcodeproj`.
 2. This example references the SDK as a **local Swift package** (`../..`, the root of this
-   repository) so it always builds against the xcframework shipped here. In your own app,
-   add it as a remote package instead — File ▸ Add Package Dependencies… ▸
+   repository), so it always builds against the release that this checkout's `Package.swift`
+   points at (SPM downloads that release's prebuilt xcframework). In your own app, add it as
+   a remote package instead — File ▸ Add Package Dependencies… ▸
    `https://github.com/appstack-tech/ios-appstack-sdk`.
 3. Add your API key in [`Constants.swift`](VirtualStore/Shared/Constants.swift):
 
@@ -141,7 +142,7 @@ let params = await AppstackAttributionSdk.shared.getAttributionParams()
 try await AppstackAttributionSdk.shared.deleteUserData()
 ```
 
-See the [Appstack iOS SDK documentation](https://docs.app-stack.tech/documentation/sdk/quickstart)
+See the [Appstack iOS SDK documentation](https://docs.appstack.tech/SDKs/swift)
 for the full API.
 
 ---

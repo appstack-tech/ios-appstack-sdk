@@ -12,6 +12,7 @@ The Appstack iOS SDK lets you:
 - Track revenue events with currency (for ROAS / optimization)
 - Enable Apple Ads attribution
 - Retrieve the Appstack installation ID and attribution parameters
+- Handle Universal Links for already-installed apps
 
 ## Features (with examples)
 
@@ -58,27 +59,39 @@ let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams
 ```
 
 ### `getAttributionParams() async -> [String: Any]?`
-Retrieve attribution parameters from the SDK. This returns all available attribution data that the SDK has collected.
+Retrieve the attribution parameters for this install. The call suspends until the initial attribution match completes (success or failure), so there is no need to add a delay after `configure()`.
 
-**Returns:** A dictionary containing attribution parameters (key-value pairs), or `nil` if not yet available.
+**Returns:** The query parameters of the matched ad click (for example `appstack_campaign`, `utm_source`, `gclid`), plus an `appstack_match_status` key that is always present. The result is never `nil`; the optional return type is kept only so existing `?? [:]` call sites keep compiling.
 
-**Returns data on success:** Dictionary with various attribution-related data depending on availability.
+**`appstack_match_status` values:**
 
-**Returns empty dictionary:** `[:]` if no attribution parameters are available.
+| Value | Meaning |
+|-------|---------|
+| `matched` | The install was attributed and the parameters are included. |
+| `matched_no_params` | The install was attributed, but the link carried no tracking parameters. |
+| `organic` | No matching click. The install is organic. |
+| `skipped` | No match was attempted for this install (for example, an app update rather than a new install). |
+| `failed` | The match request failed (offline, timeout, server error). The SDK retries; read the value again later. |
+| `not_configured` | `configure()` has not been called. |
+
+Only `failed` is worth re-reading later. The other values are final. The key name is also available as `AppstackAttributionSdk.attributionMatchStatusKey`.
 
 **Example:**
 ```swift
 let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
-print("Attribution parameters:", attributionParams)
+let status = attributionParams[AppstackAttributionSdk.attributionMatchStatusKey] as? String
 
-// Example output (varies by device / store install):
+// Example output for an attributed install:
 // [
-//   "attribution_source": "app_store",
-//   "install_timestamp": "1733629800",
-//   "attributed": "true",
+//   "appstack_match_status": "matched",
+//   "appstack_campaign": "summer_sale",
+//   "utm_source": "google",
+//   "gclid": "...",
 //   ...
 // ]
 ```
+
+> Since 4.5.0 the result is never empty. If your code treated an empty result as "not attributed", check `appstack_match_status` instead.
 
 **Use Cases:**
 - Retrieve attribution data for analytics
@@ -96,6 +109,71 @@ if #available(iOS 15.0, *) {
     AppstackASAAttribution.shared.enableAppleAdsAttribution()
 }
 ```
+
+### Universal Links
+
+When a user taps an Appstack link and the app is already installed, iOS opens the app directly with the tapped URL. `handleUniversalLink` parses that URL locally, with no network request, and returns the `deeplinkId` and the link's query parameters so your app can route the user.
+
+**Requirements:**
+
+- A custom HTTPS domain provisioned for your app in Appstack (for example `links.example.com`). Shared `appstack.link` hosts are not supported.
+- That domain in your app's **Associated Domains** entitlement: `applinks:links.example.com`. Add only the custom domain.
+- Only standard links shaped as `https://links.example.com/{deeplinkId}` are parsed. Extra path segments, non-HTTPS URLs, and hosts not listed in `allowedHosts` (when you supply it) return `nil`.
+
+**SwiftUI:**
+
+```swift
+import SwiftUI
+import AppstackSDK
+
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                // SwiftUI delivers Universal Links here, on cold start and while running.
+                .onOpenURL { url in
+                    route(url)
+                }
+        }
+    }
+
+    private func route(_ url: URL) {
+        let options = LinkOptions(allowedHosts: ["links.example.com"])
+        guard let link = AppstackAttributionSdk.shared.handleUniversalLink(url, options: options) else { return }
+        // link.deeplinkId, link.queryParams (e.g. a custom "deep_link_path"), link.url
+    }
+}
+```
+
+**UIKit (SceneDelegate):** handle both the cold start and the already-running case:
+
+```swift
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    // Cold start: the link arrives in the connection options.
+    if let activity = connectionOptions.userActivities.first {
+        handle(activity)
+    }
+}
+
+func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+    // App already running.
+    handle(userActivity)
+}
+
+private func handle(_ activity: NSUserActivity) {
+    guard let link = AppstackAttributionSdk.shared.handleUniversalLink(activity) else { return }
+    // Route using link.deeplinkId / link.queryParams
+}
+```
+
+Apps without a `SceneDelegate` can call the same method from `application(_:continue:restorationHandler:)`.
+
+**Notes:**
+
+- Safe to call before `configure()`.
+- It does not send an event and does not change install attribution. If you want to count the tap as a re-engagement, call `sendEvent(...)` yourself.
+- `allowedHosts` filters by hostname only. It does not verify that you own the domain.
 
 ## Integrations
 
@@ -155,9 +233,11 @@ See the [RevenueCat integration docs](https://docs.appstack.tech/Integrations/re
 
 ## 📋 Requirements
 
-- **iOS** 15.0+
-- **Xcode** 14.0+
-- **Swift** 5.0+
+- **iOS** 15.0+ (Mac Catalyst 15.0+ supported since 4.4.0)
+- **Xcode** 16.0+
+- **Swift** 5.5+ (Swift 6 language mode supported since 4.7.1)
+
+The SDK ships an Apple privacy manifest (since 4.5.1) declaring its required-reason API usage, so you don't need to add those entries to your app's manifest.
 
 ---
 
@@ -169,7 +249,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
  dependencies: [
-    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.1.0")
+    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.7.0")
  ]
 ```
 
@@ -178,6 +258,12 @@ Or directly from Xcode:
 1. Go to **File > Add Packages**.
 2. Enter the repository URL: `https://github.com/appstack-tech/ios-appstack-sdk.git`.
 3. Select the desired version and click **Add Package**.
+
+Since 4.4.0, SPM downloads the prebuilt `AppstackSDK.xcframework.zip` from the GitHub release instead of cloning the framework from the repository. Projects pinned to older versions keep resolving as before. We recommend updating to the latest 4.x release.
+
+### Manual installation
+
+Download `AppstackSDK.xcframework.zip` from the [latest release](https://github.com/appstack-tech/ios-appstack-sdk/releases/latest), unzip it, and drag `AppstackSDK.xcframework` into your Xcode project. In your app target's **Frameworks, Libraries, and Embedded Content**, set it to **Embed & Sign**.
 
 ---
 
@@ -411,7 +497,7 @@ The `AppstackAttributionSdk.shared.configure()` method supports the following pa
 
 - **`apiKey`** (String, required): Your Appstack API key. Use your **development** API key for test builds and your **production** API key for App Store releases — this is how Appstack separates test traffic from production data.
 - **`logLevel`** (LogLevel, default: .info): Logging level for debugging
-- **`customerUserId`** (String?, default: nil): Optional identifier for your own user, associated with this installation
+- **`customerUserId`** (String?, default: nil): Optional identifier for your own user, associated with this installation. If the id is only known later (for example after login), use `setCustomerUserId(_:)` instead.
 
 ### **Configuration Examples:**
 
@@ -429,6 +515,15 @@ AppstackAttributionSdk.shared.configure(
     customerUserId: "your-internal-user-id"
 )
 ```
+
+### **Setting the customer user id after login**
+
+```swift
+// After the user logs in
+AppstackAttributionSdk.shared.setCustomerUserId("your-internal-user-id")
+```
+
+The id applies to every event sent from that point on, including events still buffered. It is safe to call from any thread, before or after `configure()`.
 
 ### **Separating development and production**
 
@@ -453,7 +548,7 @@ enum AppstackConfig {
 
     static var logLevel: LogLevel {
         #if DEBUG
-        return .info   // most verbose: logs init, every event sent, and errors
+        return .debug  // most verbose: adds attribution-match troubleshooting details
         #else
         return .error  // production: only log errors
         #endif
@@ -466,9 +561,9 @@ AppstackAttributionSdk.shared.configure(
 )
 ```
 
-> **Log levels:** `.info` is currently the most verbose level (it logs initialization, every event sent, and errors), followed by `.debug` (events + errors), `.error` (errors only), and `.off`. Use `.info` while developing. _Note: this ordering will change in a future release so that `.debug` becomes the most verbose level, matching standard logging conventions._
+> **Log levels** (least to most verbose, since 4.3.1): `.off` (no SDK logs), `.error` (actionable errors only, such as an invalid API key or incorrect SDK usage), `.info` (errors plus lifecycle confirmations such as "Appstack SDK initialized"), and `.debug` (info plus troubleshooting details such as the attribution match outcome). Use `.debug` while developing and `.error` in production.
 
-> **Verifying your setup:** run a debug build, trigger a few events, and confirm they appear in the **development** environment of the Appstack dashboard (not production). With `logLevel: .info` the SDK logs the API key it was configured with at startup and each event as it is sent.
+> **Verifying your setup:** run a debug build, trigger a few events, and confirm they appear in the **development** environment of the Appstack dashboard (not production). With `logLevel: .debug` the SDK logs its initialization and the attribution match result in the Xcode console.
 
 ---
 
@@ -486,7 +581,7 @@ Task {
 }
 ```
 
-On success, locally cached attribution data is also cleared.
+On success, locally cached attribution data and the stored customer user id are also cleared.
 
 ---
 
