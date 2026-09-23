@@ -10,7 +10,7 @@ You can install the SDK via **Swift Package Manager (SPM)** by adding the follow
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.1.0")
+    .package(url: "https://github.com/appstack-tech/ios-appstack-sdk.git", from: "4.7.0")
 ]
 ```
 
@@ -64,7 +64,7 @@ let appstackId = AppstackAttributionSdk.shared.getAppstackId()
 let attributionParams = await AppstackAttributionSdk.shared.getAttributionParams() ?? [:]
 ```
 
-`getAttributionParams()` is `async` and suspends until the initial attribution match completes (success or failure). Call it inside a `Task { }` or another async context.
+`getAttributionParams()` is `async` and suspends until the initial attribution match completes (success or failure). Call it inside a `Task { }` or another async context. The result always includes an `appstack_match_status` key (`matched`, `matched_no_params`, `organic`, `skipped`, `failed` or `not_configured`). See the [Readme](./Readme.md#getattributionparams-async---string-any) for what each value means.
 
 ## Identifying users (optional)
 
@@ -76,6 +76,13 @@ AppstackAttributionSdk.shared.configure(
     logLevel: .info,
     customerUserId: "your-internal-user-id"
 )
+```
+
+If the id is only known later (for example after login), set it with `setCustomerUserId(_:)`, and pass `nil` on logout:
+
+```swift
+AppstackAttributionSdk.shared.setCustomerUserId("your-internal-user-id")
+AppstackAttributionSdk.shared.setCustomerUserId(nil) // on logout
 ```
 
 ## Deleting user data
@@ -91,6 +98,10 @@ Task {
     }
 }
 ```
+
+## Universal Links
+
+To route users who tap an Appstack link when the app is already installed, pass the URL to `handleUniversalLink(_:)`. It needs a custom link domain in your Associated Domains entitlement. See the [Readme](./Readme.md#universal-links) for setup.
 
 ## Integrations
 
@@ -260,8 +271,10 @@ AppstackAttributionSdk.shared.sendEvent(
 ```
 
 **Supported parameter types:**
-- `String`, `Int`, `Double`, `Bool`
-- Any JSON-serializable value
+- `String`, finite numbers (`Int`, `Double`, ...), `Bool`
+- Arrays and nested `[String: Any]` dictionaries of those types
+
+`nil` values are left out of the payload. Values JSON can't represent (`Date`, `URL`, `Data`, `Set`, custom objects, `NaN` or infinite numbers) are dropped individually and named in an error log; the rest of the event is still sent.
 </details>
 
 <details>
@@ -339,7 +352,7 @@ if #available(iOS 15.0, *) {
 
 **Events not appearing:**
 - Check API key is correct
-- Increase log verbosity with `logLevel: .info` (currently the most verbose level; this ordering will change in a future release so `.debug` becomes the most verbose)
+- Increase log verbosity with `logLevel: .debug` (the most verbose level)
 - Ensure network connectivity
 
 **Apple Search Ads attribution not working:**

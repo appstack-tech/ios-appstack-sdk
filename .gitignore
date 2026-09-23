@@ -14,3 +14,6 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
+
+# macOS
+.DS_Store
