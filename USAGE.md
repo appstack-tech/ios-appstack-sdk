@@ -78,11 +78,10 @@ AppstackAttributionSdk.shared.configure(
 )
 ```
 
-If the id is only known later (for example after login), set it with `setCustomerUserId(_:)`, and pass `nil` on logout:
+If the id is only known later (for example after login), set it with `setCustomerUserId(_:)`:
 
 ```swift
 AppstackAttributionSdk.shared.setCustomerUserId("your-internal-user-id")
-AppstackAttributionSdk.shared.setCustomerUserId(nil) // on logout
 ```
 
 ## Deleting user data

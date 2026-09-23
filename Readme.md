@@ -521,12 +521,9 @@ AppstackAttributionSdk.shared.configure(
 ```swift
 // After the user logs in
 AppstackAttributionSdk.shared.setCustomerUserId("your-internal-user-id")
-
-// On logout, clear it so the previous user's id isn't attached to later events
-AppstackAttributionSdk.shared.setCustomerUserId(nil)
 ```
 
-The id applies to every event sent from that point on, including events still buffered. It is safe to call from any thread, before or after `configure()`. A blank string is treated the same as `nil`.
+The id applies to every event sent from that point on, including events still buffered. It is safe to call from any thread, before or after `configure()`.
 
 ### **Separating development and production**
 
