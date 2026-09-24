@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1702BFA4AB8C55D8A9685385 /* AppstackSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5029A32844A6A8D53F059B /* AppstackSDK.xcframework */; };
+		2EAF46464510234B7B49CD59 /* SDKUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C569A3942321DA5D9CC27 /* SDKUsage.swift */; };
+		6BBBAD3F96659DD18ADCB1A0 /* AppstackSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB5029A32844A6A8D53F059B /* AppstackSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71FBD7F3B14971669B13FC69 /* SDKUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C569A3942321DA5D9CC27 /* SDKUsage.swift */; };
+		87308BA1364004CEF899C4D5 /* SmokeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00577CA69DEA407845D2BC13 /* SmokeApp.swift */; };
+		8EDAFC2D7208E8FBB6C4ADDD /* AppstackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 6C7A3C18644CE9105185B234 /* AppstackSDK */; };
+		A916E8E3072458CB9980A7F0 /* SmokeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00577CA69DEA407845D2BC13 /* SmokeApp.swift */; };
+		BD51DB0011AF2A86D812BED2 /* SDKUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C569A3942321DA5D9CC27 /* SDKUsage.swift */; };
+		C22693A989FD3F551D9CBE24 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3580CF11DB589592EF95E /* NotificationService.swift */; };
+		EC3CBE911044B4D10D687D11 /* AppstackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A8F590ADC78BDC1C6507261D /* AppstackSDK */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C98D622C9C3F0F702A1C5327 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6BBBAD3F96659DD18ADCB1A0 /* AppstackSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00577CA69DEA407845D2BC13 /* SmokeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeApp.swift; sourceTree = "<group>"; };
+		14D3580CF11DB589592EF95E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3ACD77F0E4E669A1CFD54053 /* SmokeExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SmokeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B89257D3D3FCFB64BA656F6 /* SmokeSPM.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmokeSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		755180468E67C809AF070E30 /* sleepy-goodall-1d2af6 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "sleepy-goodall-1d2af6"; path = ../..; sourceTree = SOURCE_ROOT; };
+		785990989185DCA4E14EE7EA /* SmokeEmbedded.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmokeEmbedded.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10C569A3942321DA5D9CC27 /* SDKUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKUsage.swift; sourceTree = "<group>"; };
+		BB5029A32844A6A8D53F059B /* AppstackSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AppstackSDK.xcframework; path = Frameworks/AppstackSDK.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00945FA352627127ADB8D401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3CBE911044B4D10D687D11 /* AppstackSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C891A06058819F2D3C56B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1702BFA4AB8C55D8A9685385 /* AppstackSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACAFD47529532FF2C6C58150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDAFC2D7208E8FBB6C4ADDD /* AppstackSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A28719E6C372DD03B88BAAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785990989185DCA4E14EE7EA /* SmokeEmbedded.app */,
+				3ACD77F0E4E669A1CFD54053 /* SmokeExtension.appex */,
+				3B89257D3D3FCFB64BA656F6 /* SmokeSPM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31E293BE153A8AA2709808DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14D3580CF11DB589592EF95E /* NotificationService.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		43599FCA8A8B103C1E95ED36 = {
+			isa = PBXGroup;
+			children = (
+				E92EECE574024D6DD035CC80 /* App */,
+				31E293BE153A8AA2709808DC /* Extension */,
+				4F219A3A6FAEBA3A3AC05F94 /* Packages */,
+				9478CA743E3AC3AC65555F66 /* Shared */,
+				548EC62A88511BC4E3183942 /* Frameworks */,
+				2A28719E6C372DD03B88BAAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F219A3A6FAEBA3A3AC05F94 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				755180468E67C809AF070E30 /* sleepy-goodall-1d2af6 */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		548EC62A88511BC4E3183942 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB5029A32844A6A8D53F059B /* AppstackSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9478CA743E3AC3AC65555F66 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A10C569A3942321DA5D9CC27 /* SDKUsage.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E92EECE574024D6DD035CC80 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00577CA69DEA407845D2BC13 /* SmokeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		212ACE1D424A269FBB4D7E99 /* SmokeExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AB189B0F60F82E50CBCE330 /* Build configuration list for PBXNativeTarget "SmokeExtension" */;
+			buildPhases = (
+				D011C86CE6287AC17913D0DE /* Sources */,
+				ACAFD47529532FF2C6C58150 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmokeExtension;
+			packageProductDependencies = (
+				6C7A3C18644CE9105185B234 /* AppstackSDK */,
+			);
+			productName = SmokeExtension;
+			productReference = 3ACD77F0E4E669A1CFD54053 /* SmokeExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3C0342D9637CBFA08D77009B /* SmokeSPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C45E33ABDCF86E6366A7EDF /* Build configuration list for PBXNativeTarget "SmokeSPM" */;
+			buildPhases = (
+				5EF070A194C301BA18CE3F5A /* Sources */,
+				00945FA352627127ADB8D401 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmokeSPM;
+			packageProductDependencies = (
+				A8F590ADC78BDC1C6507261D /* AppstackSDK */,
+			);
+			productName = SmokeSPM;
+			productReference = 3B89257D3D3FCFB64BA656F6 /* SmokeSPM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F25E6CDD4821978813912F0 /* SmokeEmbedded */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96541A50250DC28C9D7E44C1 /* Build configuration list for PBXNativeTarget "SmokeEmbedded" */;
+			buildPhases = (
+				BA3B8802BAA4393A51C49630 /* Sources */,
+				7C891A06058819F2D3C56B3E /* Frameworks */,
+				C98D622C9C3F0F702A1C5327 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmokeEmbedded;
+			packageProductDependencies = (
+			);
+			productName = SmokeEmbedded;
+			productReference = 785990989185DCA4E14EE7EA /* SmokeEmbedded.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4C26FC436B9DEB8F30750A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					212ACE1D424A269FBB4D7E99 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					3C0342D9637CBFA08D77009B = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					7F25E6CDD4821978813912F0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 37CE09DD6EB7F120445AA583 /* Build configuration list for PBXProject "SmokeConsumer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 43599FCA8A8B103C1E95ED36;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				01D160585DEDA85EDB285121 /* XCLocalSwiftPackageReference "../.." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2A28719E6C372DD03B88BAAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C0342D9637CBFA08D77009B /* SmokeSPM */,
+				7F25E6CDD4821978813912F0 /* SmokeEmbedded */,
+				212ACE1D424A269FBB4D7E99 /* SmokeExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EF070A194C301BA18CE3F5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EAF46464510234B7B49CD59 /* SDKUsage.swift in Sources */,
+				A916E8E3072458CB9980A7F0 /* SmokeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA3B8802BAA4393A51C49630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71FBD7F3B14971669B13FC69 /* SDKUsage.swift in Sources */,
+				87308BA1364004CEF899C4D5 /* SmokeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D011C86CE6287AC17913D0DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C22693A989FD3F551D9CBE24 /* NotificationService.swift in Sources */,
+				BD51DB0011AF2A86D812BED2 /* SDKUsage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		22159B9552D03D3264C85847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Generated/SmokeSPM-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.appstack.smoke.spm;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		291978E3CF8C21F05DD6F05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		60C5EEC06211F5750C28B352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Generated/SmokeSPM-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.appstack.smoke.spm;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66206D498631D8FB827406CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7507BE485F6B18759B915A15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Frameworks\"",
+				);
+				INFOPLIST_FILE = "Generated/SmokeEmbedded-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.appstack.smoke.embedded;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E45905CA5E5017FEA3A4F10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				INFOPLIST_FILE = "Generated/SmokeExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.appstack.smoke.spm.extension;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B69B075D464C1A20D2FE8FE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				INFOPLIST_FILE = "Generated/SmokeExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.appstack.smoke.spm.extension;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D021CE6730AA8FC5C71E33DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Frameworks\"",
+				);
+				INFOPLIST_FILE = "Generated/SmokeEmbedded-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.appstack.smoke.embedded;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C45E33ABDCF86E6366A7EDF /* Build configuration list for PBXNativeTarget "SmokeSPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60C5EEC06211F5750C28B352 /* Debug */,
+				22159B9552D03D3264C85847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		37CE09DD6EB7F120445AA583 /* Build configuration list for PBXProject "SmokeConsumer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66206D498631D8FB827406CD /* Debug */,
+				291978E3CF8C21F05DD6F05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4AB189B0F60F82E50CBCE330 /* Build configuration list for PBXNativeTarget "SmokeExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69B075D464C1A20D2FE8FE0 /* Debug */,
+				7E45905CA5E5017FEA3A4F10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		96541A50250DC28C9D7E44C1 /* Build configuration list for PBXNativeTarget "SmokeEmbedded" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7507BE485F6B18759B915A15 /* Debug */,
+				D021CE6730AA8FC5C71E33DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		01D160585DEDA85EDB285121 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C7A3C18644CE9105185B234 /* AppstackSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppstackSDK;
+		};
+		A8F590ADC78BDC1C6507261D /* AppstackSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppstackSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F4C26FC436B9DEB8F30750A3 /* Project object */;
+}
