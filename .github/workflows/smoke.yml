@@ -27,6 +27,7 @@ on:
     paths:
       - '.github/workflows/**'
       - 'ci/**'
+      - 'Package.swift'
 
 permissions:
   contents: read
@@ -65,20 +66,25 @@ jobs:
   build:
     name: ${{ matrix.integration }} (Xcode ${{ matrix.xcode }})
     needs: checksum
-    runs-on: macos-15
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
         integration: [spm, embedded]
         # The version the release is built with, plus the newest one a customer
-        # may be on (swiftinterface compatibility).
+        # may be on (swiftinterface compatibility). Each needs its own runner
+        # image: latest-stable only picks among the Xcodes on that image.
         xcode: ['16.4', latest-stable]
         include:
           - integration: spm
             scheme: SmokeSPM
           - integration: embedded
             scheme: SmokeEmbedded
+          - xcode: '16.4'
+            runner: macos-15
+          - xcode: latest-stable
+            runner: macos-26
     steps:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0

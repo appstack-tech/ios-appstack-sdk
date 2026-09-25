@@ -5,7 +5,7 @@
 | Job | What it checks |
 |---|---|
 | Checksum | The zip at `Package.swift`'s `url` is a release asset of this repo and its SHA-256 matches `checksum` |
-| spm / embedded | `SmokeSPM` (Swift Package Manager) and `SmokeEmbedded` (XCFramework embedded directly) build for the iOS Simulator and a generic iOS device, with Xcode 16.4 and the latest stable Xcode |
+| spm / embedded | `SmokeSPM` (Swift Package Manager) and `SmokeEmbedded` (XCFramework embedded directly) build for the iOS Simulator and a generic iOS device, with Xcode 16.4 (`macos-15`) and the latest stable Xcode (`macos-26`) |
 | App extension | `SmokeExtension` (notification service) builds with `APPLICATION_EXTENSION_API_ONLY=YES`. Non-blocking step: the SDK binary has the `APP_EXTENSION_SAFE` flag |
 | Mac Catalyst | Non-blocking: the Catalyst slice has a valid bundle layout, and both apps build for Mac Catalyst |
 
