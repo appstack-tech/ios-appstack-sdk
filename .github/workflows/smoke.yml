@@ -1,0 +1,259 @@
+name: Smoke test
+
+# Once a release is published, install it the way customers do and check that
+# it builds:
+#   * Release candidate: runs when the `rc` branch is updated. Its Package.swift
+#     points at the asset on the rolling `prerelease` release.
+#   * Stable release: runs when an `X.Y.Z` tag is pushed. Its Package.swift
+#     points at the asset on that version's release.
+#
+# Security:
+#   * No secrets, and GITHUB_TOKEN is read-only.
+#   * Keep "Require approval for all outside collaborators" on (Settings >
+#     Actions > General > Fork pull request workflows), so fork PRs can't run
+#     without a maintainer's approval.
+#   * Actions are pinned by commit SHA.
+#
+# No `schedule` trigger: GitHub disables scheduled workflows after 60 days
+# without repository activity. Use workflow_dispatch to re-check `main`.
+on:
+  push:
+    branches:
+      - rc
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'ci/**'
+      - 'Package.swift'
+
+permissions:
+  contents: read
+
+# A newer push to the same ref (e.g. the next force-pushed RC) supersedes the
+# running check.
+concurrency:
+  group: smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Package.swift must point at a release asset of this repo.
+  EXPECTED_URL_PREFIX: https://github.com/${{ github.repository }}/releases/download/
+  PROJECT: ci/SmokeConsumer/SmokeConsumer.xcodeproj
+  XCODE_VERSION: '16.4'
+
+jobs:
+  checksum:
+    name: Checksum
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      # On a stable tag push the Release (and its asset) is created a little
+      # after the tag, so wait for it before failing on 404. Every other job
+      # depends on this one, so none of them race the asset either.
+      - name: Download asset and verify checksum
+        env:
+          WAIT_SECONDS: ${{ github.ref_type == 'tag' && '1200' || '0' }}
+        run: ci/fetch-xcframework.sh
+
+  build:
+    name: ${{ matrix.integration }} (Xcode ${{ matrix.xcode }})
+    needs: checksum
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        integration: [spm, embedded]
+        # The version the release is built with, plus the newest one a customer
+        # may be on (swiftinterface compatibility). Each needs its own runner
+        # image: latest-stable only picks among the Xcodes on that image.
+        xcode: ['16.4', latest-stable]
+        include:
+          - integration: spm
+            scheme: SmokeSPM
+          - integration: embedded
+            scheme: SmokeEmbedded
+          - xcode: '16.4'
+            runner: macos-15
+          - xcode: latest-stable
+            runner: macos-26
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90 # v1.7.0
+        with:
+          xcode-version: ${{ matrix.xcode }}
+
+      - name: Resolve package (SPM)
+        if: matrix.integration == 'spm'
+        run: |
+          xcodebuild -resolvePackageDependencies \
+            -project "$PROJECT" -scheme SmokeSPM \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm"
+
+      - name: Download XCFramework (embedded)
+        if: matrix.integration == 'embedded'
+        run: ci/fetch-xcframework.sh ci/SmokeConsumer/Frameworks
+
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild build -quiet \
+            -project "$PROJECT" -scheme "${{ matrix.scheme }}" \
+            -destination 'generic/platform=iOS Simulator' \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build for iOS device
+        run: |
+          xcodebuild build -quiet \
+            -project "$PROJECT" -scheme "${{ matrix.scheme }}" \
+            -destination 'generic/platform=iOS' \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" \
+            CODE_SIGNING_ALLOWED=NO
+
+  extension:
+    name: App extension
+    needs: checksum
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90 # v1.7.0
+        with:
+          xcode-version: ${{ env.XCODE_VERSION }}
+
+      - name: Build extension for iOS Simulator and device
+        run: |
+          set -o pipefail
+          for destination in 'generic/platform=iOS Simulator' 'generic/platform=iOS'; do
+            xcodebuild build -quiet \
+              -project "$PROJECT" -scheme SmokeExtension \
+              -destination "$destination" \
+              -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" \
+              CODE_SIGNING_ALLOWED=NO APPLICATION_EXTENSION_API_ONLY=YES \
+              2>&1 | tee -a "$RUNNER_TEMP/extension.log"
+          done
+
+      # NON-BLOCKING. Recent linkers no longer warn when an extension links a
+      # dylib that wasn't built with APPLICATION_EXTENSION_API_ONLY, so check
+      # the Mach-O flag directly. 4.7.2 ships without it; make this step
+      # blocking once the XCFramework build sets it.
+      - name: Check binary is marked extension-safe (non-blocking)
+        continue-on-error: true
+        run: |
+          status=0
+          checked=0
+          if grep -q 'not safe for use in application extensions' "$RUNNER_TEMP/extension.log"; then
+            echo "::warning::Linker reported AppstackSDK as not safe for use in application extensions"
+            status=1
+          fi
+          while IFS= read -r -d '' binary; do
+            slice=$(basename "$(dirname "$(dirname "$binary")")")
+            checked=$((checked + 1))
+            if otool -hv "$binary" | grep -q APP_EXTENSION_SAFE; then
+              echo "$slice: APP_EXTENSION_SAFE"
+            else
+              echo "::warning::$slice: AppstackSDK binary lacks the APP_EXTENSION_SAFE flag"
+              status=1
+            fi
+          done < <(find "$RUNNER_TEMP/spm/artifacts" -path '*AppstackSDK.xcframework/*/AppstackSDK.framework/AppstackSDK' -type f -print0)
+          if [[ $checked -eq 0 ]]; then
+            echo "::warning::No resolved AppstackSDK binaries found to check"
+            status=1
+          fi
+          exit $status
+
+  catalyst:
+    name: Mac Catalyst (non-blocking)
+    needs: checksum
+    runs-on: macos-15
+    timeout-minutes: 30
+    # NON-BLOCKING. Package.swift declares only .iOS(.v15) while the
+    # XCFramework also ships a Mac Catalyst slice, and that slice is zipped
+    # without its framework symlinks. Each step below may fail without failing
+    # the workflow; make them blocking once a release fixes both.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@ed7a3b1fda3918c0306d1b724322adc0b8cc0a90 # v1.7.0
+        with:
+          xcode-version: ${{ env.XCODE_VERSION }}
+
+      - name: Download XCFramework
+        run: ci/fetch-xcframework.sh ci/SmokeConsumer/Frameworks
+
+      - name: Check Catalyst slice bundle layout
+        id: layout
+        continue-on-error: true
+        run: |
+          framework=$(find ci/SmokeConsumer/Frameworks/AppstackSDK.xcframework -maxdepth 2 -path '*maccatalyst*/AppstackSDK.framework')
+          status=0
+          for link in Versions/Current AppstackSDK Headers Modules Resources; do
+            if [[ ! -L "$framework/$link" ]]; then
+              echo "::warning::Mac Catalyst slice: $link should be a symlink (zip the XCFramework with symlinks preserved, e.g. ditto -c -k --keepParent)"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Build SPM app for Mac Catalyst
+        id: spm
+        continue-on-error: true
+        run: |
+          xcodebuild build -quiet \
+            -project "$PROJECT" -scheme SmokeSPM \
+            -destination 'generic/platform=macOS,variant=Mac Catalyst' \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build embedded app for Mac Catalyst
+        id: embedded
+        continue-on-error: true
+        run: |
+          xcodebuild build -quiet \
+            -project "$PROJECT" -scheme SmokeEmbedded \
+            -destination 'generic/platform=macOS,variant=Mac Catalyst' \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Report
+        if: always()
+        env:
+          LAYOUT: ${{ steps.layout.outcome }}
+          SPM: ${{ steps.spm.outcome }}
+          EMBEDDED: ${{ steps.embedded.outcome }}
+        run: |
+          {
+            echo "### Mac Catalyst (non-blocking)"
+            echo "| check | outcome |"
+            echo "|---|---|"
+            echo "| Catalyst slice bundle layout | $LAYOUT |"
+            echo "| SPM build | $SPM |"
+            echo "| Embedded build | $EMBEDDED |"
+          } >> "$GITHUB_STEP_SUMMARY"
+          for check in LAYOUT SPM EMBEDDED; do
+            if [[ "${!check}" != success ]]; then
+              echo "::warning::Mac Catalyst check ${check} did not pass (${!check}); non-blocking for now"
+            fi
+          done

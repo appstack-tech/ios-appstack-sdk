@@ -17,3 +17,5 @@ xcuserdata
 
 # macOS
 .DS_Store
+# Smoke-test consumer: XCFramework downloaded by CI
+ci/SmokeConsumer/Frameworks/

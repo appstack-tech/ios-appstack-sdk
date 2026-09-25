@@ -1,0 +1,84 @@
+# XcodeGen spec for the release smoke-test consumer (see .github/workflows/smoke.yml).
+# The generated SmokeConsumer.xcodeproj is committed so CI doesn't need XcodeGen.
+# After editing this file, regenerate with:  cd ci/SmokeConsumer && xcodegen generate
+name: SmokeConsumer
+options:
+  bundleIdPrefix: tech.appstack.smoke
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: ""
+    DEVELOPMENT_TEAM: ""
+packages:
+  # The repo root, i.e. the Package.swift of the ref being tested. SPM resolves
+  # its binaryTarget from the remote url and verifies the checksum, as it does
+  # for a customer.
+  AppstackSDK:
+    path: ../..
+targets:
+  # App that gets the SDK through Swift Package Manager.
+  SmokeSPM:
+    type: application
+    platform: iOS
+    sources: [App, Shared]
+    info:
+      path: Generated/SmokeSPM-Info.plist
+      properties:
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: tech.appstack.smoke.spm
+        SUPPORTS_MACCATALYST: YES
+    dependencies:
+      - package: AppstackSDK
+  # App that embeds AppstackSDK.xcframework directly (manual install).
+  # CI downloads the zip from Package.swift's url into Frameworks/.
+  SmokeEmbedded:
+    type: application
+    platform: iOS
+    sources: [App, Shared]
+    info:
+      path: Generated/SmokeEmbedded-Info.plist
+      properties:
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: tech.appstack.smoke.embedded
+        SUPPORTS_MACCATALYST: YES
+    dependencies:
+      - framework: Frameworks/AppstackSDK.xcframework
+        embed: true
+  # Notification service extension that links the SDK through SPM.
+  SmokeExtension:
+    type: app-extension
+    platform: iOS
+    sources: [Extension, Shared]
+    info:
+      path: Generated/SmokeExtension-Info.plist
+      properties:
+        CFBundleDisplayName: SmokeExtension
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.usernotifications.service
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NotificationService
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: tech.appstack.smoke.spm.extension
+        APPLICATION_EXTENSION_API_ONLY: YES
+    dependencies:
+      - package: AppstackSDK
+schemes:
+  SmokeSPM:
+    build:
+      targets: {SmokeSPM: all}
+  SmokeEmbedded:
+    build:
+      targets: {SmokeEmbedded: all}
+  SmokeExtension:
+    build:
+      targets: {SmokeExtension: all}
