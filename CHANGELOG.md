@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.8.0] - 2026-11-12
+
+### Added
+- `getAttributionParams()` now returns `deeplink_id`, the ID of the matched link, and
+  `confidence_tier` (`high`, `medium` or `low`), the confidence of the match. Neither is returned
+  for an organic install. Android already returned `deeplink_id`.
+
+### Fixed
+- `LogLevel`, `EventType`, `LinkOptions` and `UniversalLinkResult` are now `Sendable`. Swift 6
+  projects no longer get concurrency warnings when these values cross a task or actor boundary.
+
 ## [4.7.2] - 2026-09-22
 
 ### Fixed
